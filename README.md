@@ -1,7 +1,6 @@
 # MCSN
 
 Developed by:
-Alberto Guerra
-Juan Camilo Alzate Peña
+Alberto Guerra & Juan Camilo Alzate Peña
 
 2022
