@@ -10,8 +10,6 @@ const infoButtonClose = document.querySelector('.info-button-close');
 const infoBox = document.querySelector('.info-box');
 //console.log(slideWidth);
 
-
-
 const setSlidePosition = (slide, index) => {
   slide.style.left = slideWidth * index + 'px';
 };
