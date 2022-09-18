@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,53 @@
   <link rel="stylesheet" href="style.css">
   <title>MCSN</title>
 </head>
+
 <body>
-<div class="header-container">
-  <div class="title">Ascolta i suoni e le voci del paesaggio</div>
-  <div class="menu">
-    <div class="page-indicator">
-      <span>1/3</span>
-    </div>
-    <div class="archivio">
-      <span>archivio</span>
-    </div>
-    <div class="info">
-      <span>info+</span>
+  <div class="header-container">
+    <div class="title">Ascolta i suoni e le voci del paesaggio</div>
+    <div class="menu">
+      <div class="slide-indicator">
+        <p class="indicator">1/3</p>
+        <p class="indicator">2/3</p>
+        <p class="indicator">3/3</p>
+      </div>
+      <div class="archivio">
+        <span>archivio</span>
+      </div>
+      <div class="info">
+        <span>info+</span>
+      </div>
     </div>
   </div>
-</div>
-<div class="left-container">
-</div>
-<div class="footer">  
-</div>
-  
+  <div class="left-container">
+  </div>
+  <div class="footer">
+
+  </div>
+
+  <div class="slider">
+    <button class="slider_button slider_button--left">
+      <img src="assets/left.svg" alt="">
+    </button>
+    <div class="slider_track-container">
+      <ul class="slider_track">
+        <li class="slide current-slide">
+          <p>1</p>
+        </li>
+        <li class="slide">
+          <p>2</p>
+        </li>
+        <li class="slide">
+          <p>3</p>
+        </li>
+      </ul>
+    </div>
+    <button class="slider_button slider_button--right">
+      <img src="assets/right.svg" alt="">
+    </button>
+  </div>
+
+  <script src="js/slider.js"></script>
 </body>
+
 </html>
