@@ -43,14 +43,12 @@ S
 
 infoButtonOpen.addEventListener('click', e => {
   infoBox.style.transform = 'translateX(-430px)';
-  infoBox.classList.remove('is-hidden');
   prevButton.classList.add('is-hidden');
   nextButton.classList.add('is-hidden');
 })
 
 infoButtonClose.addEventListener('click', e => {
   infoBox.style.transform = 'translateX(430px)';
-  infoBox.classList.add('is-hidden');
   prevButton.classList.remove('is-hidden');
   nextButton.classList.remove('is-hidden');
   
