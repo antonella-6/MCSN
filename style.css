@@ -8,6 +8,7 @@ body {
   justify-content: space-between;
   height: 4vh;
   align-items: center;
+  overflow: hidden;
 }
 
 .menu {
@@ -84,4 +85,18 @@ body {
 
 .is-hidden {
 	display: none;
+}
+
+.info-box {
+  position: absolute;
+  background-color: #66CC33;
+  top: 0;
+  height: 100vh;
+  width: 430px;
+  left: 100%;
+}
+
+.info-button-open, .info-button-close {
+  background: transparent;
+	border: 0;
 }

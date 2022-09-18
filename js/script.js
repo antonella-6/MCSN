@@ -5,11 +5,12 @@ const prevButton = document.querySelector('.slider_button--left');
 const slideWidth = slides[0].getBoundingClientRect().width;
 const indicators = document.querySelector('.slide-indicator');
 const indicator = Array.from(indicators.children);
+const infoButtonOpen = document.querySelector('.info-button-open');
+const infoButtonClose = document.querySelector('.info-button-close');
+const infoBox = document.querySelector('.info-box');
 //console.log(slideWidth);
 
 
-
-// Arrange slides next to each other
 
 const setSlidePosition = (slide, index) => {
   slide.style.left = slideWidth * index + 'px';
@@ -39,8 +40,23 @@ nextButton.addEventListener('click', e => {
   //move to next slide
   moveToSlide(track, currentSlide, nextSlide);
   removeArrow();
-
+S
 });
+
+infoButtonOpen.addEventListener('click', e => {
+  infoBox.style.transform = 'translateX(-430px)';
+  infoBox.classList.remove('is-hidden');
+  prevButton.classList.add('is-hidden');
+  nextButton.classList.add('is-hidden');
+})
+
+infoButtonClose.addEventListener('click', e => {
+  infoBox.style.transform = 'translateX(430px)';
+  infoBox.classList.add('is-hidden');
+  prevButton.classList.remove('is-hidden');
+  nextButton.classList.remove('is-hidden');
+  
+})
 
 //Remove Prev and Next Arrows (First and Last)
 const removeArrow = () => {
