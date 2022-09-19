@@ -1,3 +1,14 @@
+/* 
+
+WE SHOULD FIND A SOLUTION TO FORCE TO BE EXACTLY IN THIS DIMENSION [SURFACE 8]
+
+html, body {
+	width: 1440px;
+	height: 960px;
+   }
+   
+*/
+
 body {
 	margin: 0;
 	overflow-x: hidden;
