@@ -1,3 +1,10 @@
+// THERE IS A FUNCTION THAT WE CAN ADD, LIKE A BUTTON WHEN THE PAGE START THAT FIT THE RIGHT DIMENSION
+// BUT PROBABLY IT WILL BE HELPFUL ONLY FOR US TO TEST (?), IN THE TABLET THE WEBPAGE IS ALWAYS AT FULLSCREEN
+// https://stackoverflow.com/questions/29544337/how-to-open-my-page-to-with-a-specific-size-browser-window
+//
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
 const track = document.querySelector('.slider_track');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.slider_button--right');
