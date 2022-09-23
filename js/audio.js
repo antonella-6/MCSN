@@ -3,7 +3,7 @@ const event = new Event('end');
 var audio = new Audio()
 
 $('.btnAudio').on('click', function () {
-    var src = './assets/sounds/' + this.id + '.mp3'
+    var src = './assets/sounds/' + this.id + '.mp3' /* AUDIO FILE NAME SAME INTO THE HTML AUDIO LOAD */
     audio.src = src
     audio.dispatchEvent(event)
 
