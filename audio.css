@@ -1,0 +1,34 @@
+.audioControl{
+    opacity: 0;
+}
+
+#progressAudioBar{
+    width: 90%;
+    margin: auto; 
+    -webkit-appearance: none;
+}
+
+
+input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+	-moz-appearance: none;
+	background: #999;
+	border-radius: 5px;
+  width: 100%;
+  height: 1px;
+  outline: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #000;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+  
+  input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1);
+  }

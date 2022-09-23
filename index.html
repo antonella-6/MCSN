@@ -6,7 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="audio.css">
   <title>MCSN</title>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -29,7 +32,14 @@
 
   <div class="left-container"></div>
 
-  <div class="footer"></div>
+  <div class="footer">
+    <span class="audioControl" id="progressAudioTime">00:00</span>
+    <input class="audioControl" id="progressAudioBar" type="range" value="0" min="0" max="100" step="1">
+    <p>aa</p>
+    <p>aa</p>
+    <p>aa</p>
+    <p>aa</p>
+  </div>
 
   <div class="slider">
     <button class="slider_button slider_button--left">
@@ -39,6 +49,8 @@
       <ul class="slider_track">
         <li class="slide current-slide">
           <p>1</p>
+          <div id="test" class="btnAudio">Test</div>
+          <div id="test2" class="btnAudio">Test2</div>
         </li>
         <li class="slide">
           <p>2</p>
@@ -59,6 +71,7 @@
   </div>
 
   <script src="js/script.js"></script>
+  <script src="js/audio.js"></script>
 </body>
 
 </html>
