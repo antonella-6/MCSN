@@ -9,6 +9,21 @@ html, body {
    
 */
 
+@font-face {
+	font-family: Karmina;
+	src: url(assets/fonts/KarminaReg.otf);
+}
+
+@font-face {
+	font-family: KarminaSansL;
+	src: url(assets/fonts/KarminaSans_Light.otf);
+}
+
+@font-face {
+	font-family: KarminaSansR;
+	src: url(assets/fonts/KarminaSans_Regular.otf);
+}
+
 body, * {
 	margin: 0;
 	overflow-x: hidden;
@@ -43,6 +58,12 @@ body, * {
 
   display: flex;
   justify-content: space-evenly;
+}
+
+.indicator {
+	font-family: "KarminaSansL";
+	font-feature-settings: 'frac' 1;
+	font-size: 30px;
 }
 
 .slider {
