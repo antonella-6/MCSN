@@ -158,11 +158,47 @@ body, * {
 	border: 0;
 }
 
+.info-button-close {
+	float: right;
+}
+.info-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.info-title {
+	font-family: 'Karmina';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 26px;
+	width: 100%;
+}
+
+.info-subtitle {
+	font-family: 'KarminaSansR';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 133%;
+	width: 100%;
+}
+
+.versi-narrazione-box {
+	display: flex;
+	flex-direction: column;
+}
+
+.icon-type {
+	display: flex;
+}
+
 /*  Archivio Table*/
 
 .archivio-table {
 	border-collapse: collapse;
 	width: 100%;
+	margin-top: 42px;
 }
 
 .archivio-table tr {
