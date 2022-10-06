@@ -146,10 +146,11 @@ body, * {
   background-color: #66CC33;
   top: 0;
   height: 100vh;
-  width: 430px;
+  width: 436px;
   left: 100%;
 	transition: transform 300ms ease-in;
-	overflow-y: scroll
+	overflow-y: scroll;
+	z-index: 1;
 
 }
 
@@ -164,6 +165,7 @@ body, * {
 .info-content {
 	display: flex;
 	flex-direction: column;
+	margin: 16px 0 0 30px;
 }
 
 .info-title {
@@ -173,6 +175,8 @@ body, * {
 	font-size: 22px;
 	line-height: 26px;
 	width: 100%;
+	margin-bottom: 16px;
+	margin-top: 54px;
 }
 
 .info-subtitle {
@@ -182,15 +186,56 @@ body, * {
 	font-size: 18px;
 	line-height: 133%;
 	width: 100%;
+	margin-bottom: 16px;
 }
 
 .versi-narrazione-box {
 	display: flex;
 	flex-direction: column;
+	font-family: 'KarminaSansR';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 22px;
+	margin-top: 8px;
 }
 
 .icon-type {
 	display: flex;
+}
+
+.archivi-sonori {
+	font-family: 'KarminaSansR';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 137%;
+}
+
+.crediti table {
+	font-family: 'KarminaSansR';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 137%;
+	margin-bottom: 56px;
+}
+
+.crediti table tr td:first-child {
+	width: 180px;
+}
+
+.archivi-sonori table tr td:first-child {
+	width: 180px;
+}
+
+.info-p {
+	font-family: 'Karmina';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 117.5%;
+	margin-bottom: 20px;
 }
 
 /*  Archivio Table*/
@@ -232,4 +277,9 @@ body, * {
 }
 .archivio-table tr:nth-child(n+2) td {
 	padding: 21px 0;
+}
+
+.fix-archivio {
+	overflow-y: hidden;
+	position: fixed;
 }

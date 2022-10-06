@@ -49,13 +49,13 @@ S
 });
 
 infoButtonOpen.addEventListener('click', e => {
-  infoBox.style.transform = 'translateX(-430px)';
+  infoBox.style.transform = 'translateX(-436px)';
   prevButton.classList.add('is-hidden');
   nextButton.classList.add('is-hidden');
 })
 
 infoButtonClose.addEventListener('click', e => {
-  infoBox.style.transform = 'translateX(430px)';
+  infoBox.style.transform = 'translateX(436px)';
   prevButton.classList.remove('is-hidden');
   nextButton.classList.remove('is-hidden');
   
