@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="audio.css">
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
   <title>Archivio</title>
 </head>
 <body>
@@ -177,6 +180,16 @@
     </tr>
 </table>
 
+<div class="footer">
+  <span class="audioControl" id="progressAudioTime">00:00</span>
+  <input class="audioControl" id="progressAudioBar" type="range" value="0" min="0" max="100" step="1">
+  <p>aa</p>
+  <p>aa</p>
+  <p>aa</p>
+  <p>aa</p>
+</div>
+
   <script src="js/archivio.js"></script>
+  <script src="js/audio.js"></script>
 </body>
 </html>
