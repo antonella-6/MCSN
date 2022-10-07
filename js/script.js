@@ -45,7 +45,6 @@ nextButton.addEventListener('click', e => {
   //move to next slide
   moveToSlide(track, currentSlide, nextSlide);
   removeArrow();
-S
 });
 
 infoButtonOpen.addEventListener('click', e => {
