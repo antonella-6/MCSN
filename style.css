@@ -11,28 +11,27 @@ html, body {
 
 /* Fonts */
 
-
 @font-face {
-	font-family: Karmina;
-	src: url(assets/fonts/KarminaReg.otf);
+  font-family: Karmina;
+  src: url(assets/fonts/KarminaReg.otf);
 }
 
 @font-face {
-	font-family: KarminaSansL;
-	src: url(assets/fonts/KarminaSans_Light.otf);
+  font-family: KarminaSansL;
+  src: url(assets/fonts/KarminaSans_Light.otf);
 }
 
 @font-face {
-	font-family: KarminaSansR;
-	src: url(assets/fonts/KarminaSans_Regular.otf);
+  font-family: KarminaSansR;
+  src: url(assets/fonts/KarminaSans_Regular.otf);
 }
-
 
 /* General */
 
-body, * {
-	margin: 0;
-	overflow-x: hidden;
+body,
+* {
+  margin: 0;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -41,21 +40,28 @@ body, * {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 4vh;
+  /*height: 4vh;*/
   align-items: center;
   overflow: hidden;
+
+  /*width: 1440px;*/
+  height: 60px;
+  left: 0px;
+  top: 0px;
+
+  background: #ededed;
 }
 
 .menu {
   display: flex;
   flex-direction: row;
-	align-items: center;
+  align-items: center;
 }
 
 .indicator {
-	font-family: "KarminaSansL";
-	font-feature-settings: 'frac' 1;
-	font-size: 30px;
+  font-family: "KarminaSansL";
+  /*font-feature-settings: 'frac' 1;*/
+  font-size: 30px;
 }
 
 /* left container */
@@ -68,218 +74,216 @@ body, * {
 /* Footer */
 
 .footer {
-  background-color: #F5F5F5;
+  background-color: #ededed;
   position: fixed;
   width: 100%;
-  height: 3vh;
+  height: 40px;
   bottom: 0px;
 
   display: flex;
   justify-content: space-evenly;
-
 }
-
 
 /* Content */
 
 .slider {
-	position: absolute;
-	margin: 0 auto;
-	height: 96vh;
-	width: 100%;
-	top: 4vh;
+  position: absolute;
+  margin: 0 auto;
+  height: 96vh;
+  width: 100%;
+  top: 4vh;
 }
 
 .slide {
-	position: absolute;
-	width: 100%;
-	top: 0;
-	bottom: 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
 }
 
 .slider_track {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	position: relative;
-	height: 100%;
-	transition: transform 300ms ease-in;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 300ms ease-in;
 }
 
 .slider_track-container {
-	height: 100%;
-	position: relative;
-	overflow: hidden;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .slider_button {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	background: transparent;
-	border: 0;
-	cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 .slider_button--left {
-	left: 0px;
-	z-index: 1;
+  left: 0px;
+  z-index: 1;
 }
 
 .slider_button--right {
-	right: 0px;
-	z-index: 1;
+  right: 0px;
+  z-index: 1;
 }
 
 .slider_button img {
-	width: 11px;
+  width: 11px;
 }
 
 .is-hidden {
-	display: none;
+  display: none;
 }
 
 /* Info Tab */
 
 .info-box {
   position: absolute;
-  background-color: #66CC33;
+  background-color: #66cc33;
   top: 0;
   height: 100vh;
   width: 436px;
   left: 100%;
-	transition: transform 300ms ease-in;
-	overflow-y: scroll;
-	z-index: 1;
-
+  transition: transform 300ms ease-in;
+  overflow-y: scroll;
+  z-index: 1;
 }
 
-.info-button-open, .info-button-close {
+.info-button-open,
+.info-button-close {
   background: transparent;
-	border: 0;
+  border: 0;
 }
 
 .info-button-close {
-	float: right;
+  float: right;
 }
 .info-content {
-	display: flex;
-	flex-direction: column;
-	margin: 16px 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0 0 30px;
 }
 
 .info-title {
-	font-family: 'Karmina';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 22px;
-	line-height: 26px;
-	width: 100%;
-	margin-bottom: 16px;
-	margin-top: 54px;
+  font-family: "Karmina";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  width: 100%;
+  margin-bottom: 16px;
+  margin-top: 54px;
 }
 
 .info-subtitle {
-	font-family: 'KarminaSansR';
-	font-style: normal;
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 133%;
-	width: 100%;
-	margin-bottom: 16px;
+  font-family: "KarminaSansR";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133%;
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .versi-narrazione-box {
-	display: flex;
-	flex-direction: column;
-	font-family: 'KarminaSansR';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 22px;
-	margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  font-family: "KarminaSansR";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  margin-top: 8px;
 }
 
 .icon-type {
-	display: flex;
+  display: flex;
 }
 
 .archivi-sonori {
-	font-family: 'KarminaSansR';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 137%;
+  font-family: "KarminaSansR";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 137%;
 }
 
 .crediti table {
-	font-family: 'KarminaSansR';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 137%;
-	margin-bottom: 56px;
+  font-family: "KarminaSansR";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 137%;
+  margin-bottom: 56px;
 }
 
 .crediti table tr td:first-child {
-	width: 180px;
+  width: 180px;
 }
 
 .archivi-sonori table tr td:first-child {
-	width: 180px;
+  width: 180px;
 }
 
 .info-p {
-	font-family: 'Karmina';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 117.5%;
-	margin-bottom: 20px;
+  font-family: "Karmina";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 117.5%;
+  margin-bottom: 20px;
 }
 
 /*  Archivio Table*/
 
 .archivio-table {
-	border-collapse: collapse;
-	width: 100%;
-	margin-top: 42px;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 42px;
 }
 
 .archivio-table tr {
-	border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .archivio-table tr:first-child {
-	font-family: 'KarminaSansR';
-	font-size: 22px;
-	line-height: 106.9%;
+  font-family: "KarminaSansR";
+  font-size: 22px;
+  line-height: 106.9%;
 }
 
-.archivio-table tr:first-child td{
-	padding-bottom: 13px;
+.archivio-table tr:first-child td {
+  padding-bottom: 13px;
 }
 
-.archivio-table tr:nth-child(n+2) td:first-child {
-	font-family: 'Karmina';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 22px;
-	line-height: 106.9%;
+.archivio-table tr:nth-child(n + 2) td:first-child {
+  font-family: "Karmina";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 106.9%;
 }
 
-.archivio-table tr:nth-child(n+2) td:nth-child(2) {
-	font-family: 'KarminaSansL';
-	font-style: italic;
-	font-weight: 300;
-	font-size: 22px;
-	line-height: 106.9%;
+.archivio-table tr:nth-child(n + 2) td:nth-child(2) {
+  font-family: "KarminaSansL";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 106.9%;
 }
-.archivio-table tr:nth-child(n+2) td {
-	padding: 21px 0;
+.archivio-table tr:nth-child(n + 2) td {
+  padding: 21px 0;
 }
 
 .fix-archivio {
-	overflow-y: hidden;
-	position: fixed;
+  overflow-y: hidden;
+  position: fixed;
 }
