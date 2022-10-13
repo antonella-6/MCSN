@@ -28,6 +28,7 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
   targetSlide.classList.add("current-slide");
 };
 
+
 // When click Left, move to left
 prevButton.addEventListener("click", (e) => {
   const currentSlide = track.querySelector(".current-slide");
@@ -46,17 +47,21 @@ nextButton.addEventListener("click", (e) => {
   removeArrow();
 });
 
-infoButtonOpen.addEventListener("click", (e) => {
-  infoBox.style.transform = "translateX(-436px)";
+function openInfo() {
+  document.getElementById("myInfoBox").style.width = "436px";
+  document.getElementById("myInfoBox").style.left = "calc(100% - 436px)";
   prevButton.classList.add("is-hidden");
   nextButton.classList.add("is-hidden");
-});
+  
+}
 
-infoButtonClose.addEventListener("click", (e) => {
-  infoBox.style.transform = "translateX(436px)";
+function closeInfo() {
+  document.getElementById("myInfoBox").style.width = "0";
+  document.getElementById("myInfoBox").style.left = "100%";
   prevButton.classList.remove("is-hidden");
   nextButton.classList.remove("is-hidden");
-});
+}
+
 
 //Remove Prev and Next Arrows (First and Last)
 const removeArrow = () => {
