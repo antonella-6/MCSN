@@ -1,5 +1,5 @@
 var isBusy = false;
-const event = new Event("end");
+const evento = new Event("end");
 var audio = new Audio();
 
 $(".btnAudio").on("click", function () {
@@ -8,7 +8,7 @@ $(".btnAudio").on("click", function () {
     this.id +
     ".mp3"; /* AUDIO FILE NAME SAME INTO THE HTML AUDIO LOAD */
   audio.src = src;
-  audio.dispatchEvent(event);
+  audio.dispatchEvent(evento);
 
   isBusy = true;
 

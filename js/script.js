@@ -1,98 +1,230 @@
-// THERE IS A FUNCTION THAT WE CAN ADD, LIKE A BUTTON WHEN THE PAGE START THAT FIT THE RIGHT DIMENSION
-// BUT PROBABLY IT WILL BE HELPFUL ONLY FOR US TO TEST (?), IN THE TABLET THE WEBPAGE IS ALWAYS AT FULLSCREEN
-// https://stackoverflow.com/questions/29544337/how-to-open-my-page-to-with-a-specific-size-browser-window
-//
-//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
-const track = document.querySelector(".slider_track");
-const slides = Array.from(track.children);
-const nextButton = document.querySelector(".slider_button--right");
-const prevButton = document.querySelector(".slider_button--left");
-const slideWidth = slides[0].getBoundingClientRect().width;
-const indicators = document.querySelector(".slide-indicator");
-const indicator = Array.from(indicators.children);
 const infoButtonOpen = document.querySelector(".info-button-open");
 const infoButtonClose = document.querySelector(".info-button-close");
 const infoBox = document.querySelector(".info-box");
-//console.log(slideWidth);
-
-const setSlidePosition = (slide, index) => {
-  slide.style.left = slideWidth * index + "px";
-};
-
-slides.forEach(setSlidePosition);
-
-const moveToSlide = (track, currentSlide, targetSlide) => {
-  track.style.transform = "translateX(-" + targetSlide.style.left + ")";
-  currentSlide.classList.remove("current-slide");
-  targetSlide.classList.add("current-slide");
-};
-
-
-// When click Left, move to left
-prevButton.addEventListener("click", (e) => {
-  const currentSlide = track.querySelector(".current-slide");
-  const prevSlide = currentSlide.previousElementSibling;
-  //move to prev slide
-  moveToSlide(track, currentSlide, prevSlide);
-  removeArrow();
-});
-
-// When click Right, move to right
-nextButton.addEventListener("click", (e) => {
-  const currentSlide = track.querySelector(".current-slide");
-  const nextSlide = currentSlide.nextElementSibling;
-  //move to next slide
-  moveToSlide(track, currentSlide, nextSlide);
-  removeArrow();
-});
+const indicators = document.querySelector(".slide-indicator");
+const indicator = Array.from(indicators.children);
 
 function openInfo() {
   document.getElementById("myInfoBox").style.width = "436px";
   document.getElementById("myInfoBox").style.left = "calc(100% - 436px)";
-  prevButton.classList.add("is-hidden");
-  nextButton.classList.add("is-hidden");
+  prev.classList.add("is-hidden");
+  next.classList.add("is-hidden");
   
 }
 
 function closeInfo() {
   document.getElementById("myInfoBox").style.width = "0";
   document.getElementById("myInfoBox").style.left = "100%";
-  prevButton.classList.remove("is-hidden");
-  nextButton.classList.remove("is-hidden");
+  prev.classList.remove("is-hidden");
+  next.classList.remove("is-hidden");
 }
 
+let slider = document.querySelector('.slider'),
+  sliderList = slider.querySelector('.slider-list'),
+  sliderTrack = slider.querySelector('.slider-track'),
+  slides = slider.querySelectorAll('.slide'),
+  arrows = slider.querySelector('.slider-arrows'),
+  prev = arrows.children[0],
+  next = arrows.children[1],
+  slideWidth = slides[0].offsetWidth,
+  slideIndex = 0,
+  posInit = 0,
+  posX1 = 0,
+  posX2 = 0,
+  posY1 = 0,
+  posY2 = 0,
+  posFinal = 0,
+  isSwipe = false,
+  isScroll = false,
+  allowSwipe = true,
+  transition = true,
+  nextTrf = 0,
+  prevTrf = 0,
+  lastTrf = --slides.length * slideWidth,
+  posThreshold = slides[0].offsetWidth * 0.35,
+  trfRegExp = /([-0-9.]+(?=px))/,
+  swipeStartTime,
+  swipeEndTime,
+  getEvent = function() {
+    return (event.type.search('touch') !== -1) ? event.touches[0] : event;
+  },
+  slide = function() {
+    if (transition) {
+      sliderTrack.style.transition = 'transform .5s';
+    }
+    sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
 
-//Remove Prev and Next Arrows (First and Last)
-const removeArrow = () => {
-  const currentSlide = track.querySelector(".current-slide");
-  const slideOne = slides[0];
-  const slideTwo = slides[1];
-  const slideThree = slides[2];
-  const indicatorOne = indicator[0];
-  const indicatorTwo = indicator[1];
-  const indicatorThree = indicator[2];
+    prev.classList.toggle('disabled', slideIndex === 0);
+    next.classList.toggle('disabled', slideIndex === --slides.length);
 
-  if (currentSlide == slideOne) {
-    prevButton.classList.add("is-hidden");
-    indicatorOne.classList.remove("is-hidden");
-    indicatorTwo.classList.add("is-hidden");
-    indicatorThree.classList.add("is-hidden");
-    console.log("slide 1");
-  } else if (currentSlide == slideTwo) {
-    prevButton.classList.remove("is-hidden");
-    nextButton.classList.remove("is-hidden");
-    indicatorOne.classList.add("is-hidden");
-    indicatorTwo.classList.remove("is-hidden");
-    indicatorThree.classList.add("is-hidden");
-    console.log("slide 2");
-  } else if (currentSlide == slideThree) {
-    nextButton.classList.add("is-hidden");
-    indicatorOne.classList.add("is-hidden");
-    indicatorTwo.classList.add("is-hidden");
-    indicatorThree.classList.remove("is-hidden");
-    console.log("slide 3");
+  },
+  swipeStart = function() {
+    let evt = getEvent();
+
+    if (allowSwipe) {
+
+      swipeStartTime = Date.now();
+      
+      transition = true;
+
+      nextTrf = (slideIndex + 1) * -slideWidth;
+      prevTrf = (slideIndex - 1) * -slideWidth;
+
+      posInit = posX1 = evt.clientX;
+      posY1 = evt.clientY;
+
+      sliderTrack.style.transition = '';
+
+      document.addEventListener('touchmove', swipeAction);
+      document.addEventListener('mousemove', swipeAction);
+      document.addEventListener('touchend', swipeEnd);
+      document.addEventListener('mouseup', swipeEnd);
+
+      sliderList.classList.remove('grab');
+      sliderList.classList.add('grabbing');
+    }
+  },
+  swipeAction = function() {
+
+    let evt = getEvent(),
+      style = sliderTrack.style.transform,
+      transform = +style.match(trfRegExp)[0];
+
+    posX2 = posX1 - evt.clientX;
+    posX1 = evt.clientX;
+
+    posY2 = posY1 - evt.clientY;
+    posY1 = evt.clientY;
+
+    if (!isSwipe && !isScroll) {
+      let posY = Math.abs(posY2);
+      if (posY > 7 || posX2 === 0) {
+        isScroll = true;
+        allowSwipe = false;
+      } else if (posY < 7) {
+        isSwipe = true;
+      }
+    }
+
+    if (isSwipe) {
+      if (slideIndex === 0) {
+        if (posInit < posX1) {
+          setTransform(transform, 0);
+          return;
+        } else {
+          allowSwipe = true;
+        }
+      }
+
+      // запрет ухода вправо на последнем слайде
+      if (slideIndex === --slides.length) {
+        if (posInit > posX1) {
+          setTransform(transform, lastTrf);
+          return;
+        } else {
+          allowSwipe = true;
+        }
+      }
+
+      if (posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf) {
+        reachEdge();
+        return;
+      }
+
+      sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
+    }
+
+  },
+  swipeEnd = function() {
+    posFinal = posInit - posX1;
+
+    isScroll = false;
+    isSwipe = false;
+
+    document.removeEventListener('touchmove', swipeAction);
+    document.removeEventListener('mousemove', swipeAction);
+    document.removeEventListener('touchend', swipeEnd);
+    document.removeEventListener('mouseup', swipeEnd);
+
+    sliderList.classList.add('grab');
+    sliderList.classList.remove('grabbing');
+
+    if (allowSwipe) {
+      swipeEndTime = Date.now();
+      if (Math.abs(posFinal) > posThreshold || swipeEndTime - swipeStartTime < 300) {
+        if (posInit < posX1) {
+          slideIndex--;
+        } else if (posInit > posX1) {
+          slideIndex++;
+        }
+      }
+
+      if (posInit !== posX1) {
+        allowSwipe = false;
+        slide();
+        indicate();
+      } else {
+        allowSwipe = true;
+      }
+
+    } else {
+      allowSwipe = true;
+    }
+
+  },
+  setTransform = function(transform, comapreTransform) {
+    if (transform >= comapreTransform) {
+      if (transform > comapreTransform) {
+        sliderTrack.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
+      }
+    }
+    allowSwipe = false;
+  },
+  reachEdge = function() {
+    transition = false;
+    swipeEnd();
+    allowSwipe = true;
+  };
+
+sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
+sliderList.classList.add('grab');
+
+sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
+slider.addEventListener('touchstart', swipeStart);
+slider.addEventListener('mousedown', swipeStart);
+
+arrows.addEventListener('click', function() {
+  let target = event.target;
+
+  if (target.classList.contains('next')) {
+    slideIndex++;
+    indicate();
+  } else if (target.classList.contains('prev')) {
+    slideIndex--;
+    indicate();
+  } else {
+    return;
   }
-};
 
-removeArrow();
+  slide();
+  
+});
+
+indicate = function(){
+ if(slideIndex === 0){
+  indicator[0].classList.remove('is-hidden');
+  indicator[1].classList.add('is-hidden');
+  indicator[2].classList.add('is-hidden');
+  console.log("slide 1");
+ } else if (slideIndex === 1){
+  indicator[0].classList.add('is-hidden');
+  indicator[1].classList.remove('is-hidden');
+  indicator[2].classList.add('is-hidden');
+  console.log("slide 2");
+ } else if (slideIndex === 2){
+  indicator[0].classList.add('is-hidden');
+  indicator[1].classList.add('is-hidden');
+  indicator[2].classList.remove('is-hidden');
+  console.log("slide 3");
+ };
+};

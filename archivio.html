@@ -11,20 +11,150 @@
   <title>Archivio</title>
 </head>
 <body>
-  <div class="header-container">
-    <div class="title" style="font-family: Karmina; font-size: 30px;">Ascolta i suoni e le voci del paesaggio</div>
-    <div class="menu">
-      <div class="archivio">
-        <a href="index.html">diorama</a>
+    <div class="header-container">
+        <div class="title" style="font-family: Karmina; font-size: 30px">
+          Ascolta i suoni e le voci del paesaggio
+        </div>
+        <div class="menu">
+          <div class="slide-indicator">
+            <p class="indicator">1/3</p>
+            <p class="indicator">2/3</p>
+            <p class="indicator">3/3</p>
+          </div>
+          <div class="archivio">
+            <a href="index.html" style="font-family: KarminaSansR; font-size: 21px">
+              | diorama</a>
+          </div>
+          <div class="info">
+            <button class="info-button-open" style="font-family: KarminaSansR; font-size: 21px" onclick="openInfo()">
+              | info+
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="info">
-        <button class="info-button-open">info+</button>
+  
+  <div id="myInfoBox" class="info-box">
+    <button class="info-button-close closeInfo" onclick="closeInfo()">info-</button>
+    <div class="info-container">
+      <div class="info-content">
+        <div class="info-title">Versi e Narrazioni</div>
+        <div class="versi-narrazione-box">
+          <div class="icon-type">
+            <div class="icon-versi">icon goes here</div>
+            <div>Verso</div>
+          </div>
+          <div class="icon-type">
+            <div class="icon-versi">icon goes here</div>
+            <div>Audio narrazione</div>
+          </div>
+          <div class="icon-type">
+            <div class="icon-versi">icon goes here</div>
+            <div>No verso/audio</div>
+          </div>
+        </div>
+        <div class="archivi-sonori">
+          <div class="info-title">Archivi sonori</div>
+          <table>
+            <tr>
+              <td>- Biblioteca Museo</td>
+              <td>- Aporee</td>
+            </tr>
+            <tr>
+              <td>- Aplsalts</td>
+              <td>- Envato Elements</td>
+            </tr>
+            <tr>
+              <td>- Vogelwarte</td>
+              <td>- Fonik</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="crediti">
+          <div class="info-title">Crediti</div>
+          <div class="info-subtitle">SUPSI - Istituto Design</div>
+          <table>
+            <tr>
+              <td>Jean-Pierre Calderolo</td>
+              <td>Coordinatore progetto</td>
+            </tr>
+            <tr>
+              <td>Marta Pucciarelli</td>
+              <td>Sonificazione diorama</td>
+            </tr>
+            <tr>
+              <td>Vanessa De Luca</td>
+              <td>Attività didattiche</td>
+            </tr>
+            <tr>
+              <td>Giulio Zaccarelli</td>
+              <td>Parete scientifica</td>
+            </tr>
+            <tr>
+              <td>Antonella Autuori</td>
+              <td>Interfaccia sonora</td>
+            </tr>
+          </table>
+          <div class="info-subtitle">Collaboratori esterni</div>
+          <table>
+            <tr>
+              <td>Daniele Murgia</td>
+              <td>Produzione suoni</td>
+            </tr>
+            <tr>
+              <td>Alberto Guerra</td>
+              <td>Sviluppo interfaccia</td>
+            </tr>
+            <tr>
+              <td>Juan C. Alzate Peña</td>
+              <td>Sviluppo interfaccia</td>
+            </tr>
+          </table>
+          <div class="info-subtitle">
+            UNITAS - Associazione Ciechi e Ipovedenti<br />della Svizzera
+          </div>
+          <table>
+            <tr>
+              <td>Giorgietti Pia</td>
+              <td>Ruolo</td>
+            </tr>
+            <tr>
+              <td>Tiziana</td>
+              <td>Ruolo</td>
+            </tr>
+          </table>
+          <div class="info-subtitle">
+            UNISMR - Università degli Studi della Repubblica di San Marino
+          </div>
+          <div class="info-p">
+            Realizzazione della traccia<br />“Una passeggiata sonora”
+          </div>
+          <table>
+            <tr>
+              <td>Roberto Paci dalò</td>
+              <td>Docente</td>
+            </tr>
+            <tr>
+              <td>Alessandra Bosco</td>
+              <td>Docente</td>
+            </tr>
+            <tr>
+              <td>Alice di Francescantonio</td>
+              <td>Progettista</td>
+            </tr>
+            <tr>
+              <td>Marta Mezzetti</td>
+              <td>Progettista</td>
+            </tr>
+            <tr>
+              <td>Nicolò Sinatra</td>
+              <td>Progettista</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   </div>
-  
-  <div class="info-box">
-    <button class="info-button-close">info-</button>
 
   </div>
   <table class="archivio-table">
@@ -189,7 +319,7 @@
   <p>aa</p>
 </div>
 
-  <script src="js/archivio.js"></script>
+  <script src="js/script.js"></script>
   <script src="js/audio.js"></script>
 </body>
 </html>

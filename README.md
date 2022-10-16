@@ -1,4 +1,4 @@
-# MCSN
+# MCSN - SUPSI
 
 Developed by:
 Alberto Guerra & Juan Camilo Alzate Peña
