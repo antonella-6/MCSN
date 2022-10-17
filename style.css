@@ -108,20 +108,26 @@ body {
 .prev {
   border: none;
   cursor: pointer;
-  width: 0.5em;
   height: 40px;
+  width: 2em;
 }
 
 .prev {
   position: absolute;
   left: 0px;
   z-index: 1;
+  background: url(assets/left.svg);
+  margin-left: 0.9em;
+  background-repeat: no-repeat;
+  
 }
 
 .next {
   position: absolute;
   right: 0px;
   z-index: 1;
+  background: url(assets/right.svg);
+   background-repeat: no-repeat;
 }
 
 .next.disabled,
@@ -220,6 +226,101 @@ body {
 }
 
 /* Animal Boxes - SLIDE TWO*/
+
+.slideTwo {
+  position: relative;
+}
+
+.marmotta {
+  position: absolute;
+  top: 10em;
+  left: 4em;
+}
+
+.marasso {
+  position: absolute;
+  top: 25em;
+  left: 14em;
+}
+
+.coturnice {
+  position: absolute;
+  top: 15em;
+  left: 24em;
+}
+
+.culbianco {
+  position: absolute;
+  top: 30em;
+  left: 30em;
+}
+
+.passera-scopaiola {
+  position: absolute;
+  top: 8em;
+  left: 34em;
+}
+
+.camoscio {
+  position: absolute;
+  top: 27em;
+  left: 44em;
+}
+
+.stambecco-alpino {
+  position: absolute;
+  top: 6em;
+  left: 52em;
+}
+
+.spioncello {
+  position: absolute;
+  top: 14em;
+  left: 62em;
+}
+
+.toporagno-alpino {
+  position: absolute;
+  top: 30em;
+  left: 66em;
+}
+
+/* Animal Boxes - SLIDE Three*/
+
+.slideThree {
+  position: relative;
+}
+
+.arvicola-delle-nevi {
+  position: absolute;
+  top: 29em;
+  left: 5em;
+}
+
+.camoscio-page-three {
+  position: absolute;
+  top: 15em;
+  left: 22em;
+}
+
+.stambecco-alpino-page-three {
+  position: absolute;
+  top: 28em;
+  left: 34em;
+}
+
+.fringuello-alpino {
+  position: absolute;
+  top: 8em;
+  left: 50em;
+}
+
+.picchio-muraiolo {
+  position: absolute;
+  top: 15em;
+  left: 64em;
+}
+
 
 /* Below Header container */
 
@@ -401,7 +502,7 @@ body {
 }
 
 .archivio-table tr {
-  border-bottom: 0.04em solid black;
+  border-bottom: 0.029em solid black;
   vertical-align:-webkit-baseline-middle; 
   vertical-align: middle;
 }
