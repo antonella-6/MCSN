@@ -43,6 +43,10 @@ body {
   font-size: 1.36em;
 }
 
+.archivio-header {
+  position: fixed;
+}
+
 .menu {
   display: flex;
   flex-direction: row;
