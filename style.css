@@ -331,11 +331,11 @@ margin-bottom: 40px;
 }
 
 .second-column {
-  width: 28%;
+  width: 30%;
 }
 
 .third-column {
-  width: 26%;
+  width: 22%;
 }
 
 .archivio-table tr:nth-child(n + 2) td:nth-child(2) {
