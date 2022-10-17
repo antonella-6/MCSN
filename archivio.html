@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +8,33 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="audio.css">
   <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-  crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <title>Archivio</title>
 </head>
+
 <body>
-    <div class="header-container">
-        <div class="title" style="font-family: Karmina; font-size: 30px">
-          Ascolta i suoni e le voci del paesaggio
-        </div>
-        <div class="menu">
-          <div class="slide-indicator">
-            <p class="indicator">1/3</p>
-            <p class="indicator">2/3</p>
-            <p class="indicator">3/3</p>
-          </div>
-          <div class="archivio">
-            <a href="index.html" style="font-family: KarminaSansR; font-size: 21px">
-              | diorama</a>
-          </div>
-          <div class="info">
-            <button class="info-button-open" style="font-family: KarminaSansR; font-size: 21px" onclick="openInfo()">
-              | info+
-            </button>
-          </div>
-        </div>
+  <div class="header-container">
+    <div class="title" style="font-family: Karmina; font-size: 30px">
+      Ascolta i suoni e le voci del paesaggio
+    </div>
+    <div class="menu">
+      <div class="slide-indicator">
+        <p class="indicator">1/3</p>
+        <p class="indicator">2/3</p>
+        <p class="indicator">3/3</p>
       </div>
-  
+      <div class="archivio">
+        <a href="index.html" style="font-family: KarminaSansR; font-size: 21px">
+          | diorama</a>
+      </div>
+      <div class="info">
+        <button class="info-button-open" style="font-family: KarminaSansR; font-size: 21px" onclick="openInfo()">
+          | info+
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div id="myInfoBox" class="info-box">
     <button class="info-button-close closeInfo" onclick="closeInfo()">info-</button>
     <div class="info-container">
@@ -40,16 +42,16 @@
         <div class="info-title">Versi e Narrazioni</div>
         <div class="versi-narrazione-box">
           <div class="icon-type">
-            <div class="icon-versi">icon goes here</div>
-            <div>Verso</div>
+            <img class="icon-versi" src="assets\icons\verso-grey.svg" />
+            <p>Verso</p>
           </div>
           <div class="icon-type">
-            <div class="icon-versi">icon goes here</div>
-            <div>Audio narrazione</div>
+            <img class="icon-versi" src="assets\icons\audio-narrazione-grey.svg" />
+            <p>Audio narrazione</p>
           </div>
           <div class="icon-type">
-            <div class="icon-versi">icon goes here</div>
-            <div>No verso/audio</div>
+            <img class="icon-versi" src="assets\icons\no-audio.svg" />
+            <p>No verso/audio</p>
           </div>
         </div>
         <div class="archivi-sonori">
@@ -124,7 +126,7 @@
             </tr>
           </table>
           <div class="info-subtitle">
-            UNISMR - Università degli Studi della Repubblica di San Marino
+            UNISMR - Università degli Studi della Repubblica <br>di San Marino
           </div>
           <div class="info-p">
             Realizzazione della traccia<br />“Una passeggiata sonora”
@@ -159,167 +161,168 @@
   </div>
   <table class="archivio-table">
     <tr>
-        <td>Soggetto</td>
-        <td>Nome scientifico</td>
-        <td>Verso</td>
-        <td>Narrazione</td>
+      <td>Soggetto</td>
+      <td>Nome scientifico</td>
+      <td>Verso</td>
+      <td>Narrazione</td>
     </tr>
     <tr>
-        <td>Passeggiata sonora</td>
-        <td>-</td>
-        <td></td>
-        <td></td>
+      <td>Passeggiata sonora</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Ambiente alpino</td>
-        <td>-</td>
-        <td></td>
-        <td></td>
+      <td>Ambiente alpino</td>
+      <td>-</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Aquila reale</td>
-        <td>Aquila chrysaetos</td>
-        <td></td>
-        <td></td>
+      <td>Aquila reale</td>
+      <td>Aquila chrysaetos</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Arvicola delle nevi</td>
-        <td>Chionomys nivalis</td>
-        <td></td>
-        <td></td>
+      <td>Arvicola delle nevi</td>
+      <td>Chionomys nivalis</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Camoscio</td>
-        <td>Rupicapra rupicapra</td>
-        <td></td>
-        <td></td>
+      <td>Camoscio</td>
+      <td>Rupicapra rupicapra</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Codirossone</td>
-        <td>Monticola saxatilis</td>
-        <td></td>
-        <td></td>
+      <td>Codirossone</td>
+      <td>Monticola saxatilis</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Codirosso spazzacamino</td>
-        <td>Phoenicurus ochruros</td>
-        <td></td>
-        <td></td>
+      <td>Codirosso spazzacamino</td>
+      <td>Phoenicurus ochruros</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Coturnice</td>
-        <td>Alectoris graeca</td>
-        <td></td>
-        <td></td>
+      <td>Coturnice</td>
+      <td>Alectoris graeca</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Culbianco</td>
-        <td>Oenanthe oenanthe</td>
-        <td></td>
-        <td></td>
+      <td>Culbianco</td>
+      <td>Oenanthe oenanthe</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Fringuello alpino</td>
-        <td>Mantifringilla nivalis</td>
-        <td></td>
-        <td></td>
+      <td>Fringuello alpino</td>
+      <td>Mantifringilla nivalis</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Gracchio alpino</td>
-        <td>Pyrrhocorax graculus</td>
-        <td></td>
-        <td></td>
+      <td>Gracchio alpino</td>
+      <td>Pyrrhocorax graculus</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Gracchio corallino</td>
-        <td>Pyrrhocorax pyrrhocorax</td>
-        <td></td>
-        <td></td>
+      <td>Gracchio corallino</td>
+      <td>Pyrrhocorax pyrrhocorax</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Lucertola vipara</td>
-        <td>Zootca vivipara</td>
-        <td></td>
-        <td></td>
+      <td>Lucertola vipara</td>
+      <td>Zootca vivipara</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Marasso</td>
-        <td>Vipera berus</td>
-        <td></td>
-        <td></td>
+      <td>Marasso</td>
+      <td>Vipera berus</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Marmotta</td>
-        <td>Marmota marmota</td>
-        <td></td>
-        <td></td>
+      <td>Marmotta</td>
+      <td>Marmota marmota</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Merlo dal collare</td>
-        <td>Turdus torquatus</td>
-        <td></td>
-        <td></td>
+      <td>Merlo dal collare</td>
+      <td>Turdus torquatus</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Passera scopaiola</td>
-        <td>Prunella modularis</td>
-        <td></td>
-        <td></td>
+      <td>Passera scopaiola</td>
+      <td>Prunella modularis</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Picchio muraiolo</td>
-        <td>Tichodroma muraria</td>
-        <td></td>
-        <td></td>
+      <td>Picchio muraiolo</td>
+      <td>Tichodroma muraria</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Salamandra nera</td>
-        <td>Salamandra atra</td>
-        <td></td>
-        <td></td>
+      <td>Salamandra nera</td>
+      <td>Salamandra atra</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Sordone</td>
-        <td>Prunella collaris</td>
-        <td></td>
-        <td></td>
+      <td>Sordone</td>
+      <td>Prunella collaris</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Spioncello</td>
-        <td>Anthus spinoletta</td>
-        <td></td>
-        <td></td>
+      <td>Spioncello</td>
+      <td>Anthus spinoletta</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Stambecco alpino</td>
-        <td>Capra ibex</td>
-        <td></td>
-        <td></td>
+      <td>Stambecco alpino</td>
+      <td>Capra ibex</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Toporagno alpino</td>
-        <td>Sorex alpinus</td>
-        <td></td>
-        <td></td>
+      <td>Toporagno alpino</td>
+      <td>Sorex alpinus</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-        <td>Topo selvatico alpino</td>
-        <td>Apodemus alpicola</td>
-        <td></td>
-        <td></td>
+      <td>Topo selvatico alpino</td>
+      <td>Apodemus alpicola</td>
+      <td></td>
+      <td></td>
     </tr>
-</table>
+  </table>
 
-<div class="footer">
-  <span class="audioControl" id="progressAudioTime">00:00</span>
-  <input class="audioControl" id="progressAudioBar" type="range" value="0" min="0" max="100" step="1">
-  <p>aa</p>
-  <p>aa</p>
-  <p>aa</p>
-  <p>aa</p>
-</div>
+  <div class="footer">
+    <span class="audioControl" id="progressAudioTime">00:00</span>
+    <input class="audioControl" id="progressAudioBar" type="range" value="0" min="0" max="100" step="1">
+    <p>aa</p>
+    <p>aa</p>
+    <p>aa</p>
+    <p>aa</p>
+  </div>
 
   <script src="js/script.js"></script>
   <script src="js/audio.js"></script>
 </body>
+
 </html>
