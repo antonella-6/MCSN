@@ -33,7 +33,7 @@ body {
   overflow: hidden;
 
   /*width: 1440px;*/
-  height: 60px;
+  height: 55px;
   left: 0px;
   top: 0px;
 
@@ -68,7 +68,7 @@ body {
   margin: 0 auto;
   height: calc(100% - 100px);
   width: 100%;
-  top: 60px;
+  top: 55px;
   user-select: none;
   touch-action: pan-y;
 }
@@ -97,8 +97,6 @@ body {
   flex-shrink: 0;
   font-size: 50px;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .slider-arrows {
@@ -136,6 +134,49 @@ body {
   pointer-events: none;
 }
 
+.animal-box{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.animal-name {
+  font-family: 'Karmina';
+  font-size: 22px;
+  margin: 17px 0 6px 0;
+}
+
+.scientific-name {
+  font-family: 'KarminaSans_Light';
+  font-size: 18px;
+  font-style: italic;
+}
+
+.sordone {
+  position: absolute;
+  top: 138px;
+  left: 180px;
+}
+
+.codirossone {
+  position: absolute;
+  top: 316px;
+  left: 317px;
+}
+
+.lucertola-vivipara {
+  position: absolute;
+  top: 375px;
+  left: 65px;
+}
+
+.topo-selvatico-alpino {
+  position: absolute;
+  top: 746px;
+  left: 376px;
+}
+
 /* Below Header container */
 
 .below-header-container {
@@ -153,6 +194,7 @@ body {
 .below-header-container img:nth-of-type(2) {
   margin-left: 70px;
 }
+
 
 /* Footer */
 
