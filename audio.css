@@ -3,8 +3,8 @@
 }
 
 #progressAudioBar{
-    width: 90%;
-    margin: auto; 
+    width: 40%;
+    margin-left: 0.9em; 
     -webkit-appearance: none;
 }
 

@@ -24,6 +24,7 @@ body {
 /* Header */
 
 .header-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -179,7 +180,6 @@ body {
 /* Below Header container */
 
 .below-header-container {
-  width: 100%;
   display: flex;
   margin: 0.5em 0 0 0.9em;
 }
@@ -198,17 +198,22 @@ body {
 /* Footer */
 
 .footer {
+  width: 100vw;
   background-color: #ededed;
   position: fixed;
-  width: 100%;
   height: 1.8em;
   bottom: 0px;
   align-items: center;
   display: flex;
-  justify-content: space-evenly;
   z-index: 1;
   font-family: "KarminaSansR";
   font-size: 1.2em;
+}
+
+.languages {
+  display: flex;
+  position: absolute;
+  right: 1.3em;
 }
 
 /* Info Tab */
