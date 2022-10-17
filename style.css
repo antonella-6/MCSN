@@ -63,7 +63,7 @@ body {
 .slider {
   position: absolute;
   margin: 0 auto;
-  height: calc(100% - 2.5em - 1.8em - 0.5em);
+  height: calc(100vh - 3.8em);
   width: 100%;
   top: 2.5em;;
   user-select: none;
@@ -172,7 +172,7 @@ body {
 
 .topo-selvatico-alpino {
   position: absolute;
-  top: 27em;
+  top: 32em;
   left: 17em;
 }
 
@@ -207,6 +207,8 @@ body {
   display: flex;
   justify-content: space-evenly;
   z-index: 1;
+  font-family: "KarminaSansR";
+  font-size: 1.2em;
 }
 
 /* Info Tab */
@@ -229,12 +231,20 @@ body {
 .info-button-close {
   background: transparent;
   border: 0;
+  font-family: "KarminaSansR";
+  text-decoration: underline;
+  font-size: 1.1em;
 }
+
+.archivio a {
+  font-family: "KarminaSansR";
+  text-decoration: underline;
+  font-size: 1.1em;
+}
+
 
 .info-button-close {
   position: absolute;
-  font-family: "KarminaSansR";
-  font-size: 1.1em;
   padding: 0;
   right: 0px;
   margin: 0.7em 1.4em 0 0;
