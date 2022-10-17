@@ -329,8 +329,10 @@ body {
 /* Below Header container */
 
 .below-header-container {
+  position: relative;
   display: flex;
   margin: 0.5em 0 0 0.9em;
+  z-index: 10;
 }
 
 .below-header-container p {
@@ -339,10 +341,14 @@ body {
   margin-left: 0.68em;
 }
 
-.below-header-container img:nth-of-type(2) {
+.below-header-container .passeggiata {
   margin-left: 3.1em;
 }
 
+.below-header-container div {
+  display: flex;
+  align-items: center;
+}
 
 /* Footer */
 
