@@ -500,9 +500,8 @@ body {
 .archivio-table {
   border-collapse: collapse;
   max-width: 100vw;
-  margin-top: 1.9em;
   width: calc(100% - 1.8em);
-  margin: 1.9em auto;
+  margin: 3.9em auto;
 }
 
 .archivio-table tr {
