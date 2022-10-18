@@ -1,11 +1,11 @@
 .audioControl{
     opacity: 0;
+    margin-left: 0.9em;
 }
 
 #progressAudioBar{
-    width: 25%;
-    margin-left: 0.9em; 
-    -webkit-appearance: none;
+    width: 20%;
+        -webkit-appearance: none;
 }
 
 

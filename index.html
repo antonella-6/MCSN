@@ -23,14 +23,17 @@
         <p class="indicator is-hidden">2/3</p>
         <p class="indicator is-hidden">3/3</p>
       </div>
+      <div class="separator">
+        <img src="assets\icons\separator.svg"/>
+      </div>
       <div class="archivio">
-        <a href="archivio.html">
-          | archivio</a>
+        <a href="archivio.html">archivio</a>
+      </div>
+      <div class="separator">
+        <img src="assets\icons\separator.svg"/>
       </div>
       <div class="info">
-        <button class="info-button-open" onclick="openInfo()">
-          | info+
-        </button>
+        <button class="info-button-open" onclick="openInfo()">info+</button>
       </div>
     </div>
   </div>
@@ -50,13 +53,19 @@
     <span class="audioControl" id="progressAudioTime">00:00</span>
     <input class="audioControl" id="progressAudioBar" type="range" value="0" min="0" max="100" step="1" />
     <div class="languages">
-      <p>IT</p>
-      <p>|</p>
-      <p>EN</p>
-      <p>|</p>
-      <p>FR</p>
-      <p>|</p>
-      <p>DE</p>
+      <p class="active-language">IT</p>
+      <div class="separator-footer">
+        <img src="assets\icons\separator.svg"/>
+      </div>
+      <p class="inactive-language" >EN</p>
+      <div class="separator-footer">
+        <img src="assets\icons\separator.svg"/>
+      </div>
+      <p class="inactive-language">FR</p>
+      <div class="separator-footer">
+        <img src="assets\icons\separator.svg"/>
+      </div>
+      <p class="inactive-language">DE</p>
     </div>
   </div>
 

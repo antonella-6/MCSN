@@ -43,6 +43,18 @@ body {
   font-size: 1.36em;
 }
 
+.separator img{
+  margin: 2px 12px 0;
+  width: 0.095em;
+
+}
+
+.separator-footer img{
+  margin: 16px 12px 0;
+  width: 0.095em;
+
+}
+
 .archivio-header {
   position: fixed;
 }
@@ -56,7 +68,8 @@ body {
 .indicator {
   font-family: "KarminaSansL";
   font-feature-settings: "frac" 1;
-  font-size: 1.8em;
+  font-size: 1.6em;
+  margin-top: 30px;
 }
 
 .is-hidden {
@@ -371,6 +384,10 @@ body {
   right: 1.3em;
 }
 
+.inactive-language {
+  color: #808080;
+}
+
 /* Info Tab */
 
 .info-box {
@@ -400,14 +417,20 @@ body {
   font-family: "KarminaSansR";
   text-decoration: underline;
   font-size: 1.1em;
+  color: black;
 }
 
+.info-button-open {
+  padding: 0;
+  right: 0px;
+  margin: 0em 1.4em 0 0;
+}
 
 .info-button-close {
   position: absolute;
   padding: 0;
   right: 0px;
-  margin: 0.7em 1.4em 0 0;
+  margin: 0.6em 1.4em 0 0;
 }
 
 .info-container {
