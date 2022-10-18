@@ -116,7 +116,6 @@ let slider = document.querySelector('.slider'),
         }
       }
 
-      // запрет ухода вправо на последнем слайде
       if (slideIndex === --slides.length) {
         if (posInit > posX1) {
           setTransform(transform, lastTrf);
@@ -228,3 +227,12 @@ indicate = function(){
   console.log("slide 3");
  };
 };
+
+/* Show Image when icon clicked */
+
+var image = document.querySelector('#image');
+
+image.addEventListener('click', function() {
+    image.src = 'assets/images/codirosso.png';
+    image.style.width = "5.5em"
+});

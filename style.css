@@ -167,6 +167,18 @@ body {
   align-items: flex-start;
 }
 
+.versi-box-container {
+  width: 5.5em;
+  height: 5.5em;
+  position: relative;
+}
+
+#image {
+  bottom: 0px;
+  object-position: left bottom !important;
+  position: absolute;
+}
+
 .animal-name {
   font-family: 'Karmina';
   font-size: 1em;
