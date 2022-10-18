@@ -234,5 +234,6 @@ var image = document.querySelector('#image');
 
 image.addEventListener('click', function() {
     image.src = 'assets/images/codirosso.png';
-    image.style.width = "5.5em"
+    image.style.width = "5.5em";
+    
 });
