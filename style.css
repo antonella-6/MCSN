@@ -1,3 +1,9 @@
+:root {
+  --versi-black: url(assets/icons/verso-black.svg);
+  --versi-grey: url(assets/icons/verso-grey.svg);
+}
+
+
 /* Fonts */
 
 @font-face {
@@ -14,6 +20,7 @@
   font-family: KarminaSansR;
   src: url(assets/fonts/KarminaSans_Regular.otf);
 }
+
 
 body {
   margin: 0;
@@ -173,10 +180,30 @@ body {
   position: relative;
 }
 
-#image {
-  bottom: 0px;
+.image {
+  margin-bottom: 0.77em;
   object-position: left bottom !important;
-  position: absolute;
+  width: 5.5em;
+  height: 5.5em;
+}
+
+.icon {
+  background-size: 2.45em;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.versi-black {
+  background-image: var(--versi-black);
+}
+
+.playing-open {
+  width: 5.5em;
+  height: 5.5em;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+
 }
 
 .animal-name {
@@ -236,7 +263,7 @@ body {
   left: 40em;
 }
 
-.merlo-dal-collare {
+.merlo_dal_collare {
   position: absolute;
   top: 22.1em;
   left: 50em;
