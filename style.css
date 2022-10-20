@@ -1,9 +1,3 @@
-:root {
-  --versi-black: url(assets/icons/verso-black.svg);
-  --versi-grey: url(assets/icons/verso-grey.svg);
-}
-
-
 /* Fonts */
 
 @font-face {
@@ -172,38 +166,6 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
-}
-
-.versi-box-container {
-  width: 5.5em;
-  height: 5.5em;
-  position: relative;
-}
-
-.image {
-  margin-bottom: 0.77em;
-  object-position: left bottom !important;
-  width: 5.5em;
-  height: 5.5em;
-}
-
-.icon {
-  background-size: 2.45em;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-}
-
-.versi-black {
-  background-image: var(--versi-black);
-}
-
-.playing-open {
-  width: 5.5em;
-  height: 5.5em;
-  background-size: cover;
-  background-position: center center;
-  border-radius: 10px;
-
 }
 
 .animal-name {

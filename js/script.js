@@ -227,15 +227,3 @@ indicate = function(){
   console.log("slide 3");
  };
 };
-
-/* Show Image when icon clicked */
-
-var image = document.querySelector('#image');
-var imageName = image.getAttribute('name');
-var src = "assets/images/" + imageName +".png";
-
-image.addEventListener('click', function() {
-    image.src = src;
-    image.style.width = "5.5em";
-    
-});
