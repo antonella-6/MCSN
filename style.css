@@ -576,8 +576,8 @@ body {
 
 .archivio-table tr {
   border-bottom: 0.029em solid black;
-  /* vertical-align:-webkit-baseline-middle; 
-  vertical-align: middle; */
+  vertical-align:-webkit-baseline-middle; 
+  vertical-align: middle;
 }
 
 .archivio-table tr:last-child {
@@ -625,11 +625,12 @@ body {
   padding: 0.5em 0;
 }
 
-.archivio-table tr:nth-child(n + 2) td:nth-child(n + 3) {
-  vertical-align: top;
-}
 
 .fix-archivio {
   overflow-y: hidden;
   position: fixed;
+}
+
+tr:has(.image) {
+  vertical-align: top;
 }
