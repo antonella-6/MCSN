@@ -2,7 +2,6 @@ var isBusy = false;
 const evento = new Event("end");
 var audio = new Audio();
 const iconImg = document.querySelectorAll('.icon');
-const mainAudio = document.querySelectorAll('.main-audio');
 
 
 
