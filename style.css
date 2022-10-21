@@ -181,6 +181,31 @@ body {
   font-style: italic;
 }
 
+.icon {
+  width: 4.9em;
+  height: 4.9em;
+  background-size: 2.45em;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  cursor: pointer;
+}
+
+.image {
+  width: 4.9em;
+  height: 4.9em;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.main-audio {
+  width: auto;
+}
+
+/* .verso-black {
+  background-image: url(assets/icons/verso-black.svg);
+} */
+
 /* Animal Boxes - SLIDE ONE*/
 
 

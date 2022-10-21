@@ -1,6 +1,46 @@
 var isBusy = false;
 const evento = new Event("end");
 var audio = new Audio();
+const iconImg = document.querySelectorAll('.icon');
+const mainAudio = document.querySelectorAll('.main-audio');
+
+
+
+for (var i = 0; i < iconImg.length; i++) {
+  /* console.log(iconImg[i]); */
+  var iconType = iconImg[i].getAttribute('data-type');
+  var iconSrc = "assets/icons/" + iconType + ".svg";
+  iconImg[i].classList.remove('image');
+
+  console.log(iconType);
+  console.log(iconSrc);
+
+  iconImg[i].style.backgroundImage = 'url(' + iconSrc + ')';
+
+  iconImg[i].addEventListener("click", function () {
+    removeClass();
+    var imgName = event.target.getAttribute("content");
+    var imgSrc = "assets/images/" + imgName + ".jpg";
+    console.log('cliked');
+    this.style.backgroundImage = 'url(' + imgSrc + ')';
+    this.classList.remove('icon');
+    this.classList.add('image');
+  });
+
+};
+
+
+
+function removeClass() {
+  for (var i = 0; i < iconImg.length; i++) {
+    var iconType = iconImg[i].getAttribute('data-type');
+    var iconSrc = "assets/icons/" + iconType + ".svg";
+    iconImg[i].style.backgroundImage = 'url(' + iconSrc + ')';
+    iconImg[i].classList.remove('image');
+    iconImg[i].classList.add('icon');
+  }
+}
+
 
 $(".btnAudio").on("click", function () {
   var src =
@@ -34,9 +74,16 @@ $(".btnAudio").on("click", function () {
 
   audio.addEventListener("ended", () => {
     isBusy = false;
+    for (var i = 0; i < iconImg.length; i++) {
+      iconImg[i].style.backgroundImage = 'url(' + iconSrc + ')';
+      iconImg[i].classList.remove('image');
+      iconImg[i].classList.add('icon');
+    }
+
   });
 
   audio.addEventListener("end", () => {
     audio.pause();
+
   });
 });

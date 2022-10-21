@@ -227,3 +227,5 @@ indicate = function(){
   console.log("slide 3");
  };
 };
+
+
