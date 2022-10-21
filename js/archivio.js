@@ -1,14 +1,18 @@
-const infoButtonOpen = document.querySelector('.info-button-open');
-const infoButtonClose = document.querySelector('.info-button-close');
-const infoBox = document.querySelector('.info-box');
-const archivioTable = document.querySelector('.archivio-table');
+const infoButtonOpen = document.querySelector(".info-button-open");
+const infoButtonClose = document.querySelector(".info-button-close");
+const infoBox = document.querySelector(".info-box");
 
-infoButtonOpen.addEventListener('click', e => {
-  infoBox.style.transform = 'translateX(-436px)';
-  archivioTable.classList.add('fix-archivio');
-})
+function openInfo() {
+  document.getElementById("myInfoBox").style.width = "436px";
+  document.getElementById("myInfoBox").style.left = "calc(100% - 436px)";
+  prev.classList.add("is-hidden");
+  next.classList.add("is-hidden");
+  
+}
 
-infoButtonClose.addEventListener('click', e => {
-  infoBox.style.transform = 'translateX(436px)';
-  archivioTable.classList.remove('fix-archivio');
-})
+function closeInfo() {
+  document.getElementById("myInfoBox").style.width = "0";
+  document.getElementById("myInfoBox").style.left = "100%";
+  prev.classList.remove("is-hidden");
+  next.classList.remove("is-hidden");
+}
