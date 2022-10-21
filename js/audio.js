@@ -4,9 +4,6 @@ var audio = new Audio();
 const iconImg = document.querySelectorAll('.icon');
 var mainAudio = document.querySelectorAll('.main-audio')
 
-
-
-
 for (var i = 0; i < iconImg.length; i++) {
   /* console.log(iconImg[i]); */
   var iconType = iconImg[i].getAttribute('data-type');
@@ -97,3 +94,41 @@ $(".btnAudio").on("click", function () {
 
   });
 });
+
+
+function preload(arrayOfImages) {
+  $(arrayOfImages).each(function(){
+      $('<img/>')[0].src = this;
+      // Alternatively you could use:
+      // (new Image()).src = this;
+  });
+}
+
+// Usage:
+
+preload([
+  'assets/images/aquila_reale.jpg',
+  'assets/images/arvicola_delle_nevi.jpg',
+  'assets/images/camoscio_F.jpg',
+  'assets/images/camoscio_M.jpg',
+  'assets/images/codirosso_spazzacamino.jpg',
+  'assets/images/codirossone.jpg',
+  'assets/images/coturnice.jpg',
+  'assets/images/culbianco.jpg',
+  'assets/images/fringuello_alpino.jpg',
+  'assets/images/gracchio_alpino.jpg',
+  'assets/images/gracchio_corallino.jpg',
+  'assets/images/lucertola_vivipera.jpg',
+  'assets/images/marasso.jpg',
+  'assets/images/marmotta.jpg',
+  'assets/images/merlo_dal_collare.jpg',
+  'assets/images/passera_scopaiola.jpg',
+  'assets/images/picchio_muraiolo.jpg',
+  'assets/images/salamandra_nera.jpg',
+  'assets/images/sordone.jpg',
+  'assets/images/spioncello.jpg',
+  'assets/images/stambecco_alpino_F.jpg',
+  'assets/images/stambecco_alpino_M.jpg',
+  'assets/images/topo_selvatico_alpino.jpg',
+  'assets/images/toporagno_alpino.jpg'
+]);
