@@ -65,6 +65,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
 .indicator {
@@ -129,6 +130,7 @@ body {
   cursor: pointer;
   height: 40px;
   width: 2em;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
 .prev {
@@ -452,6 +454,7 @@ body {
   text-decoration: underline;
   font-size: 1.1em;
   cursor: pointer;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
 .archivio a {
