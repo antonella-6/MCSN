@@ -166,7 +166,9 @@
       <td>-</td>
       <td></td>
       <td>
-        <img id="IT_passeggiata" class="icon-versi btnAudio" src="assets\icons\audio-narrazione-white.svg"/>
+        <div id="IT_passeggiata" class="btnAudio main-audio">
+          <img class="icon-versi" src="assets\icons\audio-narrazione-white.svg" />
+        </div>
       </td>
     </tr>
     <tr>
@@ -174,24 +176,26 @@
       <td>-</td>
       <td></td>
       <td>
-        <img id="IT_ambiente_alpino" class="icon-versi btnAudio" src="assets\icons\audio-narrazione-white.svg"/>
-      </td>
+        <div id="IT_ambiente_alpino" class="btnAudio main-audio">
+          <img class="icon-versi" src="assets\icons\audio-narrazione-white.svg" />
+        </div>
+        </td>
     </tr>
     <tr>
       <td>Aquila reale</td>
       <td>Aquila chrysaetos</td>
       <td>
-        <img id="aquila_reale" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="aquila_reale" data-type="verso-black" content="aquila_reale" class="btnAudio icon icon-archivio"></div>
       </td>
       <td>
-        <img id="IT_aquila" class="icon-versi btnAudio" src="assets\icons\audio-narrazione-black.svg"/>
+        <div id="IT_aquila" data-type="audio-narrazione-black" content="aquila_reale" class="btnAudio icon icon-archivio"></div>
       </td>
     </tr>
     <tr>
       <td>Arvicola delle nevi</td>
       <td>Chionomys nivalis</td>
       <td>
-        <img class="icon-versi" class="icon-versi" src="assets\icons\no-audio.svg"/>
+        <div data-type="no-audio" content="arvicola_delle_nevi" class="icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -199,7 +203,7 @@
       <td>Camoscio</td>
       <td>Rupicapra rupicapra</td>
       <td>
-        <img id="camoscio" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="camoscio" data-type="verso-black" content="camoscio_M" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -207,7 +211,7 @@
       <td>Codirossone</td>
       <td>Monticola saxatilis</td>
       <td>
-        <img id="codirossone" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="codirossone" data-type="verso-black" content="codirossone" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -215,7 +219,7 @@
       <td>Codirosso spazzacamino</td>
       <td>Phoenicurus ochruros</td>
       <td>
-        <img id="codirosso_spazzacamino" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="codirosso_spazzacamino" data-type="verso-black" content="codirosso_spazzacamino" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -223,7 +227,7 @@
       <td>Coturnice</td>
       <td>Alectoris graeca</td>
       <td>
-        <img id="coturnice" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="coturnice" data-type="verso-black" content="coturnice" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -231,7 +235,7 @@
       <td>Culbianco</td>
       <td>Oenanthe oenanthe</td>
       <td>
-        <img id="culbianco" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="culbianco" data-type="verso-black" content="culbianco" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -239,7 +243,7 @@
       <td>Fringuello alpino</td>
       <td>Mantifringilla nivalis</td>
       <td>
-        <img id="fringuello_alpino" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="fringuello_alpino" data-type="verso-black" content="fringuello_alpino" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -247,7 +251,7 @@
       <td>Gracchio alpino</td>
       <td>Pyrrhocorax graculus</td>
       <td>
-        <img id="gracchio_alpino" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="gracchio_alpino" data-type="verso-black" content="gracchio_alpino" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -255,7 +259,7 @@
       <td>Gracchio corallino</td>
       <td>Pyrrhocorax pyrrhocorax</td>
       <td>
-        <img id="gracchio_corallino" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="gracchio_corallino" data-type="verso-black" content="gracchio_corallino" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -263,7 +267,7 @@
       <td>Lucertola vipara</td>
       <td>Zootca vivipara</td>
       <td>
-        <img class="icon-versi" src="assets\icons\no-audio.svg"/>
+        <div data-type="no-audio" content="lucertola_vivipera" class="icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -271,7 +275,7 @@
       <td>Marasso</td>
       <td>Vipera berus</td>
       <td>
-        <img class="icon-versi" src="assets\icons\no-audio.svg"/>
+        <div data-type="no-audio" content="marasso" class="icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -279,17 +283,17 @@
       <td>Marmotta</td>
       <td>Marmota marmota</td>
       <td>
-        <img id="marmotta" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="marmotta" data-type="verso-black" content="marmotta" class="btnAudio icon icon-archivio"></div>
       </td>
       <td>
-        <img id="IT_marmotta" class="icon-versi btnAudio" src="assets\icons\audio-narrazione-black.svg"/>
+        <div id="IT_marmotta" data-type="audio-narrazione-black" content="marmotta" class="btnAudio icon icon-archivio"></div>
       </td>
     </tr>
     <tr>
       <td>Merlo dal collare</td>
       <td>Turdus torquatus</td>
       <td>
-        <img id="merlo_dal_collare" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="merlo_dal_collare" data-type="verso-black" content="merlo_dal_collare" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -297,7 +301,7 @@
       <td>Passera scopaiola</td>
       <td>Prunella modularis</td>
       <td>
-        <img id="passera_scopaiola" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="passera_scopaiola" data-type="verso-black" content="passera_scopaiola" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -305,7 +309,7 @@
       <td>Picchio muraiolo</td>
       <td>Tichodroma muraria</td>
       <td>
-        <img id="picchio_muraiolo" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="picchio_muraiolo" data-type="verso-black" content="picchio_muraiolo" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -313,7 +317,7 @@
       <td>Salamandra nera</td>
       <td>Salamandra atra</td>
       <td>
-        <img class="icon-versi" src="assets\icons\no-audio.svg"/>
+        <div data-type="no-audio" content="salamandra_nera" class="icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -321,7 +325,7 @@
       <td>Sordone</td>
       <td>Prunella collaris</td>
       <td>
-        <img id="sordone" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="sordone" data-type="verso-black" content="sordone" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -329,7 +333,7 @@
       <td>Spioncello</td>
       <td>Anthus spinoletta</td>
       <td>
-        <img id="spioncello" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="spioncello" data-type="verso-black" content="spioncello" class="btnAudio icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -337,17 +341,17 @@
       <td>Stambecco alpino</td>
       <td>Capra ibex</td>
       <td>
-        <img id="stambecco" class="icon-versi btnAudio" src="assets\icons\verso-black.svg"/>
+        <div id="stambecco" data-type="verso-black" content="stambecco_alpino_F" class="btnAudio icon icon-archivio"></div>
       </td>
       <td>
-        <img id="IT_stambecco_M" class="icon-versi btnAudio" src="assets\icons\audio-narrazione-black.svg"/>
+        <div id="IT_stambecco_M" data-type="audio-narrazione-black" content="stambecco_alpino_M" class="btnAudio icon icon-archivio"></div>
       </td>
     </tr>
     <tr>
       <td>Toporagno alpino</td>
       <td>Sorex alpinus</td>
       <td>
-        <img class="icon-versi" src="assets\icons\no-audio.svg"/>
+        <div data-type="no-audio" content="toporagno_alpino" class="icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>
@@ -355,7 +359,7 @@
       <td>Topo selvatico alpino</td>
       <td>Apodemus alpicola</td>
       <td>
-        <img class="icon-versi" src="assets\icons\no-audio.svg"/>
+        <div data-type="no-audio" content="topo_selvatico_alpino" class="icon icon-archivio"></div>
       </td>
       <td></td>
     </tr>

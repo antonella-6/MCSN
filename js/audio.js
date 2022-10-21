@@ -9,10 +9,6 @@ for (var i = 0; i < iconImg.length; i++) {
   var iconType = iconImg[i].getAttribute('data-type');
   var iconSrc = "assets/icons/" + iconType + ".svg";
   iconImg[i].classList.remove('image');
-
-  console.log(iconType);
-  console.log(iconSrc);
-
   iconImg[i].style.backgroundImage = 'url(' + iconSrc + ')';
 
   iconImg[i].addEventListener("click", function () {
@@ -28,10 +24,7 @@ for (var i = 0; i < iconImg.length; i++) {
 
 for (var i = 0; i < mainAudio.length; i++) {
   mainAudio[i].addEventListener("click", function () {
-    console.log('hello');
     removeClass();
-    
-  
   });
 
   }
@@ -45,7 +38,6 @@ function removeClass() {
     iconImg[i].classList.add('icon');
   }
 }
-
 
 $(".btnAudio").on("click", function () {
   var src =

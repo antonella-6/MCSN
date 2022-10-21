@@ -158,6 +158,7 @@ body {
 .icon-versi {
   width: 2.45em;
   cursor: pointer;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
 /* Animal Boxes */
@@ -183,13 +184,22 @@ body {
 }
 
 .icon {
-  width: 4.9em;
-  height: 4.9em;
   background-size: 2.45em;
   background-repeat: no-repeat;
-  background-position: bottom left;
   cursor: pointer;
   -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.icon.icon-archivio {
+  background-position: top left;
+  width: 2.45em;
+  height: 2.45em;
+}
+
+.animal-box .icon{
+  width: 4.9em;
+  height: 4.9em;
+  background-position: bottom left;
 }
 
 .image {
@@ -566,8 +576,8 @@ body {
 
 .archivio-table tr {
   border-bottom: 0.029em solid black;
-  vertical-align:-webkit-baseline-middle; 
-  vertical-align: middle;
+  /* vertical-align:-webkit-baseline-middle; 
+  vertical-align: middle; */
 }
 
 .archivio-table tr:last-child {
@@ -613,6 +623,10 @@ body {
 }
 .archivio-table tr:nth-child(n + 2) td {
   padding: 0.5em 0;
+}
+
+.archivio-table tr:nth-child(n + 2) td:nth-child(n + 3) {
+  vertical-align: top;
 }
 
 .fix-archivio {
