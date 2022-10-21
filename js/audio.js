@@ -2,6 +2,8 @@ var isBusy = false;
 const evento = new Event("end");
 var audio = new Audio();
 const iconImg = document.querySelectorAll('.icon');
+var mainAudio = document.querySelectorAll('.main-audio')
+
 
 
 
@@ -25,10 +27,17 @@ for (var i = 0; i < iconImg.length; i++) {
     this.classList.remove('icon');
     this.classList.add('image');
   });
-
 };
 
+for (var i = 0; i < mainAudio.length; i++) {
+  mainAudio[i].addEventListener("click", function () {
+    console.log('hello');
+    removeClass();
+    
+  
+  });
 
+  }
 
 function removeClass() {
   for (var i = 0; i < iconImg.length; i++) {
@@ -74,6 +83,8 @@ $(".btnAudio").on("click", function () {
   audio.addEventListener("ended", () => {
     isBusy = false;
     for (var i = 0; i < iconImg.length; i++) {
+      var iconType = iconImg[i].getAttribute('data-type');
+      var iconSrc = "assets/icons/" + iconType + ".svg";
       iconImg[i].style.backgroundImage = 'url(' + iconSrc + ')';
       iconImg[i].classList.remove('image');
       iconImg[i].classList.add('icon');
