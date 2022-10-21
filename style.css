@@ -226,6 +226,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom left;
   cursor: pointer;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
 .image {
@@ -234,6 +235,7 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
 .main-audio {
