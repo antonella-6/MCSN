@@ -1,41 +1,4 @@
 
-#preload-01 { 
-  background-image: url(assets/images/aquila_reale.jpg);
-}
-
-#preload-02 { 
-  background-image: url(assets/images/arvicola_delle_nevi.jpg);
-}
-
-#preload-03 { 
-  background-image: url(assets/images/camoscio_F.jpg);
-}
-
-#preload-04 { 
-  background-image: url(assets/images/Camoscio_M.jpg);
-}
-
-#preload-05 { 
-  background-image: url(assets/images/codirosso_spazzacamino.jpg);
-}
-
-#preload-06 { 
-  background-image: url(assets/images/codirossone.jpg);
-}
-
-#preload-07 { 
-  background-image: url(assets/images/coturnice.jpg);
-}
-
-#preload-08 { 
-  background-image: url(assets/images/culbianco.jpg);
-}
-
-#preload-09 { 
-  background-image: url(assets/images/fringuello_alpino.jpg);
-}
-
-
 /* Fonts */
 
 @font-face {
