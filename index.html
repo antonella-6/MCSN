@@ -14,9 +14,10 @@
 
 <body>
   <div class="header-container">
-    <div class="title">
-      Ascolta i suoni e le voci del paesaggio
-    </div>
+    <div lang="it" class="title">Ascolta i suoni e le voci del paesaggio</div>
+    <div lang="en" class="title">Hear the sounds and voices of the landscape</div>
+    <div lang="fr" class="title">Écoutez les sons et les voix du paysage</div>
+    <div lang="de" class="title">Hören Sie die Geräusche und Stimmen der Landschaft</div>
     <div class="menu">
       <div class="slide-indicator">
         <p class="indicator">1/3</p>
@@ -27,7 +28,10 @@
         <img src="assets\icons\separator.svg"/>
       </div>
       <div class="archivio">
-        <a href="archivio.html">archivio</a>
+        <a lang="it" href="archivio.html">archivio</a>
+        <a lang="en" href="archivio.html">archive</a>
+        <a lang="fr" href="archivio.html">archive</a>
+        <a lang="de" href="archivio.html">archiv</a>
       </div>
       <div class="separator">
         <img src="assets\icons\separator.svg"/>
@@ -53,19 +57,19 @@
     <span class="audioControl" id="progressAudioTime">00:00</span>
     <input class="audioControl" id="progressAudioBar" type="range" value="0" min="0" max="100" step="1" />
     <div class="languages">
-      <p class="active-language">IT</p>
+      <p id="switch-it" class="active-language">IT</p>
       <div class="separator-footer">
         <img src="assets\icons\separator.svg"/>
       </div>
-      <p class="inactive-language" >EN</p>
+      <p id="switch-en">EN</p>
       <div class="separator-footer">
         <img src="assets\icons\separator.svg"/>
       </div>
-      <p class="inactive-language">FR</p>
+      <p id="switch-fr"">FR</p>
       <div class="separator-footer">
         <img src="assets\icons\separator.svg"/>
       </div>
-      <p class="inactive-language">DE</p>
+      <p id="switch-de">DE</p>
     </div>
   </div>
 

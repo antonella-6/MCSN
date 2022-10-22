@@ -424,10 +424,11 @@ body {
   display: flex;
   position: absolute;
   right: 1.3em;
+  color: #808080;
 }
 
-.inactive-language {
-  color: #808080;
+.active-language {
+  color: #000000;
 }
 
 /* Info Tab */
