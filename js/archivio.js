@@ -17,128 +17,38 @@ function closeInfo() {
   next.classList.remove("is-hidden");
 }
 
-/* Translation Functions */
+function preload(arrayOfImages) {
+  $(arrayOfImages).each(function(){
+      $(new Image()).src = this;
 
-
-var italian = localStorage.getItem('[lang="it"]');
-var english = localStorage.getItem('[lang="en"]');
-var french = localStorage.getItem('[lang="fr"]');
-var german = localStorage.getItem('[lang="de"]');
-console.log("Italian is " + italian);
-console.log("English is " + english);
-console.log("French is " + french);
-console.log("German is " + german);
-
-$(document).ready(function() {
-
-if (german == 'true') {
-  $('[lang="it"]').hide();
-  $('[lang="en"]').hide();
-  $('[lang="fr"]').hide();
-  $('#switch-de').addClass('active-language');
-  $('#switch-en').removeClass('active-language');
-  $('#switch-fr').removeClass('active-language');
-  $('#switch-it').removeClass('active-language');
-} else if (italian == 'true') {
-  $('[lang="en"]').hide();
-  $('[lang="fr"]').hide();
-  $('[lang="de"]').hide();
-  $('#switch-it').addClass('active-language');
-  $('#switch-en').removeClass('active-language');
-  $('#switch-fr').removeClass('active-language');
-  $('#switch-de').removeClass('active-language');
-} else if (english == 'true') {
-  $('[lang="it"]').hide();
-  $('[lang="fr"]').hide();
-  $('[lang="de"]').hide();
-  $('#switch-en').addClass('active-language');
-  $('#switch-it').removeClass('active-language');
-  $('#switch-fr').removeClass('active-language');
-  $('#switch-de').removeClass('active-language');
-} else if (french == 'true') {
-  $('[lang="it"]').hide();
-  $('[lang="en"]').hide();
-  $('[lang="de"]').hide();
-  $('#switch-fr').addClass('active-language');
-  $('#switch-it').removeClass('active-language');
-  $('#switch-en').removeClass('active-language');
-  $('#switch-de').removeClass('active-language');
+  });
 }
-});
 
-$('#switch-it').click(0, function() {
-  if ( $('[lang="it"]').is(':visible')) {
-    console.log("Italian Selected.");
-} else {
-  $('[lang="it"]').toggle();
-  $('[lang="en"]').hide();
-  $('[lang="fr"]').hide();
-  $('[lang="de"]').hide();
-  localStorage.setItem('[lang="it"]', true);
-  localStorage.setItem('[lang="en"]', false);
-  localStorage.setItem('[lang="fr"]', false);
-  localStorage.setItem('[lang="de"]', false);
-  $('#switch-it').addClass('active-language');
-  $('#switch-en').removeClass('active-language');
-  $('#switch-fr').removeClass('active-language');
-  $('#switch-de').removeClass('active-language');
 
-}
-});
-
-$('#switch-en').click(function() {
-  if ( $('[lang="en"]').is(':visible')) {
-    console.log("English Selected.");
-} else {
-  $('[lang="en"]').toggle();
-  $('[lang="it"]').hide();
-  $('[lang="fr"]').hide();
-  $('[lang="de"]').hide();
-  localStorage.setItem('[lang="it"]', false);
-  localStorage.setItem('[lang="en"]', true);
-  localStorage.setItem('[lang="fr"]', false);
-  localStorage.setItem('[lang="de"]', false);
-  $('#switch-en').addClass('active-language');
-  $('#switch-it').removeClass('active-language');
-  $('#switch-fr').removeClass('active-language');
-  $('#switch-de').removeClass('active-language');
-}
-});
-
-$('#switch-fr').click(function() {
-  if ( $('[lang="fr"]').is(':visible')) {
-    console.log("French Selected.");
-} else {
-  $('[lang="fr"]').toggle();
-  $('[lang="it"]').hide();
-  $('[lang="en"]').hide();
-  $('[lang="de"]').hide();
-  localStorage.setItem('[lang="it"]', false);
-  localStorage.setItem('[lang="en"]', false);
-  localStorage.setItem('[lang="fr"]', true);
-  localStorage.setItem('[lang="de"]', false);
-  $('#switch-fr').addClass('active-language');
-  $('#switch-it').removeClass('active-language');
-  $('#switch-en').removeClass('active-language');
-  $('#switch-de').removeClass('active-language');
-}
-});
-
-$('#switch-de').click(function() {
-  if ( $('[lang="de"]').is(':visible')) {
-    console.log("German Selected.");
-} else {
-  $('[lang="de"]').toggle();
-  $('[lang="it"]').hide();
-  $('[lang="en"]').hide();
-  $('[lang="fr"]').hide();
-  localStorage.setItem('[lang="it"]', false);
-  localStorage.setItem('[lang="en"]', false);
-  localStorage.setItem('[lang="fr"]', false);
-  localStorage.setItem('[lang="de"]', true);
-  $('#switch-de').addClass('active-language');
-  $('#switch-it').removeClass('active-language');
-  $('#switch-en').removeClass('active-language');
-  $('#switch-fr').removeClass('active-language');
-}
-});
+preload([
+  'assets/images/aquila_reale.jpg',
+  'assets/images/arvicola_delle_nevi.jpg',
+  'assets/images/camoscio_F.jpg',
+  'assets/images/camoscio_M.jpg',
+  'assets/images/codirosso_spazzacamino.jpg',
+  'assets/images/codirossone.jpg',
+  'assets/images/coturnice.jpg',
+  'assets/images/culbianco.jpg',
+  'assets/images/fringuello_alpino.jpg',
+  'assets/images/gracchio_alpino.jpg',
+  'assets/images/gracchio_corallino.jpg',
+  'assets/images/lucertola_vivipera.jpg',
+  'assets/images/marasso.jpg',
+  'assets/images/marmotta.jpg',
+  'assets/images/merlo_dal_collare.jpg',
+  'assets/images/passera_scopaiola.jpg',
+  'assets/images/picchio_muraiolo.jpg',
+  'assets/images/salamandra_nera.jpg',
+  'assets/images/sordone.jpg',
+  'assets/images/spioncello.jpg',
+  'assets/images/stambecco_alpino_F.jpg',
+  'assets/images/stambecco_alpino_M.jpg',
+  'assets/images/topo_selvatico_alpino.jpg',
+  'assets/images/toporagno_alpino.jpg'
+]);
+console.log('preloaded!');
