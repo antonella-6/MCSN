@@ -227,3 +227,67 @@ indicate = function(){
   console.log("slide 3");
  };
 };
+
+$('[lang="en"]').hide();
+$('[lang="fr"]').hide();
+$('[lang="de"]').hide();
+
+$('#switch-en').click(function() {
+  if ( $('[lang="en"]').is(':visible')) {
+    console.log("English Selected.");
+} else {
+  $('[lang="en"]').toggle();
+  $('[lang="it"]').hide();
+  $('[lang="fr"]').hide();
+  $('[lang="de"]').hide();
+  $('#switch-en').addClass('active-language');
+  $('#switch-it').removeClass('active-language');
+  $('#switch-fr').removeClass('active-language');
+  $('#switch-de').removeClass('active-language');
+}
+});
+
+$('#switch-it').click(function() {
+  if ( $('[lang="it"]').is(':visible')) {
+    console.log("Italian Selected.");
+} else {
+  $('[lang="it"]').toggle();
+  $('[lang="en"]').hide();
+  $('[lang="fr"]').hide();
+  $('[lang="de"]').hide();
+  $('#switch-it').addClass('active-language');
+  $('#switch-en').removeClass('active-language');
+  $('#switch-fr').removeClass('active-language');
+  $('#switch-de').removeClass('active-language');
+}
+});
+
+$('#switch-fr').click(function() {
+  if ( $('[lang="fr"]').is(':visible')) {
+    console.log("French Selected.");
+} else {
+  $('[lang="fr"]').toggle();
+  $('[lang="it"]').hide();
+  $('[lang="en"]').hide();
+  $('[lang="de"]').hide();
+  $('#switch-fr').addClass('active-language');
+  $('#switch-it').removeClass('active-language');
+  $('#switch-en').removeClass('active-language');
+  $('#switch-de').removeClass('active-language');
+}
+});
+
+$('#switch-de').click(function() {
+  if ( $('[lang="de"]').is(':visible')) {
+    console.log("German Selected.");
+} else {
+  $('[lang="de"]').toggle();
+  $('[lang="it"]').hide();
+  $('[lang="en"]').hide();
+  $('[lang="fr"]').hide();
+  $('#switch-de').addClass('active-language');
+  $('#switch-it').removeClass('active-language');
+  $('#switch-en').removeClass('active-language');
+  $('#switch-fr').removeClass('active-language');
+}
+});
