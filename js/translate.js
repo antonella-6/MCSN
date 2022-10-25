@@ -10,7 +10,8 @@ console.log("French is " + french);
 console.log("German is " + german);
 
 if ((italian == null) && (english == null) && (french == null) && (german == null) ){
-    localStorage.setItem('[lang="it"]', true); 
+    localStorage.setItem('[lang="it"]', true);
+    $('#switch-it').addClass('active-language');
   } else if (german == 'true') {
     $('[lang="it"]').hide();
     $('[lang="en"]').hide();
