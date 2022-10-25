@@ -115,6 +115,7 @@ preload[18] = "/assets/images/spioncello.jpg";
 preload[19] = "/assets/images/stambecco_alpino_F.jpg";
 preload[20] = "/assets/images/stambecco_alpino_M.jpg";
 preload[21] = "/assets/images/topo_selvatico_alpino.jpg";
+preload[22] = "/assets/images/toporagno_alpino.jpg";
 
 // Leave the next 5 lines as they are.
 var loadedimages = new Array();

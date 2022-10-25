@@ -598,7 +598,9 @@ body {
   padding-bottom: 0.6em;
 }
 
-.archivio-table tr:nth-child(n + 2) td:first-child {
+
+
+.soggeto-name {
   font-family: "Karmina";
   font-style: normal;
   font-weight: 700;
@@ -618,7 +620,7 @@ body {
   width: 21%;
 }
 
-.archivio-table tr:nth-child(n + 2) td:nth-child(2) {
+.nome-scientifico {
   font-family: "KarminaSansL";
   font-style: italic;
   font-weight: 300;
