@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="audio.css" />
-  
-<!--   <link rel="preload" href="/assets/images/aquila_reale.jpg" as="image" />
+
+  <!--   <link rel="preload" href="/assets/images/aquila_reale.jpg" as="image" />
   <link rel="preload" href="/assets/images/arvicola_delle_nevi.jpg" as="image" />
   <link rel="preload" href="/assets/images/camoscio_F.jpg" as="image" />
   <link rel="preload" href="/assets/images/camoscio_M.jpg" as="image" />
@@ -51,7 +51,7 @@
         <p class="indicator is-hidden">3/3</p>
       </div>
       <div class="separator">
-        <img src="assets\icons\separator.svg"/>
+        <img src="assets\icons\separator.svg" />
       </div>
       <div class="archivio">
         <a lang="it" href="archivio.html">archivio</a>
@@ -60,7 +60,7 @@
         <a lang="de" href="archivio.html">archiv</a>
       </div>
       <div class="separator">
-        <img src="assets\icons\separator.svg"/>
+        <img src="assets\icons\separator.svg" />
       </div>
       <div class="info">
         <button class="info-button-open" onclick="openInfo()">info+</button>
@@ -69,12 +69,21 @@
   </div>
 
   <div class="below-header-container">
-    <div id="IT_ambiente_alpino" class="btnAudio main-audio">
+    <div lang="it" id="IT_ambiente_alpino" class="btnAudio main-audio">
       <img class="icon-versi" src="assets\icons\audio-narrazione-white.svg" />
-      <p lang="it">Ambiente alpino</p>
-      <p lang="en">Alpine environment</p>
-      <p lang="fr">Environnement alpin</p>
-      <p lang="de">Alpine Umgebung</p>
+      <p>Ambiente alpino</p>
+    </div>
+    <div lang="en" id="EN_The_alpine_environment" class="btnAudio main-audio">
+      <img class="icon-versi" src="assets\icons\audio-narrazione-white.svg" />
+      <p>Alpine environment</p>
+    </div>
+    <div lang="fr" id="FR_Environment_alpin" class="btnAudio main-audio">
+      <img class="icon-versi" src="assets\icons\audio-narrazione-white.svg" />
+      <p>Environnement alpin</p>
+    </div>
+    <div lang="de" id="DE_Die_alpine_Umwelt" class="btnAudio main-audio">
+      <img class="icon-versi" src="assets\icons\audio-narrazione-white.svg" />
+      <p>Alpine Umwelt</p>
     </div>
     <div id="IT_passeggiata" class="passeggiata btnAudio main-audio">
       <img class="icon-versi" src="assets\icons\audio-narrazione-white.svg" />
@@ -91,15 +100,15 @@
     <div class="languages">
       <p id="switch-it" class="active-language">IT</p>
       <div class="separator-footer">
-        <img src="assets\icons\separator.svg"/>
+        <img src="assets\icons\separator.svg" />
       </div>
       <p id="switch-en">EN</p>
       <div class="separator-footer">
-        <img src="assets\icons\separator.svg"/>
+        <img src="assets\icons\separator.svg" />
       </div>
       <p id="switch-fr">FR</p>
       <div class="separator-footer">
-        <img src="assets\icons\separator.svg"/>
+        <img src="assets\icons\separator.svg" />
       </div>
       <p id="switch-de">DE</p>
     </div>
@@ -144,7 +153,7 @@
             <span class="scientific-name">Apodemus alpicola</span>
           </div>
           <div class="animal-box gracchio-alpino">
-            <div  id="gracchio_alpino" data-type="verso-black" content="gracchio_alpino" class="btnAudio icon"></div>
+            <div id="gracchio_alpino" data-type="verso-black" content="gracchio_alpino" class="btnAudio icon"></div>
             <span lang="it" class="animal-name">Gracchio<br>alpino</span>
             <span lang="en" class="animal-name">Yellow-billed<br>Chough</span>
             <span lang="fr" class="animal-name">Chocard à <br>bec jaune</span>
@@ -160,7 +169,8 @@
             <span class="scientific-name">Aquila<br>chrysaetos</span>
           </div>
           <div class="animal-box codirosso-spazzacamino">
-            <div id="codirosso_spazzacamino" data-type="verso-black" content="codirosso_spazzacamino" class="btnAudio icon"></div>
+            <div id="codirosso_spazzacamino" data-type="verso-black" content="codirosso_spazzacamino"
+              class="btnAudio icon"></div>
             <span lang="it" class="animal-name">Codirosso<br>spazzacamino</span>
             <span lang="en" class="animal-name">Black<br>Redstart</span>
             <span lang="fr" class="animal-name">Rougequeue<br>noir</span>
@@ -176,7 +186,8 @@
             <span class="scientific-name">Turdus<br>torquatus</span>
           </div>
           <div class="animal-box gracchio-corallino">
-            <div id="gracchio_corallino" data-type="verso-black" content="gracchio_corallino" class="btnAudio icon"></div>
+            <div id="gracchio_corallino" data-type="verso-black" content="gracchio_corallino" class="btnAudio icon">
+            </div>
             <span lang="it" class="animal-name">Gracchio<br>corallino</span>
             <span lang="en" class="animal-name">Red-bileld<br>Chough</span>
             <span lang="fr" class="animal-name">Crave à<br>bec jaune</span>
@@ -284,7 +295,8 @@
             <span class="scientific-name">Rupicapra<br>rupicapra</span>
           </div>
           <div class="animal-box stambecco-alpino-page-three">
-            <div id="IT_stambecco_M" data-type="audio-narrazione-black" content="stambecco_alpino_M" class="btnAudio icon"></div>
+            <div id="IT_stambecco_M" data-type="audio-narrazione-black" content="stambecco_alpino_M"
+              class="btnAudio icon"></div>
             <span lang="it" class="animal-name">Stambecco<br>alpino ♂</span>
             <span lang="en" class="animal-name">Alpine<br>ibex ♂</span>
             <span lang="fr" class="animal-name">Bouquetin<br>des Alpes ♂</span>
@@ -330,7 +342,7 @@
             <p lang="it">Verso</p>
             <p lang="en">Verse</p>
             <p lang="fr">Verset</p>
-            <p lang="de">Verse</p> 
+            <p lang="de">Verse</p>
           </div>
           <div class="icon-type">
             <img class="icon-versi" src="assets\icons\audio-narrazione-grey.svg" />
@@ -439,7 +451,8 @@
             </tr>
           </table>
           <div lang="it" class="info-subtitle">UNITAS - Associazione Ciechi e Ipovedenti<br>della Svizzera</div>
-          <div lang="en" class="info-subtitle">UNITAS - Association of the Blind and Visually Impaired<br>of Switzerland</div>
+          <div lang="en" class="info-subtitle">UNITAS - Association of the Blind and Visually Impaired<br>of Switzerland
+          </div>
           <div lang="fr" class="info-subtitle">UNITAS - Association des aveugles et malvoyants<br>de Suisse</div>
           <div lang="de" class="info-subtitle">UNITAS - Blinden- und Sehbehindertenverband<br>der Schweiz</div>
           <table>
