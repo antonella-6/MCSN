@@ -135,8 +135,7 @@ console.log("English is " + english);
 console.log("French is " + french);
 console.log("German is " + german);
 
-  if ((italian == 'false') && (english == 'false') && (french == 'false') && (german == 'false') ){
-    $('[lang="it"]').hide();
+if ((italian == null) && (english == null) && (french == null) && (german == null) ){
     localStorage.setItem('[lang="it"]', true); 
   } else if (german == 'true') {
     $('[lang="it"]').hide();
@@ -192,6 +191,8 @@ $('#switch-it').click(0, function() {
 
 }
 });
+
+console.log("set lenguage");
 
 $('#switch-en').click(function() {
   if ( $('[lang="en"]').is(':visible')) {
