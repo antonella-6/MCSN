@@ -135,7 +135,7 @@ console.log("English is " + english);
 console.log("French is " + french);
 console.log("German is " + german);
 
-$(document).ready(function() {
+$(window).ready(function() {
 
   if ((italian == 'false') && (english == 'false') && (french == 'false') && (german == 'false') ){
     $('[lang="it"]').hide();
