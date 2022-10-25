@@ -135,8 +135,6 @@ console.log("English is " + english);
 console.log("French is " + french);
 console.log("German is " + german);
 
-$(window).ready(function() {
-
   if ((italian == 'false') && (english == 'false') && (french == 'false') && (german == 'false') ){
     $('[lang="it"]').hide();
     localStorage.setItem('[lang="it"]', true); 
@@ -173,7 +171,6 @@ $(window).ready(function() {
     $('#switch-en').removeClass('active-language');
     $('#switch-de').removeClass('active-language');
   }
-});
 
 
 $('#switch-it').click(0, function() {
