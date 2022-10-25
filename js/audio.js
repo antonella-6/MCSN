@@ -93,7 +93,7 @@ var preload = new Array();
 //   image assigned to preload[#], with 
 //   consecutive numbering starting at 0.
 
-preload[0] = "/assets/images/aquila_reale.jpg";
+preload[0] = "https://juanalzate29.github.io/MCSN/assets/images/aquila_reale.jpg";
 preload[1] = "/assets/images/arvicola_delle_nevi.jpg";
 preload[2] = "/assets/images/camoscio_F.jpg";
 preload[3] = "/assets/images/camoscio_M.jpg";
