@@ -3,10 +3,12 @@ const infoButtonClose = document.querySelector(".info-button-close");
 const infoBox = document.querySelector(".info-box");
 const indicators = document.querySelector(".slide-indicator");
 const indicator = Array.from(indicators.children);
+const closeBox = document.querySelector(".close-box");
 
 function openInfo() {
   document.getElementById("myInfoBox").style.width = "436px";
   document.getElementById("myInfoBox").style.left = "calc(100% - 436px)";
+  closeBox.style.width = "calc(100% - 436px)";
   prev.classList.add("is-hidden");
   next.classList.add("is-hidden");
   audio.pause();
@@ -16,7 +18,7 @@ function openInfo() {
   for (var j = 0; j < items.length; j++) {
     items[j].style.opacity = 0;
   };
-  
+
 };
 
 function closeInfo() {
@@ -24,6 +26,7 @@ function closeInfo() {
   document.getElementById("myInfoBox").style.left = "100%";
   prev.classList.remove("is-hidden");
   next.classList.remove("is-hidden");
+  closeBox.style.width = "0";
 }
 
 let slider = document.querySelector('.slider'),
