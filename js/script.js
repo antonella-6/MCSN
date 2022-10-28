@@ -9,8 +9,15 @@ function openInfo() {
   document.getElementById("myInfoBox").style.left = "calc(100% - 436px)";
   prev.classList.add("is-hidden");
   next.classList.add("is-hidden");
+  audio.pause();
+  for (var i = 0; i < iconImg.length; i++) {
+    removeClass();
+  };
+  for (var j = 0; j < items.length; j++) {
+    items[j].style.opacity = 0;
+  };
   
-}
+};
 
 function closeInfo() {
   document.getElementById("myInfoBox").style.width = "0";

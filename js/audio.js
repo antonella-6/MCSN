@@ -3,6 +3,8 @@ const evento = new Event("end");
 var audio = new Audio();
 const iconImg = document.querySelectorAll('.icon');
 var mainAudio = document.querySelectorAll('.main-audio')
+var noAudio = document.querySelectorAll('.no-audio');
+var items = document.getElementsByClassName("audioControl");
 
 for (var i = 0; i < iconImg.length; i++) {
   /* console.log(iconImg[i]); */
@@ -19,6 +21,15 @@ for (var i = 0; i < iconImg.length; i++) {
     this.style.backgroundImage = 'url(' + imgSrc + ')';
     this.classList.remove('icon');
     this.classList.add('image');
+  });
+};
+
+for (var i = 0; i < noAudio.length; i++) { 
+  noAudio[i].addEventListener("click", function () {
+    audio.pause();
+    for (var j = 0; j < items.length; j++) {
+      items[j].style.opacity = 0;
+    };
   });
 };
 
@@ -49,7 +60,7 @@ $(".btnAudio").on("click", function () {
 
   isBusy = true;
 
-  var items = document.getElementsByClassName("audioControl");
+  
   for (var i = 0; i < items.length; i++) {
     items[i].style.opacity = 1;
   }
