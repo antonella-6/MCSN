@@ -2,29 +2,33 @@ var isBusy = false;
 const evento = new Event("end");
 var audio = new Audio();
 const iconImg = document.querySelectorAll('.icon');
-var mainAudio = document.querySelectorAll('.main-audio')
+var mainAudio = document.querySelectorAll('.main-audio');
 var noAudio = document.querySelectorAll('.no-audio');
 var items = document.getElementsByClassName("audioControl");
+var btnAudio = document.querySelectorAll('.btnAudio');
 
 for (var i = 0; i < iconImg.length; i++) {
-  /* console.log(iconImg[i]); */
   var iconType = iconImg[i].getAttribute('data-type');
   var iconSrc = "assets/icons/" + iconType + ".svg";
-  iconImg[i].classList.remove('image');
   iconImg[i].style.backgroundImage = 'url(' + iconSrc + ')';
 
   iconImg[i].addEventListener("click", function () {
-    removeClass();
-    var imgName = event.target.getAttribute("content");
-    var imgSrc = "assets/images/" + imgName + ".jpg";
-    console.log('cliked');
-    this.style.backgroundImage = 'url(' + imgSrc + ')';
-    this.classList.remove('icon');
-    this.classList.add('image');
+    if ((event.target.classList.contains('image')) == true) {
+      removeClass();
+    } else {
+      removeClass();
+      var imgName = event.target.getAttribute("content");
+      var imgSrc = "assets/images/" + imgName + ".jpg";
+      this.style.backgroundImage = 'url(' + imgSrc + ')';
+      this.classList.remove('icon');
+      this.classList.add('image');
+      this.classList.add('active');
+      console.log('clicked ' + imgName);
+    }
   });
 };
 
-for (var i = 0; i < noAudio.length; i++) { 
+for (var i = 0; i < noAudio.length; i++) {
   noAudio[i].addEventListener("click", function () {
     audio.pause();
     for (var j = 0; j < items.length; j++) {
@@ -35,10 +39,14 @@ for (var i = 0; i < noAudio.length; i++) {
 
 for (var i = 0; i < mainAudio.length; i++) {
   mainAudio[i].addEventListener("click", function () {
-    removeClass();
+    if ((event.target.classList.contains('active')) == true) {
+      removeClass();
+    } else { 
+      removeClass();
+      this.classList.add('active');
+    }
   });
-
-  }
+}
 
 function removeClass() {
   for (var i = 0; i < iconImg.length; i++) {
@@ -46,57 +54,76 @@ function removeClass() {
     var iconSrc = "assets/icons/" + iconType + ".svg";
     iconImg[i].style.backgroundImage = 'url(' + iconSrc + ')';
     iconImg[i].classList.remove('image');
+    iconImg[i].classList.remove('active');
     iconImg[i].classList.add('icon');
+  }
+  for (var i = 0; i < mainAudio.length; i++) {
+    mainAudio[i].classList.remove('active');
   }
 }
 
-$(".btnAudio").on("click", function () {
-  var src =
-    "./assets/sounds/" +
-    this.id +
-    ".mp3"; /* AUDIO FILE NAME SAME INTO THE HTML AUDIO LOAD */
-  audio.src = src;
-  audio.dispatchEvent(evento);
 
-  isBusy = true;
-
+$(".btnAudio").on("click", function () { 
+  console.log("active is: " + event.target.classList.contains('active'));
   
-  for (var i = 0; i < items.length; i++) {
-    items[i].style.opacity = 1;
-  }
+  if ((event.target.classList.contains('active') == true) ) {
+    var src =
+      "./assets/sounds/" +
+      this.id +
+      ".mp3"; /* AUDIO FILE NAME SAME INTO THE HTML AUDIO LOAD */
+    audio.src = src;
+    audio.dispatchEvent(evento);
 
-  audio.play();
-
-  audio.addEventListener("timeupdate", () => {
-    var seconds = audio.currentTime;
-    minutes = Math.floor(seconds / 60);
-    minutes = minutes >= 10 ? minutes : "0" + minutes;
-    seconds = Math.floor(seconds % 60);
-    seconds = seconds >= 10 ? seconds : "0" + seconds;
-    document.getElementById(
-      "progressAudioTime"
-    ).innerHTML = `${minutes}:${seconds}`;
-    document.getElementById("progressAudioBar").value =
-      (audio.currentTime / audio.duration) * 100;
-  });
-
-  audio.addEventListener("ended", () => {
-    isBusy = false;
-    for (var i = 0; i < iconImg.length; i++) {
-      var iconType = iconImg[i].getAttribute('data-type');
-      var iconSrc = "assets/icons/" + iconType + ".svg";
-      iconImg[i].style.backgroundImage = 'url(' + iconSrc + ')';
-      iconImg[i].classList.remove('image');
-      iconImg[i].classList.add('icon');
+    isBusy = true;
+  
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.opacity = 1;
     }
-
-  });
-
-  audio.addEventListener("end", () => {
+  
+    audio.play();
+  
+  
+  
+    audio.addEventListener("timeupdate", () => {
+      var seconds = audio.currentTime;
+      minutes = Math.floor(seconds / 60);
+      minutes = minutes >= 10 ? minutes : "0" + minutes;
+      seconds = Math.floor(seconds % 60);
+      seconds = seconds >= 10 ? seconds : "0" + seconds;
+      document.getElementById(
+        "progressAudioTime"
+      ).innerHTML = `${minutes}:${seconds}`;
+      document.getElementById("progressAudioBar").value =
+        (audio.currentTime / audio.duration) * 100;
+    });
+  
+    audio.addEventListener("ended", () => {
+      isBusy = false;
+      for (var i = 0; i < iconImg.length; i++) {
+        var iconType = iconImg[i].getAttribute('data-type');
+        var iconSrc = "assets/icons/" + iconType + ".svg";
+        iconImg[i].style.backgroundImage = 'url(' + iconSrc + ')';
+        iconImg[i].classList.remove('image');
+        iconImg[i].classList.add('icon');
+        console.log("Audio Finished");
+      } 
+    });
+  
+    audio.addEventListener("end", () => {
+      audio.pause();
+      console.log("audio paused");
+    });
+  
+  } else if ( (event.target.classList.contains('active') == false)) {
     audio.pause();
-
-  });
+    console.log("here");
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.opacity = 0;
+    }
+  }
 });
+
+
 
 var preload = new Array();
 
@@ -130,7 +157,7 @@ preload[22] = "https://juanalzate29.github.io/MCSN/assets/images/toporagno_alpin
 
 // Leave the next 5 lines as they are.
 var loadedimages = new Array();
-for(var i=0; i<preload.length; i++) {
-loadedimages[i] = new Image();
-loadedimages[i].src = preload[i];
+for (var i = 0; i < preload.length; i++) {
+  loadedimages[i] = new Image();
+  loadedimages[i].src = preload[i];
 }

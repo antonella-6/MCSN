@@ -28,6 +28,7 @@ if ((italian == null) && (english == null) && (french == null) && (german == nul
     $('#switch-en').removeClass('active-language');
     $('#switch-fr').removeClass('active-language');
     $('#switch-de').removeClass('active-language');
+    
   } else if (english == 'true') {
     $('[lang="it"]').hide();
     $('[lang="fr"]').hide();
@@ -63,11 +64,16 @@ $('#switch-it').click(0, function() {
   $('#switch-en').removeClass('active-language');
   $('#switch-fr').removeClass('active-language');
   $('#switch-de').removeClass('active-language');
+  audio.pause();
+  removeClass();
+  for (var i = 0; i < items.length; i++) {
+    items[i].style.opacity = 0;
+  }
 
 }
 });
 
-console.log("set lenguage");
+/* console.log("set lenguage"); */
 
 $('#switch-en').click(function() {
   if ( $('[lang="en"]').is(':visible')) {
@@ -85,6 +91,11 @@ $('#switch-en').click(function() {
   $('#switch-it').removeClass('active-language');
   $('#switch-fr').removeClass('active-language');
   $('#switch-de').removeClass('active-language');
+  audio.pause();
+  removeClass();
+  for (var i = 0; i < items.length; i++) {
+    items[i].style.opacity = 0;
+  }
 }
 });
 
@@ -104,6 +115,11 @@ $('#switch-fr').click(function() {
   $('#switch-it').removeClass('active-language');
   $('#switch-en').removeClass('active-language');
   $('#switch-de').removeClass('active-language');
+  audio.pause();
+  removeClass();
+  for (var i = 0; i < items.length; i++) {
+    items[i].style.opacity = 0;
+  }
 }
 });
 
@@ -123,6 +139,11 @@ $('#switch-de').click(function() {
   $('#switch-it').removeClass('active-language');
   $('#switch-en').removeClass('active-language');
   $('#switch-fr').removeClass('active-language');
+  removeClass();
+  audio.pause();
+  for (var i = 0; i < items.length; i++) {
+    items[i].style.opacity = 0;
+  }
 }
 });
 

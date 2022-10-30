@@ -157,7 +157,13 @@ body {
   pointer-events: none;
 }
 
-.icon-versi {
+.main-audio {
+  width: 2.45em;
+  cursor: pointer;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.main-audio-playing {
   width: 2.45em;
   cursor: pointer;
   -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
@@ -211,11 +217,10 @@ body {
   background-position: center;
   border-radius: 10px;
   -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+  cursor: pointer;
 }
 
-.main-audio {
-  width: auto;
-}
+
 
 /* .verso-black {
   background-image: url(assets/icons/verso-black.svg);
@@ -387,7 +392,7 @@ body {
   position: relative;
   display: flex;
   margin: 0.5em 0 0 0.9em;
-  z-index: 10;
+  z-index: 1;
 }
 
 .below-header-container p {
