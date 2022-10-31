@@ -82,8 +82,6 @@ $(".btnAudio").on("click", function () {
   
     audio.play();
   
-  
-  
     audio.addEventListener("timeupdate", () => {
       var seconds = audio.currentTime;
       minutes = Math.floor(seconds / 60);
@@ -125,7 +123,6 @@ $(".btnAudio").on("click", function () {
     }
   }
 });
-
 
 
 var preload = new Array();
