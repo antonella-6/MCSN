@@ -163,6 +163,12 @@ body {
   -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
+.icon-versi {
+  width: 2.45em;
+  cursor: pointer;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
 .main-audio-playing {
   width: 2.45em;
   cursor: pointer;

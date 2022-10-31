@@ -106,6 +106,9 @@ $(".btnAudio").on("click", function () {
         iconImg[i].classList.remove('image');
         iconImg[i].classList.add('icon');
         console.log("Audio Finished");
+        for (var j = 0; j < items.length; j++) {
+          items[j].style.opacity = 0;
+        }
       } 
     });
   
