@@ -137,7 +137,7 @@ body {
   position: absolute;
   left: 0px;
   z-index: 1;
-  background: url(assets/left.svg);
+  background: url(assets/icons/left.svg);
   margin-left: 0.9em;
   background-repeat: no-repeat;
   
@@ -147,7 +147,7 @@ body {
   position: absolute;
   right: 0px;
   z-index: 1;
-  background: url(assets/right.svg);
+  background: url(assets/icons/right.svg);
    background-repeat: no-repeat;
 }
 
