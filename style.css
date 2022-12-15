@@ -582,6 +582,14 @@ body {
 
 /*  Archivio Table*/
 
+.table-top-mask {
+  height: 40px;
+  position: fixed;
+  top: 40px;
+  background-color: #f9f9f9;
+  width: 100vw;
+}
+
 .archivio-table {
   border-collapse: collapse;
   max-width: 100vw;
@@ -605,8 +613,14 @@ body {
   line-height: 106.9%;
 }
 
-.archivio-table tr:first-child td {
+.archivio-table tr:first-child th {
   padding-bottom: 0.6em;
+  font-weight: unset;
+  text-align: left;
+  position: sticky;
+  background-color: #f9f9f9;
+  top: 3.9em;
+  box-shadow: inset 0 0 0 #000000, inset 0 -1px 0 #000000;
 }
 
 .soggeto-name {
@@ -636,7 +650,7 @@ body {
   font-size: 1em;
   line-height: 106.9%;
 }
-.archivio-table tr:nth-child(n + 2) td {
+.archivio-table tr:nth-child(n + 1) td {
   padding: 0.5em 0;
 }
 
