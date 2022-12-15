@@ -178,6 +178,15 @@ body {
   align-items: flex-start;
 }
 
+.names-box {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 1.9em;
+  z-index: 0;
+  width: 100px;
+}
+
 .animal-name {
   font-family: "Karmina";
   font-size: 1em;
@@ -205,8 +214,18 @@ body {
 
 .animal-box .icon {
   width: 4.9em;
+  height: 6.9em;
+  background-position: top left;
+  position: absolute;
+  z-index: 1;
+}
+
+.animal-box .image {
+  width: 4.9em;
   height: 4.9em;
-  background-position: bottom left;
+  position: absolute;
+  z-index: 1;
+  bottom: -2.4em;
 }
 
 /* X ANTONELLA DIMENSIONE IMMAGINI */
@@ -228,61 +247,61 @@ body {
 
 .lucertola-vivipara {
   position: absolute;
-  top: 16em;
+  top: 18em;
   left: 4em;
 }
 
 .sordone {
   position: absolute;
-  top: 6em;
+  top: 8em;
   left: 12em;
 }
 
 .codirossone {
   position: absolute;
-  top: 13em;
+  top: 15em;
   left: 20em;
 }
 
 .topo-selvatico-alpino {
   position: absolute;
-  top: 30em;
+  top: 32em;
   left: 24em;
 }
 
 .gracchio-alpino {
   position: absolute;
-  top: 24em;
+  top: 26em;
   left: 32em;
 }
 
 .aquila-reale {
   position: absolute;
-  top: 7em;
+  top: 9em;
   left: 40em;
 }
 
 .codirosso-spazzacamino {
   position: absolute;
-  top: 16.8em;
+  top: 18.8em;
   left: 40em;
 }
 
 .merlo_dal_collare {
   position: absolute;
-  top: 20.1em;
+  top: 22.1em;
   left: 50em;
 }
 
 .gracchio-corallino {
   position: absolute;
-  top: 23.9em;
+  top: 25.9em;
   left: 58em;
 }
 
 .salamandra-nera {
   position: absolute;
-  top: 30em;
+  top: 32em;
   left: 66em;
 }
 
@@ -294,43 +313,43 @@ body {
 
 .marmotta {
   position: absolute;
-  top: 8em;
+  top: 10em;
   left: 4em;
 }
 
 .marasso {
   position: absolute;
-  top: 23em;
+  top: 25em;
   left: 14em;
 }
 
 .coturnice {
   position: absolute;
-  top: 13em;
+  top: 15em;
   left: 24em;
 }
 
 .culbianco {
   position: absolute;
-  top: 28em;
+  top: 30em;
   left: 30em;
 }
 
 .passera-scopaiola {
   position: absolute;
-  top: 6em;
+  top: 8em;
   left: 34em;
 }
 
 .camoscio {
   position: absolute;
-  top: 25em;
+  top: 27em;
   left: 44em;
 }
 
 .stambecco-alpino {
   position: absolute;
-  top: 4em;
+  top: 6em;
   left: 52em;
 }
 
@@ -342,7 +361,7 @@ body {
 
 .toporagno-alpino {
   position: absolute;
-  top: 28em;
+  top: 30em;
   left: 66em;
 }
 
@@ -354,31 +373,31 @@ body {
 
 .arvicola-delle-nevi {
   position: absolute;
-  top: 27em;
+  top: 29em;
   left: 5em;
 }
 
 .camoscio-page-three {
   position: absolute;
-  top: 13em;
+  top: 15em;
   left: 22em;
 }
 
 .stambecco-alpino-page-three {
   position: absolute;
-  top: 26em;
+  top: 28em;
   left: 34em;
 }
 
 .fringuello-alpino {
   position: absolute;
-  top: 6em;
+  top: 8em;
   left: 50em;
 }
 
 .picchio-muraiolo {
   position: absolute;
-  top: 13em;
+  top: 15em;
   left: 64em;
 }
 
