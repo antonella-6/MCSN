@@ -91,8 +91,8 @@ $(".btnAudio").on("click", function () {
       document.getElementById(
         "progressAudioTime"
       ).innerHTML = `${minutes}:${seconds}`;
-      document.getElementById("progressAudioBar").value =
-        (audio.currentTime / audio.duration) * 100;
+      // document.getElementById("progressAudioBar").value =
+      //   (audio.currentTime / audio.duration) * 100;
     });
   
     audio.addEventListener("ended", () => {
