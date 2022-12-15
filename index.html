@@ -1,14 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="audio.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="audio.css" />
-
-  <!--   <link rel="preload" href="/assets/images/aquila_reale.jpg" as="image" />
+    <!--   <link rel="preload" href="/assets/images/aquila_reale.jpg" as="image" />
   <link rel="preload" href="/assets/images/arvicola_delle_nevi.jpg" as="image" />
   <link rel="preload" href="/assets/images/camoscio_F.jpg" as="image" />
   <link rel="preload" href="/assets/images/camoscio_M.jpg" as="image" />
@@ -33,505 +32,765 @@
   <link rel="preload" href="/assets/images/topo_selvatico_alpino.jpg" as="image" />
   <link rel="preload" href="/assets/images/toporagno_alpino" as="image" /> -->
 
-  <title>MCSN</title>
-  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-    crossorigin="anonymous"></script>
-</head>
+    <title>MCSN</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-  <div class="header-container">
-    <div lang="it" class="title">Ascolta i suoni e le voci del paesaggio</div>
-    <div lang="en" class="title">Listen to the sounds and voices of the landscape</div>
-    <div lang="fr" class="title">Écoutez les sons et les voix du paysage</div>
-    <div lang="de" class="title">Hören Sie die Geräusche und Stimmen der Landschaft</div>
-    <div class="menu">
-      <div class="slide-indicator">
-        <p class="indicator">1/3</p>
-        <p class="indicator is-hidden">2/3</p>
-        <p class="indicator is-hidden">3/3</p>
+  <body>
+    <div class="header-container">
+      <div lang="it" class="title">Ascolta i suoni e le voci del paesaggio</div>
+      <div lang="en" class="title">
+        Listen to the sounds and voices of the landscape
       </div>
-      <div class="separator">
-        <img src="assets\icons\separator.svg" />
+      <div lang="fr" class="title">Écoutez les sons et les voix du paysage</div>
+      <div lang="de" class="title">
+        Hören Sie die Geräusche und Stimmen der Landschaft
       </div>
-      <div class="archivio">
-        <a lang="it" href="archivio.html">archivio</a>
-        <a lang="en" href="archivio.html">archive</a>
-        <a lang="fr" href="archivio.html">archive</a>
-        <a lang="de" href="archivio.html">archiv</a>
-      </div>
-      <div class="separator">
-        <img src="assets\icons\separator.svg" />
-      </div>
-      <div class="info">
-        <button class="info-button-open" onclick="openInfo()">info+</button>
+      <div class="menu">
+        <div class="slide-indicator">
+          <p class="indicator">1/3</p>
+          <p class="indicator is-hidden">2/3</p>
+          <p class="indicator is-hidden">3/3</p>
+        </div>
+        <div class="separator">
+          <img src="assets\icons\separator.svg" />
+        </div>
+        <div class="archivio">
+          <a lang="it" href="archivio.html">archivio</a>
+          <a lang="en" href="archivio.html">archive</a>
+          <a lang="fr" href="archivio.html">archive</a>
+          <a lang="de" href="archivio.html">archiv</a>
+        </div>
+        <div class="separator">
+          <img src="assets\icons\separator.svg" />
+        </div>
+        <div class="info">
+          <button class="info-button-open" onclick="openInfo()">info+</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="below-header-container">
-    <div lang="it" >
-      <img id="IT_ambiente_alpino" class="btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
-      <p>Ambiente alpino</p>
-    </div>
-    <div lang="en" >
-      <img id="EN_The_alpine_environment" class="btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
-      <p>Alpine environment</p>
-    </div>
-    <div lang="fr">
-      <img id="FR_Environment_alpin" class="btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
-      <p>Environnement alpin</p>
-    </div>
-    <div lang="de">
-      <img id="DE_Die_alpine_Umwelt" class="btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
-      <p>Alpine Umwelt</p>
-    </div>
-    <div>
+    <div class="below-header-container">
+      <div lang="it">
+        <img
+          id="IT_ambiente_alpino"
+          class="btnAudio main-audio"
+          src="assets\icons\audio-narrazione-white.svg"
+        />
+        <p>Ambiente alpino</p>
+      </div>
+      <div lang="en">
+        <img
+          id="EN_The_alpine_environment"
+          class="btnAudio main-audio"
+          src="assets\icons\audio-narrazione-white.svg"
+        />
+        <p>Alpine environment</p>
+      </div>
+      <div lang="fr">
+        <img
+          id="FR_Environment_alpin"
+          class="btnAudio main-audio"
+          src="assets\icons\audio-narrazione-white.svg"
+        />
+        <p>Environnement alpin</p>
+      </div>
+      <div lang="de">
+        <img
+          id="DE_Die_alpine_Umwelt"
+          class="btnAudio main-audio"
+          src="assets\icons\audio-narrazione-white.svg"
+        />
+        <p>Alpine Umwelt</p>
+      </div>
+      <!-- <div>
       <img id="IT_passeggiata" class="passeggiata btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
       <p lang="it">Passeggiata in natura</p>
       <p lang="en">Walk in nature</p>
       <p lang="fr">Marche dans la nature</p>
       <p lang="de">Gehen Sie in der Natur spazieren</p>
+    </div> -->
     </div>
-  </div>
 
-  <div class="footer">
-    <span class="audioControl" id="progressAudioTime">00:00</span>
-    <input class="audioControl" id="progressAudioBar" type="range" value="0" min="0" max="100" step="1" />
-    <div class="languages">
-      <p id="switch-it" class="active-language">IT</p>
-      <div class="separator-footer">
-        <img src="assets\icons\separator.svg" />
+    <div class="footer">
+      <span class="audioControl" id="progressAudioTime">00:00</span>
+      <!-- <input
+        class="audioControl"
+        id="progressAudioBar"
+        type="range"
+        value="0"
+        min="0"
+        max="100"
+        step="1"
+      /> -->
+      <div class="languages">
+        <p id="switch-it" class="active-language">IT</p>
+        <div class="separator-footer">
+          <img src="assets\icons\separator.svg" />
+        </div>
+        <p id="switch-en">EN</p>
+        <div class="separator-footer">
+          <img src="assets\icons\separator.svg" />
+        </div>
+        <p id="switch-fr">FR</p>
+        <div class="separator-footer">
+          <img src="assets\icons\separator.svg" />
+        </div>
+        <p id="switch-de">DE</p>
       </div>
-      <p id="switch-en">EN</p>
-      <div class="separator-footer">
-        <img src="assets\icons\separator.svg" />
-      </div>
-      <p id="switch-fr">FR</p>
-      <div class="separator-footer">
-        <img src="assets\icons\separator.svg" />
-      </div>
-      <p id="switch-de">DE</p>
     </div>
-  </div>
 
-  <div class="slider">
-
-    <div class="slider-list">
-      <div class="slider-track">
-        <div class="slide">
-          <!-- THE ID HAVE TO BE THE SAME OF FILE AUDIO NAME -->
-          <div class="animal-box lucertola-vivipara">
-            <div data-type="no-audio-left-bottom-align" content="lucertola_vivipera" class="icon no-audio"></div>
-            <span lang="it" class="animal-name">Lucertola<br>vivipara</span>
-            <span lang="en" class="animal-name">Viviparous<br>lizard</span>
-            <span lang="fr" class="animal-name">Lézard<br>vivipare</span>
-            <span lang="de" class="animal-name">Waldeidechsea</span>
-            <span class="scientific-name">Zootoca<br>vivipara</span>
-          </div>
-          <div class="animal-box sordone">
-            <div id="sordone" data-type="verso-black" content="sordone" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Sordone</span>
-            <span lang="en" class="animal-name">Alpine<br>accentor</span>
-            <span lang="fr" class="animal-name">Accenteur <br>alpin</span>
-            <span lang="de" class="animal-name">Alpenbraunelle</span>
-            <span class="scientific-name">Prunella<br>collaris</span>
-          </div>
-          <div class="animal-box codirossone">
-            <div id="codirossone" data-type="verso-black" content="codirossone" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Codirossone</span>
-            <span lang="en" class="animal-name">Rofuos tailed<br>Rock Thrush</span>
-            <span lang="fr" class="animal-name">Monticole<br>de roche</span>
-            <span lang="de" class="animal-name">Steinrötel</span>
-            <span class="scientific-name">Monticola<br>saxatilis</span>
-          </div>
-          <div class="animal-box topo-selvatico-alpino">
-            <div data-type="no-audio-left-bottom-align" content="topo_selvatico_alpino" class="icon no-audio"></div>
-            <span lang="it" class="animal-name">Topo selvatico<br>alpino</span>
-            <span lang="en" class="animal-name">Alpine<br>mouse</span>
-            <span lang="fr" class="animal-name">Mulot<br>alpestre</span>
-            <span lang="de" class="animal-name">Alpenwaldmaus</span>
-            <span class="scientific-name">Apodemus alpicola</span>
-          </div>
-          <div class="animal-box gracchio-alpino">
-            <div id="gracchio_alpino" data-type="verso-black" content="gracchio_alpino" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Gracchio<br>alpino</span>
-            <span lang="en" class="animal-name">Yellow-billed<br>Chough</span>
-            <span lang="fr" class="animal-name">Chocard à <br>bec jaune</span>
-            <span lang="de" class="animal-name">Alpendohle</span>
-            <span class="scientific-name">Pyrrhocorax<br>graculus</span>
-          </div>
-          <div class="animal-box aquila-reale">
-            <div lang="it" id="IT_aquila" data-type="audio-narrazione-black" content="aquila_reale" class="btnAudio icon"></div>
-            <div lang="en" id="EN_Golden_eagle" data-type="audio-narrazione-black" content="aquila_reale" class="btnAudio icon"></div>
-            <div lang="fr" id="IT_aquila" data-type="audio-narrazione-black" content="aquila_reale" class="btnAudio icon"></div>
-            <div lang="de" id="DE_aquila" data-type="audio-narrazione-black" content="aquila_reale" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Aquila reale</span>
-            <span lang="en" class="animal-name">Golden Eagle</span>
-            <span lang="fr" class="animal-name">Aigle royal</span>
-            <span lang="de" class="animal-name">Steinadler</span>
-            <span class="scientific-name">Aquila<br>chrysaetos</span>
-          </div>
-          <div class="animal-box codirosso-spazzacamino">
-            <div id="codirosso_spazzacamino" data-type="verso-black" content="codirosso_spazzacamino"
-              class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Codirosso<br>spazzacamino</span>
-            <span lang="en" class="animal-name">Black<br>Redstart</span>
-            <span lang="fr" class="animal-name">Rougequeue<br>noir</span>
-            <span lang="de" class="animal-name">Hausrotschwanz</span>
-            <span class="scientific-name">Phoenicurus<br>ochruros</span>
-          </div>
-          <div class="animal-box merlo_dal_collare">
-            <div id="merlo_dal_collare" data-type="verso-black" content="merlo_dal_collare" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Merlo dal<br>collare</span>
-            <span lang="en" class="animal-name">Ring<br>Ouzel</span>
-            <span lang="fr" class="animal-name">Merle à<br>plastron</span>
-            <span lang="de" class="animal-name">Ringdrossel</span>
-            <span class="scientific-name">Turdus<br>torquatus</span>
-          </div>
-          <div class="animal-box gracchio-corallino">
-            <div id="gracchio_corallino" data-type="verso-black" content="gracchio_corallino" class="btnAudio icon">
+    <div class="slider">
+      <div class="slider-list">
+        <div class="slider-track">
+          <div class="slide">
+            <!-- THE ID HAVE TO BE THE SAME OF FILE AUDIO NAME -->
+            <div class="animal-box lucertola-vivipara">
+              <div
+                data-type="no-audio-left-bottom-align"
+                content="lucertola_vivipera"
+                class="icon no-audio"
+              ></div>
+              <span lang="it" class="animal-name">Lucertola<br />vivipara</span>
+              <span lang="en" class="animal-name">Viviparous<br />lizard</span>
+              <span lang="fr" class="animal-name">Lézard<br />vivipare</span>
+              <span lang="de" class="animal-name">Waldeidechsea</span>
+              <span class="scientific-name">Zootoca<br />vivipara</span>
             </div>
-            <span lang="it" class="animal-name">Gracchio<br>corallino</span>
-            <span lang="en" class="animal-name">Red-bileld<br>Chough</span>
-            <span lang="fr" class="animal-name">Crave à<br>bec jaune</span>
-            <span lang="de" class="animal-name">Alpenkrähe</span>
-            <span class="scientific-name">Pyrrhocorax<br>pyrrhocorax</span>
+            <div class="animal-box sordone">
+              <div
+                id="sordone"
+                data-type="verso-black"
+                content="sordone"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Sordone</span>
+              <span lang="en" class="animal-name">Alpine<br />accentor</span>
+              <span lang="fr" class="animal-name">Accenteur <br />alpin</span>
+              <span lang="de" class="animal-name">Alpenbraunelle</span>
+              <span class="scientific-name">Prunella<br />collaris</span>
+            </div>
+            <div class="animal-box codirossone">
+              <div
+                id="codirossone"
+                data-type="verso-black"
+                content="codirossone"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Codirossone</span>
+              <span lang="en" class="animal-name"
+                >Rofuos tailed<br />Rock Thrush</span
+              >
+              <span lang="fr" class="animal-name">Monticole<br />de roche</span>
+              <span lang="de" class="animal-name">Steinrötel</span>
+              <span class="scientific-name">Monticola<br />saxatilis</span>
+            </div>
+            <div class="animal-box topo-selvatico-alpino">
+              <div
+                data-type="no-audio-left-bottom-align"
+                content="topo_selvatico_alpino"
+                class="icon no-audio"
+              ></div>
+              <span lang="it" class="animal-name"
+                >Topo selvatico<br />alpino</span
+              >
+              <span lang="en" class="animal-name">Alpine<br />mouse</span>
+              <span lang="fr" class="animal-name">Mulot<br />alpestre</span>
+              <span lang="de" class="animal-name">Alpenwaldmaus</span>
+              <span class="scientific-name">Apodemus alpicola</span>
+            </div>
+            <div class="animal-box gracchio-alpino">
+              <div
+                id="gracchio_alpino"
+                data-type="verso-black"
+                content="gracchio_alpino"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Gracchio<br />alpino</span>
+              <span lang="en" class="animal-name"
+                >Yellow-billed<br />Chough</span
+              >
+              <span lang="fr" class="animal-name"
+                >Chocard à <br />bec jaune</span
+              >
+              <span lang="de" class="animal-name">Alpendohle</span>
+              <span class="scientific-name">Pyrrhocorax<br />graculus</span>
+            </div>
+            <div class="animal-box aquila-reale">
+              <div
+                lang="it"
+                id="IT_aquila"
+                data-type="audio-narrazione-black"
+                content="aquila_reale"
+                class="btnAudio icon"
+              ></div>
+              <div
+                lang="en"
+                id="EN_Golden_eagle"
+                data-type="audio-narrazione-black"
+                content="aquila_reale"
+                class="btnAudio icon"
+              ></div>
+              <div
+                lang="fr"
+                id="FR_Aigleroyal"
+                data-type="audio-narrazione-black"
+                content="aquila_reale"
+                class="btnAudio icon"
+              ></div>
+              <div
+                lang="de"
+                id="DE_aquila"
+                data-type="audio-narrazione-black"
+                content="aquila_reale"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Aquila reale</span>
+              <span lang="en" class="animal-name">Golden Eagle</span>
+              <span lang="fr" class="animal-name">Aigle royal</span>
+              <span lang="de" class="animal-name">Steinadler</span>
+              <span class="scientific-name">Aquila<br />chrysaetos</span>
+            </div>
+            <div class="animal-box codirosso-spazzacamino">
+              <div
+                id="codirosso_spazzacamino"
+                data-type="verso-black"
+                content="codirosso_spazzacamino"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name"
+                >Codirosso<br />spazzacamino</span
+              >
+              <span lang="en" class="animal-name">Black<br />Redstart</span>
+              <span lang="fr" class="animal-name">Rougequeue<br />noir</span>
+              <span lang="de" class="animal-name">Hausrotschwanz</span>
+              <span class="scientific-name">Phoenicurus<br />ochruros</span>
+            </div>
+            <div class="animal-box merlo_dal_collare">
+              <div
+                id="merlo_dal_collare"
+                data-type="verso-black"
+                content="merlo_dal_collare"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Merlo dal<br />collare</span>
+              <span lang="en" class="animal-name">Ring<br />Ouzel</span>
+              <span lang="fr" class="animal-name">Merle à<br />plastron</span>
+              <span lang="de" class="animal-name">Ringdrossel</span>
+              <span class="scientific-name">Turdus<br />torquatus</span>
+            </div>
+            <div class="animal-box gracchio-corallino">
+              <div
+                id="gracchio_corallino"
+                data-type="verso-black"
+                content="gracchio_corallino"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Gracchio<br />corallino</span>
+              <span lang="en" class="animal-name">Red-bileld<br />Chough</span>
+              <span lang="fr" class="animal-name">Crave à<br />bec jaune</span>
+              <span lang="de" class="animal-name">Alpenkrähe</span>
+              <span class="scientific-name">Pyrrhocorax<br />pyrrhocorax</span>
+            </div>
+            <div class="animal-box salamandra-nera">
+              <div
+                data-type="no-audio-left-bottom-align"
+                content="salamandra_nera"
+                class="icon no-audio"
+              ></div>
+              <span lang="it" class="animal-name">Salamandra<br />nera</span>
+              <span lang="en" class="animal-name">Alpine<br />salamander</span>
+              <span lang="fr" class="animal-name">Salamandre<br />noire</span>
+              <span lang="de" class="animal-name">Alpensalamander</span>
+              <span class="scientific-name">Salamandra atra</span>
+            </div>
           </div>
-          <div class="animal-box salamandra-nera">
-            <div data-type="no-audio-left-bottom-align" content="salamandra_nera" class="icon no-audio"></div>
-            <span lang="it" class="animal-name">Salamandra<br>nera</span>
-            <span lang="en" class="animal-name">Alpine<br>salamander</span>
-            <span lang="fr" class="animal-name">Salamandre<br>noire</span>
-            <span lang="de" class="animal-name">Alpensalamander</span>
-            <span class="scientific-name">Salamandra atra</span>
+          <div class="slide slideTwo">
+            <div class="animal-box marmotta">
+              <div
+                lang="it"
+                id="IT_marmotta"
+                data-type="audio-narrazione-black"
+                content="marmotta"
+                class="btnAudio icon"
+              ></div>
+              <div
+                lang="en"
+                id="EN_Marmot"
+                data-type="audio-narrazione-black"
+                content="marmotta"
+                class="btnAudio icon"
+              ></div>
+              <div
+                lang="fr"
+                id="FR_Marmotte"
+                data-type="audio-narrazione-black"
+                content="marmotta"
+                class="btnAudio icon"
+              ></div>
+              <div
+                lang="de"
+                id="DE_Murmeltier"
+                data-type="audio-narrazione-black"
+                content="marmotta"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Marmotta</span>
+              <span lang="en" class="animal-name">Alpine<br />marmot</span>
+              <span lang="fr" class="animal-name">Marmotte<br />des Alpes</span>
+              <span lang="de" class="animal-name">Alpenmurmeltier</span>
+              <span class="scientific-name">Marmota<br />marmota</span>
+            </div>
+            <div class="animal-box marasso">
+              <div
+                data-type="no-audio-left-bottom-align"
+                content="marasso"
+                class="icon no-audio"
+              ></div>
+              <span lang="it" class="animal-name">Marasso</span>
+              <span lang="en" class="animal-name"
+                >Common European<br />adder</span
+              >
+              <span lang="fr" class="animal-name">Vipère<br />péliade</span>
+              <span lang="de" class="animal-name">Kreuzotter</span>
+              <span class="scientific-name">Vipera<br />berus</span>
+            </div>
+            <div class="animal-box coturnice">
+              <div
+                id="coturnice"
+                data-type="verso-black"
+                content="coturnice"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Coturnice</span>
+              <span lang="en" class="animal-name">Rock<br />Partridge</span>
+              <span lang="fr" class="animal-name">Perdrix<br />bartavelle</span>
+              <span lang="de" class="animal-name">Steinhuhn</span>
+              <span class="scientific-name">Alectoris graeca</span>
+            </div>
+            <div class="animal-box culbianco">
+              <div
+                id="culbianco"
+                data-type="verso-black"
+                content="culbianco"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Culbianco ♂</span>
+              <span lang="en" class="animal-name"
+                >Northern<br />Wheatear ♂</span
+              >
+              <span lang="fr" class="animal-name"
+                >Traquet<br />
+                motteux ♂</span
+              >
+              <span lang="de" class="animal-name">Steinschmätzer ♂</span>
+              <span class="scientific-name">Oenanthe<br />oenanthe</span>
+            </div>
+            <div class="animal-box passera-scopaiola">
+              <div
+                id="passera_scopaiola"
+                data-type="verso-black"
+                content="passera_scopaiola"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Passera<br />scopaiola</span>
+              <span lang="en" class="animal-name">Dunnock</span>
+              <span lang="fr" class="animal-name">Accenteur<br />mouchet</span>
+              <span lang="de" class="animal-name">Heckenbraunelle</span>
+              <span class="scientific-name">Prunella<br />modularis</span>
+            </div>
+            <div class="animal-box camoscio">
+              <div
+                id="camoscio"
+                data-type="verso-black"
+                content="camoscio_M"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Camoscio ♂</span>
+              <span lang="en" class="animal-name"
+                >Alpine<br />
+                chamois ♂</span
+              >
+              <span lang="fr" class="animal-name">Chamois ♂</span>
+              <span lang="de" class="animal-name">Gämse ♂</span>
+              <span class="scientific-name">Rupicapra<br />rupicapra</span>
+            </div>
+            <div class="animal-box stambecco-alpino">
+              <div
+                id="stambecco"
+                data-type="verso-black"
+                content="stambecco_alpino_F"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Stambecco<br />alpino ♀</span>
+              <span lang="en" class="animal-name">Alpine<br />ibex ♀</span>
+              <span lang="fr" class="animal-name"
+                >Bouquetin<br />des Alpes ♀</span
+              >
+              <span lang="de" class="animal-name">Alpensteinbock ♀</span>
+              <span class="scientific-name">Capra ibex</span>
+            </div>
+            <div class="animal-box spioncello">
+              <div
+                id="spioncello"
+                data-type="verso-black"
+                content="spioncello"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Spioncello</span>
+              <span lang="en" class="animal-name">Water<br />Pipit</span>
+              <span lang="fr" class="animal-name">Pipit<br />spioncelle</span>
+              <span lang="de" class="animal-name">Bergpieper</span>
+              <span class="scientific-name">Anthus<br />spinoletta</span>
+            </div>
+            <div class="animal-box toporagno-alpino">
+              <div
+                data-type="no-audio-left-bottom-align"
+                content="toporagno_alpino"
+                class="icon no-audio"
+              ></div>
+              <span lang="it" class="animal-name">Toporagno<br />alpino</span>
+              <span lang="en" class="animal-name">Alpine<br />shrew</span>
+              <span lang="fr" class="animal-name">Musaraigne<br />alpine</span>
+              <span lang="de" class="animal-name">Alpenspitzmaus</span>
+              <span class="scientific-name">Sorex alpinus</span>
+            </div>
+          </div>
+          <div class="slide slideThree">
+            <div class="animal-box arvicola-delle-nevi">
+              <div
+                data-type="no-audio-left-bottom-align"
+                content="arvicola_delle_nevi"
+                class="icon no-audio"
+              ></div>
+              <span lang="it" class="animal-name"
+                >Arvicola<br />delle nevi</span
+              >
+              <span lang="en" class="animal-name">Snow<br />vole</span>
+              <span lang="fr" class="animal-name"
+                >Campagnol<br />des neiges</span
+              >
+              <span lang="de" class="animal-name">Schneemaus</span>
+              <span class="scientific-name">Chionomys<br />nivalis</span>
+            </div>
+            <div class="animal-box camoscio-page-three">
+              <div
+                id="camoscio"
+                data-type="verso-black"
+                content="camoscio_F"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Camoscio ♀</span>
+              <span lang="en" class="animal-name"
+                >Alpine<br />
+                chamois ♀</span
+              >
+              <span lang="fr" class="animal-name">Chamois ♀</span>
+              <span lang="de" class="animal-name">Gämse ♀</span>
+              <span class="scientific-name">Rupicapra<br />rupicapra</span>
+            </div>
+            <div class="animal-box stambecco-alpino-page-three">
+              <div
+                lang="it"
+                id="IT_stambecco_M"
+                data-type="audio-narrazione-black"
+                content="stambecco_alpino_M"
+                class="btnAudio icon"
+              ></div>
+              <div
+                lang="en"
+                id="EN_Ibex"
+                data-type="audio-narrazione-black"
+                content="stambecco_alpino_M"
+                class="btnAudio icon"
+              ></div>
+              <div
+                lang="fr"
+                id="FR_Bouquetin"
+                data-type="audio-narrazione-black"
+                content="stambecco_alpino_M"
+                class="btnAudio icon"
+              ></div>
+              <div
+                lang="de"
+                id="DE_Steinbock"
+                data-type="audio-narrazione-black"
+                content="stambecco_alpino_M"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Stambecco<br />alpino ♂</span>
+              <span lang="en" class="animal-name">Alpine<br />ibex ♂</span>
+              <span lang="fr" class="animal-name"
+                >Bouquetin<br />des Alpes ♂</span
+              >
+              <span lang="de" class="animal-name">Alpensteinbock ♂</span>
+              <span class="scientific-name">Capra ibex</span>
+            </div>
+            <div class="animal-box fringuello-alpino">
+              <div
+                id="fringuello_alpino"
+                data-type="verso-black"
+                content="fringuello_alpino"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Fringuello<br />alpino</span>
+              <span lang="en" class="animal-name">Snowfinch</span>
+              <span lang="fr" class="animal-name">Niverolle<br />alpine</span>
+              <span lang="de" class="animal-name">Schneesperling</span>
+              <span class="scientific-name">Montifringilla<br />nivalis</span>
+            </div>
+            <div class="animal-box picchio-muraiolo">
+              <div
+                id="picchio_muraiolo"
+                data-type="verso-black"
+                content="picchio_muraiolo"
+                class="btnAudio icon"
+              ></div>
+              <span lang="it" class="animal-name">Picchio<br />muraiolo</span>
+              <span lang="en" class="animal-name">Wallcreeper</span>
+              <span lang="fr" class="animal-name"
+                >Tichodrome<br />échelette</span
+              >
+              <span lang="de" class="animal-name">Mauerläufer</span>
+              <span class="scientific-name">Tichodroma<br />muraria</span>
+            </div>
           </div>
         </div>
-        <div class="slide slideTwo">
-          <div class="animal-box marmotta">
-            <div lang="it" id="IT_marmotta" data-type="audio-narrazione-black" content="marmotta" class="btnAudio icon"></div>
-            <div lang="en" id="EN_Marmot" data-type="audio-narrazione-black" content="marmotta" class="btnAudio icon"></div>
-            <div lang="fr" id="FR_Marmotte" data-type="audio-narrazione-black" content="marmotta" class="btnAudio icon"></div>
-            <div lang="de" id="DE_Murmeltier" data-type="audio-narrazione-black" content="marmotta" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Marmotta</span>
-            <span lang="en" class="animal-name">Alpine<br>marmot</span>
-            <span lang="fr" class="animal-name">Marmotte<br>des Alpes</span>
-            <span lang="de" class="animal-name">Alpenmurmeltier</span>
-            <span class="scientific-name">Marmota<br>marmota</span>
+      </div>
+      <div class="slider-arrows">
+        <button type="button" class="prev disabled"></button>
+        <button type="button" class="next"></button>
+      </div>
+    </div>
+
+    <div id="myInfoBox" class="info-box">
+      <button class="info-button-close closeInfo" onclick="closeInfo()">
+        info-
+      </button>
+      <div class="info-container">
+        <div class="info-content">
+          <div lang="it" class="info-title">Versi e Narrazioni</div>
+          <div lang="en" class="info-title">Verses and Narrations</div>
+          <div lang="fr" class="info-title">Versets et récits</div>
+          <div lang="de" class="info-title">Verse und Erzählungen</div>
+          <div class="versi-narrazione-box">
+            <div class="icon-type">
+              <img class="icon-versi" src="assets\icons\verso-grey.svg" />
+              <p lang="it">Verso</p>
+              <p lang="en">Verse</p>
+              <p lang="fr">Verset</p>
+              <p lang="de">Verse</p>
+            </div>
+            <div class="icon-type">
+              <img
+                class="icon-versi"
+                src="assets\icons\audio-narrazione-grey.svg"
+              />
+              <p lang="it">Audio narrazione</p>
+              <p lang="en">Audio narration</p>
+              <p lang="fr">Narration audio</p>
+              <p lang="de">Audio-Erzählung</p>
+            </div>
+            <div class="icon-type">
+              <img class="icon-versi" src="assets\icons\no-audio.svg" />
+              <p lang="it">No verso/audio</p>
+              <p lang="en">No verse/audio</p>
+              <p lang="fr">Pas de couplet/audio</p>
+              <p lang="de">Kein Vers/Audio</p>
+            </div>
           </div>
-          <div class="animal-box marasso">
-            <div data-type="no-audio-left-bottom-align" content="marasso" class="icon no-audio"></div>
-            <span lang="it" class="animal-name">Marasso</span>
-            <span lang="en" class="animal-name">Common European<br>adder</span>
-            <span lang="fr" class="animal-name">Vipère<br>péliade</span>
-            <span lang="de" class="animal-name">Kreuzotter</span>
-            <span class="scientific-name">Vipera<br>berus</span>
+          <div class="archivi-sonori">
+            <div lang="it" class="info-title">Archivi sonori</div>
+            <div lang="en" class="info-title">Sound archives</div>
+            <div lang="fr" class="info-title">Archives sonores</div>
+            <div lang="de" class="info-title">Tonarchive</div>
+            <table>
+              <tr>
+                <td>- Biblioteca Museo</td>
+                <td>- Aporee</td>
+              </tr>
+              <tr>
+                <td>- Aplsalts</td>
+                <td>- Envato Elements</td>
+              </tr>
+              <tr>
+                <td>- Vogelwarte</td>
+                <td>- Fonik</td>
+              </tr>
+            </table>
           </div>
-          <div class="animal-box coturnice">
-            <div id="coturnice" data-type="verso-black" content="coturnice" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Coturnice</span>
-            <span lang="en" class="animal-name">Rock<br>Partridge</span>
-            <span lang="fr" class="animal-name">Perdrix<br>bartavelle</span>
-            <span lang="de" class="animal-name">Steinhuhn</span>
-            <span class="scientific-name">Alectoris graeca</span>
-          </div>
-          <div class="animal-box culbianco">
-            <div id="culbianco" data-type="verso-black" content="culbianco" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Culbianco ♂</span>
-            <span lang="en" class="animal-name">Northern<br>Wheatear ♂</span>
-            <span lang="fr" class="animal-name">Traquet<br> motteux ♂</span>
-            <span lang="de" class="animal-name">Steinschmätzer ♂</span>
-            <span class="scientific-name">Oenanthe<br>oenanthe</span>
-          </div>
-          <div class="animal-box passera-scopaiola">
-            <div id="passera_scopaiola" data-type="verso-black" content="passera_scopaiola" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Passera<br>scopaiola</span>
-            <span lang="en" class="animal-name">Dunnock</span>
-            <span lang="fr" class="animal-name">Accenteur<br>mouchet</span>
-            <span lang="de" class="animal-name">Heckenbraunelle</span>
-            <span class="scientific-name">Prunella<br>modularis</span>
-          </div>
-          <div class="animal-box camoscio">
-            <div id="camoscio" data-type="verso-black" content="camoscio_M" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Camoscio ♂</span>
-            <span lang="en" class="animal-name">Alpine<br> chamois ♂</span>
-            <span lang="fr" class="animal-name">Chamois ♂</span>
-            <span lang="de" class="animal-name">Gämse ♂</span>
-            <span class="scientific-name">Rupicapra<br>rupicapra</span>
-          </div>
-          <div class="animal-box stambecco-alpino">
-            <div id="stambecco" data-type="verso-black" content="stambecco_alpino_F" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Stambecco<br>alpino ♀</span>
-            <span lang="en" class="animal-name">Alpine<br>ibex ♀</span>
-            <span lang="fr" class="animal-name">Bouquetin<br>des Alpes ♀</span>
-            <span lang="de" class="animal-name">Alpensteinbock ♀</span>
-            <span class="scientific-name">Capra ibex</span>
-          </div>
-          <div class="animal-box spioncello">
-            <div id="spioncello" data-type="verso-black" content="spioncello" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Spioncello</span>
-            <span lang="en" class="animal-name">Water<br>Pipit</span>
-            <span lang="fr" class="animal-name">Pipit<br>spioncelle</span>
-            <span lang="de" class="animal-name">Bergpieper</span>
-            <span class="scientific-name">Anthus<br>spinoletta</span>
-          </div>
-          <div class="animal-box toporagno-alpino">
-            <div data-type="no-audio-left-bottom-align" content="toporagno_alpino" class="icon no-audio"></div>
-            <span lang="it" class="animal-name">Toporagno<br>alpino</span>
-            <span lang="en" class="animal-name">Alpine<br>shrew</span>
-            <span lang="fr" class="animal-name">Musaraigne<br>alpine</span>
-            <span lang="de" class="animal-name">Alpenspitzmaus</span>
-            <span class="scientific-name">Sorex alpinus</span>
-          </div>
-        </div>
-        <div class="slide slideThree">
-          <div class="animal-box arvicola-delle-nevi">
-            <div data-type="no-audio-left-bottom-align" content="arvicola_delle_nevi" class="icon no-audio"></div>
-            <span lang="it" class="animal-name">Arvicola<br>delle nevi</span>
-            <span lang="en" class="animal-name">Snow<br>vole</span>
-            <span lang="fr" class="animal-name">Campagnol<br>des neiges</span>
-            <span lang="de" class="animal-name">Schneemaus</span>
-            <span class="scientific-name">Chionomys<br>nivalis</span>
-          </div>
-          <div class="animal-box camoscio-page-three">
-            <div id="camoscio" data-type="verso-black" content="camoscio_F" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Camoscio ♀</span>
-            <span lang="en" class="animal-name">Alpine<br> chamois ♀</span>
-            <span lang="fr" class="animal-name">Chamois ♀</span>
-            <span lang="de" class="animal-name">Gämse ♀</span>
-            <span class="scientific-name">Rupicapra<br>rupicapra</span>
-          </div>
-          <div class="animal-box stambecco-alpino-page-three">
-            <div lang="it" id="IT_stambecco_M" data-type="audio-narrazione-black" content="stambecco_alpino_M" class="btnAudio icon"></div>
-            <div lang="en" id="EN_Ibex" data-type="audio-narrazione-black" content="stambecco_alpino_M" class="btnAudio icon"></div>
-            <div lang="fr" id="FR_Bouquetin" data-type="audio-narrazione-black" content="stambecco_alpino_M" class="btnAudio icon"></div>
-            <div lang="de" id="DE_Steinbock" data-type="audio-narrazione-black" content="stambecco_alpino_M" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Stambecco<br>alpino ♂</span>
-            <span lang="en" class="animal-name">Alpine<br>ibex ♂</span>
-            <span lang="fr" class="animal-name">Bouquetin<br>des Alpes ♂</span>
-            <span lang="de" class="animal-name">Alpensteinbock ♂</span>
-            <span class="scientific-name">Capra ibex</span>
-          </div>
-          <div class="animal-box fringuello-alpino">
-            <div id="fringuello_alpino" data-type="verso-black" content="fringuello_alpino" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Fringuello<br>alpino</span>
-            <span lang="en" class="animal-name">Snowfinch</span>
-            <span lang="fr" class="animal-name">Niverolle<br>alpine</span>
-            <span lang="de" class="animal-name">Schneesperling</span>
-            <span class="scientific-name">Montifringilla<br>nivalis</span>
-          </div>
-          <div class="animal-box picchio-muraiolo">
-            <div id="picchio_muraiolo" data-type="verso-black" content="picchio_muraiolo" class="btnAudio icon"></div>
-            <span lang="it" class="animal-name">Picchio<br>muraiolo</span>
-            <span lang="en" class="animal-name">Wallcreeper</span>
-            <span lang="fr" class="animal-name">Tichodrome<br>échelette</span>
-            <span lang="de" class="animal-name">Mauerläufer</span>
-            <span class="scientific-name">Tichodroma<br>muraria</span>
+
+          <div class="crediti">
+            <div lang="it" class="info-title">Crediti</div>
+            <div lang="en" class="info-title">Credits</div>
+            <div lang="fr" class="info-title">Crédits</div>
+            <div lang="de" class="info-title">Kredite</div>
+            <div class="info-subtitle">SUPSI - Istituto Design</div>
+            <table>
+              <tr>
+                <td>Jean-Pierre Calderolo</td>
+                <td lang="it">Coordinatore progetto</td>
+                <td lang="en">Project coordinator</td>
+                <td lang="fr">Coordinateur de projet</td>
+                <td lang="de">Projektkoordinator</td>
+              </tr>
+              <tr>
+                <td>Marta Pucciarelli</td>
+                <td lang="it">Sonificazione diorama</td>
+                <td lang="en">Diorama sonification</td>
+                <td lang="fr">Sonification de diorama</td>
+                <td lang="de">Diorama-Sonifikation</td>
+              </tr>
+              <tr>
+                <td>Vanessa De Luca</td>
+                <td lang="it">Attività didattiche</td>
+                <td lang="en">Educational activities</td>
+                <td lang="fr">Activités éducatives</td>
+                <td lang="de">Bildungsaktivitäten</td>
+              </tr>
+              <tr>
+                <td>Giulio Zaccarelli</td>
+                <td lang="it">Parete scientifica</td>
+                <td lang="en">Scientific wall</td>
+                <td lang="fr">Mur scientifique</td>
+                <td lang="de">Wissenschaftliche Wand</td>
+              </tr>
+              <tr>
+                <td>Antonella Autuori</td>
+                <td lang="it">Interfaccia sonora</td>
+                <td lang="en">Sound interface</td>
+                <td lang="fr">Interface sonore</td>
+                <td lang="de">Sound-Schnittstelle</td>
+              </tr>
+            </table>
+            <div lang="it" class="info-subtitle">Collaboratori esterni</div>
+            <div lang="en" class="info-subtitle">External collaborators</div>
+            <div lang="fr" class="info-subtitle">Collaborateurs externes</div>
+            <div lang="de" class="info-subtitle">Externe Mitarbeiter</div>
+            <table>
+              <tr>
+                <td>Daniele Murgia</td>
+                <td lang="it">Produzione suoni</td>
+                <td lang="en">Sound production</td>
+                <td lang="fr">Réalisation sonore</td>
+                <td lang="de">Tonproduktion</td>
+              </tr>
+              <tr>
+                <td>Juan C. Alzate Peña</td>
+                <td lang="it">Sviluppo interfaccia</td>
+                <td lang="en">Interface development</td>
+                <td lang="fr">Développement d'interfaces</td>
+                <td lang="de">Schnittstellenentwicklung</td>
+              </tr>
+              <tr>
+                <td>Alberto Guerra</td>
+                <td lang="it">Sviluppo interfaccia</td>
+                <td lang="en">Interface development</td>
+                <td lang="fr">Développement d'interfaces</td>
+                <td lang="de">Schnittstellenentwicklung</td>
+              </tr>
+            </table>
+            <div lang="it" class="info-subtitle">
+              UNITAS - Associazione Ciechi e Ipovedenti<br />della Svizzera
+            </div>
+            <div lang="en" class="info-subtitle">
+              UNITAS - Association of the Blind and Visually Impaired<br />of
+              Switzerland
+            </div>
+            <div lang="fr" class="info-subtitle">
+              UNITAS - Association des aveugles et malvoyants<br />de Suisse
+            </div>
+            <div lang="de" class="info-subtitle">
+              UNITAS - Blinden- und Sehbehindertenverband<br />der Schweiz
+            </div>
+            <table>
+              <tr>
+                <td>Giorgietti Pia</td>
+                <td lang="it">Ruolo</td>
+                <td lang="en">Ruolo</td>
+                <td lang="fr">Ruolo</td>
+                <td lang="de">Ruolo</td>
+              </tr>
+              <tr>
+                <td>Tiziana</td>
+                <td>Ruolo</td>
+              </tr>
+            </table>
+            <div lang="it" class="info-subtitle">
+              UNISMR - Università degli Studi della Repubblica<br />di San
+              Marino
+            </div>
+            <div lang="en" class="info-subtitle">
+              UNISMR - University of the Republic <br />of San Marino
+            </div>
+            <div lang="fr" class="info-subtitle">
+              UNISMR - Université de la République<br />de Saint-Marin
+            </div>
+            <div lang="de" class="info-subtitle">
+              UNISMR - Universität der Republik<br />San Marino
+            </div>
+            <div lang="it" class="info-p">
+              Realizzazione della traccia<br />“Una passeggiata sonora”
+            </div>
+            <div lang="en" class="info-p">
+              Creation of the track<br />"A sound walk"
+            </div>
+            <div lang="fr" class="info-p">
+              Création du morceau<br />"Une promenade sonore"
+            </div>
+            <div lang="de" class="info-p">
+              Erstellung des Tracks <br />"Ein klangvoller Spaziergang"
+            </div>
+            <table>
+              <tr>
+                <td>Roberto Paci dalò</td>
+                <td lang="it">Docente</td>
+                <td lang="en">Professor</td>
+                <td lang="fr">Professeur</td>
+                <td lang="de">Professor</td>
+              </tr>
+              <tr>
+                <td>Alessandra Bosco</td>
+                <td lang="it">Docente</td>
+                <td lang="en">Professor</td>
+                <td lang="fr">Professeur</td>
+                <td lang="de">Professor</td>
+              </tr>
+              <tr>
+                <td>Alice di Francescantonio</td>
+                <td lang="it">Progettista</td>
+                <td lang="en">Designer</td>
+                <td lang="fr">Designer</td>
+                <td lang="de">Designer</td>
+              </tr>
+              <tr>
+                <td>Marta Mezzetti</td>
+                <td lang="it">Progettista</td>
+                <td lang="en">Designer</td>
+                <td lang="fr">Designer</td>
+                <td lang="de">Designer</td>
+              </tr>
+              <tr>
+                <td>Nicolò Sinatra</td>
+                <td lang="it">Progettista</td>
+                <td lang="en">Designer</td>
+                <td lang="fr">Designer</td>
+                <td lang="de">Designer</td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
     </div>
-    <div class="slider-arrows">
-      <button type="button" class="prev disabled"></button>
-      <button type="button" class="next"></button>
-    </div>
-  </div>
 
-  <div id="myInfoBox" class="info-box">
-    <button class="info-button-close closeInfo" onclick="closeInfo()">info-</button>
-    <div class="info-container">
-      <div class="info-content">
-        <div lang="it" class="info-title">Versi e Narrazioni</div>
-        <div lang="en" class="info-title">Verses and Narrations</div>
-        <div lang="fr" class="info-title">Versets et récits</div>
-        <div lang="de" class="info-title">Verse und Erzählungen</div>
-        <div class="versi-narrazione-box">
-          <div class="icon-type">
-            <img class="icon-versi" src="assets\icons\verso-grey.svg" />
-            <p lang="it">Verso</p>
-            <p lang="en">Verse</p>
-            <p lang="fr">Verset</p>
-            <p lang="de">Verse</p>
-          </div>
-          <div class="icon-type">
-            <img class="icon-versi" src="assets\icons\audio-narrazione-grey.svg" />
-            <p lang="it">Audio narrazione</p>
-            <p lang="en">Audio narration</p>
-            <p lang="fr">Narration audio</p>
-            <p lang="de">Audio-Erzählung</p>
-          </div>
-          <div class="icon-type">
-            <img class="icon-versi" src="assets\icons\no-audio.svg" />
-            <p lang="it">No verso/audio</p>
-            <p lang="en">No verse/audio</p>
-            <p lang="fr">Pas de couplet/audio</p>
-            <p lang="de">Kein Vers/Audio</p>
-          </div>
-        </div>
-        <div class="archivi-sonori">
-          <div lang="it" class="info-title">Archivi sonori</div>
-          <div lang="en" class="info-title">Sound archives</div>
-          <div lang="fr" class="info-title">Archives sonores</div>
-          <div lang="de" class="info-title">Tonarchive</div>
-          <table>
-            <tr>
-              <td>- Biblioteca Museo</td>
-              <td>- Aporee</td>
-            </tr>
-            <tr>
-              <td>- Aplsalts</td>
-              <td>- Envato Elements</td>
-            </tr>
-            <tr>
-              <td>- Vogelwarte</td>
-              <td>- Fonik</td>
-            </tr>
-          </table>
-        </div>
+    <div id="myCloseBox" class="close-box" onclick="closeInfo()"></div>
 
-        <div class="crediti">
-          <div lang="it" class="info-title">Crediti</div>
-          <div lang="en" class="info-title">Credits</div>
-          <div lang="fr" class="info-title">Crédits</div>
-          <div lang="de" class="info-title">Kredite</div>
-          <div class="info-subtitle">SUPSI - Istituto Design</div>
-          <table>
-            <tr>
-              <td>Jean-Pierre Calderolo</td>
-              <td lang="it">Coordinatore progetto</td>
-              <td lang="en">Project coordinator</td>
-              <td lang="fr">Coordinateur de projet</td>
-              <td lang="de">Projektkoordinator</td>
-            </tr>
-            <tr>
-              <td>Marta Pucciarelli</td>
-              <td lang="it">Sonificazione diorama</td>
-              <td lang="en">Diorama sonification</td>
-              <td lang="fr">Sonification de diorama</td>
-              <td lang="de">Diorama-Sonifikation</td>
-            </tr>
-            <tr>
-              <td>Vanessa De Luca</td>
-              <td lang="it">Attività didattiche</td>
-              <td lang="en">Educational activities</td>
-              <td lang="fr">Activités éducatives</td>
-              <td lang="de">Bildungsaktivitäten</td>
-            </tr>
-            <tr>
-              <td>Giulio Zaccarelli</td>
-              <td lang="it">Parete scientifica</td>
-              <td lang="en">Scientific wall</td>
-              <td lang="fr">Mur scientifique</td>
-              <td lang="de">Wissenschaftliche Wand</td>
-            </tr>
-            <tr>
-              <td>Antonella Autuori</td>
-              <td lang="it">Interfaccia sonora</td>
-              <td lang="en">Sound interface</td>
-              <td lang="fr">Interface sonore</td>
-              <td lang="de">Sound-Schnittstelle</td>
-            </tr>
-          </table>
-          <div lang="it" class="info-subtitle">Collaboratori esterni</div>
-          <div lang="en" class="info-subtitle">External collaborators</div>
-          <div lang="fr" class="info-subtitle">Collaborateurs externes</div>
-          <div lang="de" class="info-subtitle">Externe Mitarbeiter</div>
-          <table>
-            <tr>
-              <td>Daniele Murgia</td>
-              <td lang="it">Produzione suoni</td>
-              <td lang="en">Sound production</td>
-              <td lang="fr">Réalisation sonore</td>
-              <td lang="de">Tonproduktion</td>
-            </tr>
-            <tr>
-              <td>Juan C. Alzate Peña</td>
-              <td lang="it">Sviluppo interfaccia</td>
-              <td lang="en">Interface development</td>
-              <td lang="fr">Développement d'interfaces</td>
-              <td lang="de">Schnittstellenentwicklung</td>
-            </tr>
-            <tr>
-              <td>Alberto Guerra</td>
-              <td lang="it">Sviluppo interfaccia</td>
-              <td lang="en">Interface development</td>
-              <td lang="fr">Développement d'interfaces</td>
-              <td lang="de">Schnittstellenentwicklung</td>
-            </tr>
-          </table>
-          <div lang="it" class="info-subtitle">UNITAS - Associazione Ciechi e Ipovedenti<br>della Svizzera</div>
-          <div lang="en" class="info-subtitle">UNITAS - Association of the Blind and Visually Impaired<br>of Switzerland
-          </div>
-          <div lang="fr" class="info-subtitle">UNITAS - Association des aveugles et malvoyants<br>de Suisse</div>
-          <div lang="de" class="info-subtitle">UNITAS - Blinden- und Sehbehindertenverband<br>der Schweiz</div>
-          <table>
-            <tr>
-              <td>Giorgietti Pia</td>
-              <td lang="it">Ruolo</td>
-              <td lang="en">Ruolo</td>
-              <td lang="fr">Ruolo</td>
-              <td lang="de">Ruolo</td>
-            </tr>
-            <tr>
-              <td>Tiziana</td>
-              <td>Ruolo</td>
-            </tr>
-          </table>
-          <div lang="it" class="info-subtitle">UNISMR - Università degli Studi della Repubblica<br>di San Marino</div>
-          <div lang="en" class="info-subtitle">UNISMR - University of the Republic <br>of San Marino</div>
-          <div lang="fr" class="info-subtitle">UNISMR - Université de la République<br>de Saint-Marin</div>
-          <div lang="de" class="info-subtitle">UNISMR - Universität der Republik<br>San Marino</div>
-          <div lang="it" class="info-p">Realizzazione della traccia<br>“Una passeggiata sonora”</div>
-          <div lang="en" class="info-p">Creation of the track<br>"A sound walk"</div>
-          <div lang="fr" class="info-p">Création du morceau<br>"Une promenade sonore"</div>
-          <div lang="de" class="info-p">Erstellung des Tracks <br>"Ein klangvoller Spaziergang"</div>
-          <table>
-            <tr>
-              <td>Roberto Paci dalò</td>
-              <td lang="it">Docente</td>
-              <td lang="en">Professor</td>
-              <td lang="fr">Professeur</td>
-              <td lang="de">Professor</td>
-            </tr>
-            <tr>
-              <td>Alessandra Bosco</td>
-              <td lang="it">Docente</td>
-              <td lang="en">Professor</td>
-              <td lang="fr">Professeur</td>
-              <td lang="de">Professor</td>
-            </tr>
-            <tr>
-              <td>Alice di Francescantonio</td>
-              <td lang="it">Progettista</td>
-              <td lang="en">Designer</td>
-              <td lang="fr">Designer</td>
-              <td lang="de">Designer</td>
-            </tr>
-            <tr>
-              <td>Marta Mezzetti</td>
-              <td lang="it">Progettista</td>
-              <td lang="en">Designer</td>
-              <td lang="fr">Designer</td>
-              <td lang="de">Designer</td>
-            </tr>
-            <tr>
-              <td>Nicolò Sinatra</td>
-              <td lang="it">Progettista</td>
-              <td lang="en">Designer</td>
-              <td lang="fr">Designer</td>
-              <td lang="de">Designer</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="myCloseBox" class="close-box" onclick="closeInfo()"></div>
-
-  <script src="js/translate.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/audio.js"></script>
-
-</body>
-
+    <script src="js/translate.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/audio.js"></script>
+  </body>
 </html>
