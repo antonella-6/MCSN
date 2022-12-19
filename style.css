@@ -221,8 +221,8 @@ body {
 }
 
 .animal-box .image {
-  width: 4.9em;
-  height: 4.9em;
+  width: 6.6em; /* 4.9em*/
+  height: 6.6em; /* 4.9em*/
   position: absolute;
   z-index: 1;
   bottom: -2.4em;
@@ -230,8 +230,8 @@ body {
 
 /* X ANTONELLA DIMENSIONE IMMAGINI */
 .image {
-  width: 4.9em;
-  height: 4.9em;
+  width: 6.6em; /* 4.9em*/
+  height: 6.6em; /* 4.9em*/
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -283,7 +283,7 @@ body {
 
 .codirosso-spazzacamino {
   position: absolute;
-  top: 18.8em;
+  top: 20.0em; /*18.4em*/
   left: 40em;
 }
 
