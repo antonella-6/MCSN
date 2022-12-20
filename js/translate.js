@@ -10,7 +10,7 @@ console.log("French is " + french);
 console.log("German is " + german);
 
 if ((italian == null) && (english == null) && (french == null) && (german == null) ){
-    localStorage.setItem('[lang="it"]', true);
+    localStorage.setItem('lang', 'it');
     $('#switch-it').addClass('active-language');
   } else if (german == 'true') {
     $('[lang="it"]').hide();
@@ -49,6 +49,7 @@ if ((italian == null) && (english == null) && (french == null) && (german == nul
 
 
 $('#switch-it').click(0, function() {
+  localStorage.setItem("lang", "it")
   if ( $('[lang="it"]').is(':visible')) {
     console.log("Italian Selected.");
 } else {
@@ -71,11 +72,15 @@ $('#switch-it').click(0, function() {
   }
 
 }
+
+sortTable()
 });
 
 /* console.log("set lenguage"); */
 
 $('#switch-en').click(function() {
+  localStorage.setItem("lang", "en")
+
   if ( $('[lang="en"]').is(':visible')) {
     console.log("English Selected.");
 } else {
@@ -96,10 +101,15 @@ $('#switch-en').click(function() {
   for (var i = 0; i < items.length; i++) {
     items[i].style.opacity = 0;
   }
+
 }
+
+sortTable()
 });
 
 $('#switch-fr').click(function() {
+  localStorage.setItem("lang", "fr")
+
   if ( $('[lang="fr"]').is(':visible')) {
     console.log("French Selected.");
 } else {
@@ -121,9 +131,13 @@ $('#switch-fr').click(function() {
     items[i].style.opacity = 0;
   }
 }
+
+sortTable()
 });
 
 $('#switch-de').click(function() {
+  localStorage.setItem("lang", "de")
+
   if ( $('[lang="de"]').is(':visible')) {
     console.log("German Selected.");
 } else {
@@ -145,6 +159,8 @@ $('#switch-de').click(function() {
     items[i].style.opacity = 0;
   }
 }
+
+sortTable()
 });
 
 

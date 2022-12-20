@@ -10,6 +10,39 @@
   <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
     crossorigin="anonymous"></script>
   <title>Archivio</title>
+  <script>
+    $(document).ready(sortTable)
+
+    function sortTable() {
+      let tmpLang = localStorage.getItem("lang")
+      let langIdx = tmpLang == "it" ? 0 : tmpLang == "en" ? 1 : tmpLang == "fr" ? 2 : 3
+
+      var table, rows, switching, i, x, y, shouldSwitch;
+      table = document.getElementById("archivio-table");
+      switching = true;
+
+      while (switching) {
+        switching = false;
+        rows = table.rows;
+
+        for (i = 1; i < (rows.length - 1); i++) {
+          shouldSwitch = false;
+          x = rows[i].getElementsByTagName("TD")[langIdx];
+          y = rows[i + 1].getElementsByTagName("TD")[langIdx];
+
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+        }
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -19,11 +52,11 @@
     <div lang="fr" class="title">Écoutez les sons et les voix du paysage</div>
     <div lang="de" class="title">Hören Sie die Geräusche und Stimmen der Landschaft</div>
     <div class="menu">
-        <div class="archivio">
+      <div class="archivio">
         <a href="index.html">diorama</a>
       </div>
       <div class="separator">
-        <img src="assets\icons\separator.svg"/>
+        <img src="assets\icons\separator.svg" />
       </div>
       <div class="info">
         <button class="info-button-open" onclick="openInfo()">info+</button>
@@ -45,7 +78,7 @@
             <p lang="it">Verso</p>
             <p lang="en">Verse</p>
             <p lang="fr">Verset</p>
-            <p lang="de">Verse</p> 
+            <p lang="de">Verse</p>
           </div>
           <div class="icon-type">
             <img class="icon-versi" src="assets\icons\audio-narrazione-grey.svg" />
@@ -154,7 +187,8 @@
             </tr>
           </table>
           <div lang="it" class="info-subtitle">UNITAS - Associazione Ciechi e Ipovedenti<br>della Svizzera</div>
-          <div lang="en" class="info-subtitle">UNITAS - Association of the Blind and Visually Impaired<br>of Switzerland</div>
+          <div lang="en" class="info-subtitle">UNITAS - Association of the Blind and Visually Impaired<br>of Switzerland
+          </div>
           <div lang="fr" class="info-subtitle">UNITAS - Association des aveugles et malvoyants<br>de Suisse</div>
           <div lang="de" class="info-subtitle">UNITAS - Blinden- und Sehbehindertenverband<br>der Schweiz</div>
           <table>
@@ -225,338 +259,347 @@
   <div class="table-top-mask">
 
   </div>
-  <table class="archivio-table">
+  <table class="archivio-table" id="archivio-table">
     <thead>
-    <tr>
-      <th lang="it" class="first-column">Soggetto</th>
-      <th lang="en" class="first-column">Subject</th>
-      <th lang="fr" class="first-column">Matière</th>
-      <th lang="de" class="first-column">Thema</th>
-      <th lang="it" class="second-column">Nome scientifico</th>
-      <th lang="en" class="second-column">Scientific name</th>
-      <th lang="fr" class="second-column">Nom scientifique</th>
-      <th lang="de" class="second-column">Wissenschaftlicher Name</th>
-      <th lang="it" class="third-column">Verso</th>
-      <th lang="en" class="third-column">Verse</th>
-      <th lang="fr" class="third-column">Verset</th>
-      <th lang="de" class="third-column">Vers</th>
-      <th lang="it">Narrazione</th>
-      <th lang="en">Storytelling</th>
-      <th lang="fr">Narration</th>
-      <th lang="de">Geschichtenerzählen</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td lang="it" class="soggeto-name">Passeggiata sonora</td>
-      <td lang="en" class="soggeto-name">Sound walk</td>
-      <td lang="fr" class="soggeto-name">Marche sonore</td>
-      <td lang="de" class="soggeto-name">Klingender Spaziergang</td>
-      <td class="nome-scientifico">-</td>
-      <td></td>
-      <td>
-        <div>
-          <img id="IT_passeggiata" class="btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Ambiente alpino</td>
-      <td lang="en" class="soggeto-name">Alpine environment</td>
-      <td lang="fr" class="soggeto-name">Environnement alpin</td>
-      <td lang="de" class="soggeto-name">Alpine Umwelt</td>
-      <td class="nome-scientifico">-</td>
-      <td></td>
-      <td>
-        <div lang="it">
-          <img id="IT_ambiente_alpino" class="btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
-        </div>
-        <div lang="en">
-          <img id="EN_The_alpine_environment" class="btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
-        </div>
-        <div lang="fr">
-          <img id="FR_Environment_alpin" class="btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
-        </div>
-        <div lang="de" >
-          <img id="DE_Die_alpine_Umwelt" class="btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
-        </div>
+      <tr>
+        <th lang="it" class="first-column">Soggetto</th>
+        <th lang="en" class="first-column">Subject</th>
+        <th lang="fr" class="first-column">Matière</th>
+        <th lang="de" class="first-column">Thema</th>
+        <th lang="it" class="second-column">Nome scientifico</th>
+        <th lang="en" class="second-column">Scientific name</th>
+        <th lang="fr" class="second-column">Nom scientifique</th>
+        <th lang="de" class="second-column">Wissenschaftlicher Name</th>
+        <th lang="it" class="third-column">Verso</th>
+        <th lang="en" class="third-column">Verse</th>
+        <th lang="fr" class="third-column">Verset</th>
+        <th lang="de" class="third-column">Vers</th>
+        <th lang="it">Narrazione</th>
+        <th lang="en">Storytelling</th>
+        <th lang="fr">Narration</th>
+        <th lang="de">Geschichtenerzählen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td lang="it" class="soggeto-name">Ambiente alpino</td>
+        <td lang="en" class="soggeto-name">Alpine environment</td>
+        <td lang="fr" class="soggeto-name">Environnement alpin</td>
+        <td lang="de" class="soggeto-name">Alpine Umwelt</td>
+        <td class="nome-scientifico">-</td>
+        <td></td>
+        <td>
+          <div lang="it">
+            <img id="IT_ambiente_alpino" class="btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
+          </div>
+          <div lang="en">
+            <img id="EN_The_alpine_environment" class="btnAudio main-audio"
+              src="assets\icons\audio-narrazione-white.svg" />
+          </div>
+          <div lang="fr">
+            <img id="FR_Environment_alpin" class="btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
+          </div>
+          <div lang="de">
+            <img id="DE_Die_alpine_Umwelt" class="btnAudio main-audio" src="assets\icons\audio-narrazione-white.svg" />
+          </div>
         </td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Aquila reale</td>
-      <td lang="en" class="soggeto-name">Golden Eagle</td>
-      <td lang="fr" class="soggeto-name">Aigle royal</td>
-      <td lang="de" class="soggeto-name">Steinadler</td>
-      <td class="nome-scientifico">Aquila chrysaetos</td>
-      <td>
-        <div id="aquila_reale" data-type="verso-black" content="aquila_reale" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td>
-        <div lang="it" id="IT_aquila" data-type="audio-narrazione-black" content="aquila_reale" class="btnAudio icon icon-archivio"></div>
-        <div lang="en" id="EN_Golden_eagle" data-type="audio-narrazione-black" content="aquila_reale" class="btnAudio icon icon-archivio"></div>
-        <div lang="fr" id="FR_Aigleroyal" data-type="audio-narrazione-black" content="aquila_reale" class="btnAudio icon icon-archivio"></div>
-        <div lang="de" id="DE_aquila" data-type="audio-narrazione-black" content="aquila_reale" class="btnAudio icon icon-archivio"></div>
-      </td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Arvicola delle nevi</td>
-      <td lang="en" class="soggeto-name">Snow vole</td>
-      <td lang="fr" class="soggeto-name">Campagnol des neiges</td>
-      <td lang="de" class="soggeto-name">Schneemaus</td>
-      <td class="nome-scientifico">Chionomys nivalis</td>
-      <td>
-        <div data-type="no-audio" content="arvicola_delle_nevi" class="icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Camoscio ♀♂</td>
-      <td lang="en" class="soggeto-name">Alpine chamois ♀♂</td>
-      <td lang="fr" class="soggeto-name">Chamois ♀♂</td>
-      <td lang="de" class="soggeto-name">Gämse ♀♂</td>
-      <td class="nome-scientifico">Rupicapra rupicapra</td>
-      <td>
-        <div id="camoscio" data-type="verso-black" content="camoscio_M" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Codirossone</td>
-      <td lang="en" class="soggeto-name">Rufous tailed Rock Thrush</td>
-      <td lang="fr" class="soggeto-name">Monticole de roche</td>
-      <td lang="de" class="soggeto-name">Steinrötel</td>
-      <td class="nome-scientifico">Monticola saxatilis</td>
-      <td>
-        <div id="codirossone" data-type="verso-black" content="codirossone" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Codirosso spazzacamino</td>
-      <td lang="en" class="soggeto-name">Black Redstart</td>
-      <td lang="fr" class="soggeto-name">Rougequeue noir</td>
-      <td lang="de" class="soggeto-name">Hausrotschwanz</td>
-      <td class="nome-scientifico">Phoenicurus ochruros</td>
-      <td>
-        <div id="codirosso_spazzacamino" data-type="verso-black" content="codirosso_spazzacamino" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Coturnice</td>
-      <td lang="en" class="soggeto-name">Rock Partridge</td>
-      <td lang="fr" class="soggeto-name">Perdrix bartavelle</td>
-      <td lang="de" class="soggeto-name">Steinhuhn</td>
-      <td class="nome-scientifico">Alectoris graeca</td>
-      <td>
-        <div id="coturnice" data-type="verso-black" content="coturnice" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Culbianco ♂</td>
-      <td lang="en" class="soggeto-name">Northern Wheatear ♂</td>
-      <td lang="fr" class="soggeto-name">Traquet motteux ♂</td>
-      <td lang="de" class="soggeto-name">Steinschmätzer ♂</td>
-      <td class="nome-scientifico">Oenanthe oenanthe</td>
-      <td>
-        <div id="culbianco" data-type="verso-black" content="culbianco" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Fringuello alpino</td>
-      <td lang="en" class="soggeto-name">Snowfinch</td>
-      <td lang="fr" class="soggeto-name">Niverolle alpine</td>
-      <td lang="de" class="soggeto-name">Schneesperling</td>
-      <td class="nome-scientifico">Montifringilla nivalis</td>
-      <td>
-        <div id="fringuello_alpino" data-type="verso-black" content="fringuello_alpino" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Gracchio alpino</td>
-      <td lang="en" class="soggeto-name">Yellow-billed Chough</td>
-      <td lang="fr" class="soggeto-name">Chocard à bec jaune</td>
-      <td lang="de" class="soggeto-name">Alpendohle</td>
-      <td class="nome-scientifico">Pyrrhocorax graculus</td>
-      <td>
-        <div id="gracchio_alpino" data-type="verso-black" content="gracchio_alpino" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Gracchio corallino</td>
-      <td lang="en" class="soggeto-name">Red-billed Chough</td>
-      <td lang="fr" class="soggeto-name">Crave à bec rouge</td>
-      <td lang="de" class="soggeto-name">Alpenkrähe</td>
-      <td class="nome-scientifico">Pyrrhocorax pyrrhocorax</td>
-      <td>
-        <div id="gracchio_corallino" data-type="verso-black" content="gracchio_corallino" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Lucertola vivipara</td>
-      <td lang="en" class="soggeto-name">Viviparous lizard</td>
-      <td lang="fr" class="soggeto-name">Lézard vivipare</td>
-      <td lang="de" class="soggeto-name">Waldeidechse</td>
-      <td class="nome-scientifico">Zootoca vivipara</td>
-      <td>
-        <div data-type="no-audio" content="lucertola_vivipera" class="icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Marasso</td>
-      <td lang="en" class="soggeto-name">Common European adder</td>
-      <td lang="fr" class="soggeto-name">Vipère péliade</td>
-      <td lang="de" class="soggeto-name">Kreuzotter</td>
-      <td class="nome-scientifico">Vipera berus</td>
-      <td>
-        <div data-type="no-audio" content="marasso" class="icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Marmotta</td>
-      <td lang="en" class="soggeto-name">Alpine marmot</td>
-      <td lang="fr" class="soggeto-name">Marmotte des Alpes</td>
-      <td lang="de" class="soggeto-name">Alpenmurmeltier</td>
-      <td class="nome-scientifico">Marmota marmota</td>
-      <td>
-        <div id="marmotta" data-type="verso-black" content="marmotta" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td>
-        <div lang="it" id="IT_marmotta" data-type="audio-narrazione-black" content="marmotta" class="btnAudio icon icon-archivio"></div>
-        <div lang="en" id="EN_Marmot" data-type="audio-narrazione-black" content="marmotta" class="btnAudio icon icon-archivio"></div>
-        <div lang="fr" id="FR_Marmotte" data-type="audio-narrazione-black" content="marmotta" class="btnAudio icon icon-archivio"></div>
-        <div lang="de" id="DE_Murmeltier" data-type="audio-narrazione-black" content="marmotta" class="btnAudio icon icon-archivio"></div>
-      </td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Merlo dal collare</td>
-      <td lang="en" class="soggeto-name">Ring Ouzel</td>
-      <td lang="fr" class="soggeto-name">Merle à plastron</td>
-      <td lang="de" class="soggeto-name">Ringdrossel</td>
-      <td class="nome-scientifico">Turdus torquatus</td>
-      <td>
-        <div id="merlo_dal_collare" data-type="verso-black" content="merlo_dal_collare" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Passera scopaiola</td>
-      <td lang="en" class="soggeto-name">Dunnock</td>
-      <td lang="fr" class="soggeto-name">Accenteur mouchet</td>
-      <td lang="de" class="soggeto-name">Heckenbraunelle</td>
-      <td class="nome-scientifico">Prunella modularis</td>
-      <td>
-        <div id="passera_scopaiola" data-type="verso-black" content="passera_scopaiola" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Picchio muraiolo</td>
-      <td lang="en" class="soggeto-name">Wallcreeper</td>
-      <td lang="fr" class="soggeto-name">Tichodrome échelette</td>
-      <td lang="de" class="soggeto-name">Mauerläufer</td>
-      <td class="nome-scientifico">Tichodroma muraria</td>
-      <td>
-        <div id="picchio_muraiolo" data-type="verso-black" content="picchio_muraiolo" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Salamandra nera</td>
-      <td lang="en" class="soggeto-name">Alpine salamander</td>
-      <td lang="fr" class="soggeto-name">Salamandre noire</td>
-      <td lang="de" class="soggeto-name">Alpensalamander</span>
-      <td class="nome-scientifico">Salamandra atra</td>
-      <td>
-        <div data-type="no-audio" content="salamandra_nera" class="icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Sordone</td>
-      <td lang="en" class="soggeto-name">Alpine Accentor</td>
-      <td lang="fr" class="soggeto-name">Accenteur alpin</td>
-      <td lang="de" class="soggeto-name">Alpenbraunelle</td>
-      <td class="nome-scientifico">Prunella collaris</td>
-      <td>
-        <div id="sordone" data-type="verso-black" content="sordone" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Spioncello</td>
-      <td lang="en" class="soggeto-name">Water Pipit</td>
-      <td lang="fr" class="soggeto-name">Pipit spioncelle</td>
-      <td lang="de" class="soggeto-name">Bergpieper</td>
-      <td class="nome-scientifico">Anthus spinoletta</td>
-      <td>
-        <div id="spioncello" data-type="verso-black" content="spioncello" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Stambecco alpino ♀♂</td>
-      <td lang="en" class="soggeto-name">Alpine ibex ♀♂</td>
-      <td lang="fr" class="soggeto-name">Bouquetin des Alpes ♀♂</td>
-      <td lang="de" class="soggeto-name">Alpensteinbock ♀♂</td>
-      <td class="nome-scientifico">Capra ibex</td>
-      <td>
-        <div id="stambecco" data-type="verso-black" content="stambecco_alpino_F" class="btnAudio icon icon-archivio"></div>
-      </td>
-      <td>
-        <div lang="it" id="IT_stambecco_M" data-type="audio-narrazione-black" content="stambecco_alpino_M" class="btnAudio icon icon-archivio"></div>
-        <div lang="en" id="EN_Ibex" data-type="audio-narrazione-black" content="stambecco_alpino_M" class="btnAudio icon icon-archivio"></div>
-        <div lang="fr" id="FR_Bouquetin" data-type="audio-narrazione-black" content="stambecco_alpino_M" class="btnAudio icon icon-archivio"></div>
-        <div lang="de" id="DE_Steinbock" data-type="audio-narrazione-black" content="stambecco_alpino_M" class="btnAudio icon icon-archivio"></div>
-      </td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Toporagno alpino</td>
-      <td lang="en" class="soggeto-name">Alpine shrew</td>
-      <td lang="fr" class="soggeto-name">Musaraigne alpine</td>
-      <td lang="de" class="soggeto-name">Alpenspitzmaus</td>
-      <td class="nome-scientifico">Sorex alpinus</td>
-      <td>
-        <div data-type="no-audio" content="toporagno_alpino" class="icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td lang="it" class="soggeto-name">Topo selvatico alpino</td>
-      <td lang="en" class="soggeto-name">Alpine mouse</td>
-      <td lang="fr" class="soggeto-name">Mulot alpestre</td>
-      <td lang="de" class="soggeto-name">Alpenwaldmaus</td>
-      <td class="nome-scientifico">Apodemus alpicola</td>
-      <td>
-        <div data-type="no-audio" content="topo_selvatico_alpino" class="icon icon-archivio"></div>
-      </td>
-      <td></td>
-    </tr>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Aquila reale</td>
+        <td lang="en" class="soggeto-name">Golden Eagle</td>
+        <td lang="fr" class="soggeto-name">Aigle royal</td>
+        <td lang="de" class="soggeto-name">Steinadler</td>
+        <td class="nome-scientifico">Aquila chrysaetos</td>
+        <td>
+          <div id="aquila_reale" data-type="verso-black" content="aquila_reale" class="btnAudio icon icon-archivio">
+          </div>
+        </td>
+        <td>
+          <div lang="it" id="IT_aquila" data-type="audio-narrazione-black" content="aquila_reale"
+            class="btnAudio icon icon-archivio"></div>
+          <div lang="en" id="EN_Golden_eagle" data-type="audio-narrazione-black" content="aquila_reale"
+            class="btnAudio icon icon-archivio"></div>
+          <div lang="fr" id="FR_Aigleroyal" data-type="audio-narrazione-black" content="aquila_reale"
+            class="btnAudio icon icon-archivio"></div>
+          <div lang="de" id="DE_aquila" data-type="audio-narrazione-black" content="aquila_reale"
+            class="btnAudio icon icon-archivio"></div>
+        </td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Arvicola delle nevi</td>
+        <td lang="en" class="soggeto-name">Snow vole</td>
+        <td lang="fr" class="soggeto-name">Campagnol des neiges</td>
+        <td lang="de" class="soggeto-name">Schneemaus</td>
+        <td class="nome-scientifico">Chionomys nivalis</td>
+        <td>
+          <div data-type="no-audio" content="arvicola_delle_nevi" class="icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Camoscio ♀♂</td>
+        <td lang="en" class="soggeto-name">Alpine chamois ♀♂</td>
+        <td lang="fr" class="soggeto-name">Chamois ♀♂</td>
+        <td lang="de" class="soggeto-name">Gämse ♀♂</td>
+        <td class="nome-scientifico">Rupicapra rupicapra</td>
+        <td>
+          <div id="camoscio" data-type="verso-black" content="camoscio_M" class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Codirossone</td>
+        <td lang="en" class="soggeto-name">Rufous tailed Rock Thrush</td>
+        <td lang="fr" class="soggeto-name">Monticole de roche</td>
+        <td lang="de" class="soggeto-name">Steinrötel</td>
+        <td class="nome-scientifico">Monticola saxatilis</td>
+        <td>
+          <div id="codirossone" data-type="verso-black" content="codirossone" class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Codirosso spazzacamino</td>
+        <td lang="en" class="soggeto-name">Black Redstart</td>
+        <td lang="fr" class="soggeto-name">Rougequeue noir</td>
+        <td lang="de" class="soggeto-name">Hausrotschwanz</td>
+        <td class="nome-scientifico">Phoenicurus ochruros</td>
+        <td>
+          <div id="codirosso_spazzacamino" data-type="verso-black" content="codirosso_spazzacamino"
+            class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Coturnice</td>
+        <td lang="en" class="soggeto-name">Rock Partridge</td>
+        <td lang="fr" class="soggeto-name">Perdrix bartavelle</td>
+        <td lang="de" class="soggeto-name">Steinhuhn</td>
+        <td class="nome-scientifico">Alectoris graeca</td>
+        <td>
+          <div id="coturnice" data-type="verso-black" content="coturnice" class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Culbianco ♂</td>
+        <td lang="en" class="soggeto-name">Northern Wheatear ♂</td>
+        <td lang="fr" class="soggeto-name">Traquet motteux ♂</td>
+        <td lang="de" class="soggeto-name">Steinschmätzer ♂</td>
+        <td class="nome-scientifico">Oenanthe oenanthe</td>
+        <td>
+          <div id="culbianco" data-type="verso-black" content="culbianco" class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Fringuello alpino</td>
+        <td lang="en" class="soggeto-name">Snowfinch</td>
+        <td lang="fr" class="soggeto-name">Niverolle alpine</td>
+        <td lang="de" class="soggeto-name">Schneesperling</td>
+        <td class="nome-scientifico">Montifringilla nivalis</td>
+        <td>
+          <div id="fringuello_alpino" data-type="verso-black" content="fringuello_alpino"
+            class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Gracchio alpino</td>
+        <td lang="en" class="soggeto-name">Yellow-billed Chough</td>
+        <td lang="fr" class="soggeto-name">Chocard à bec jaune</td>
+        <td lang="de" class="soggeto-name">Alpendohle</td>
+        <td class="nome-scientifico">Pyrrhocorax graculus</td>
+        <td>
+          <div id="gracchio_alpino" data-type="verso-black" content="gracchio_alpino"
+            class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Gracchio corallino</td>
+        <td lang="en" class="soggeto-name">Red-billed Chough</td>
+        <td lang="fr" class="soggeto-name">Crave à bec rouge</td>
+        <td lang="de" class="soggeto-name">Alpenkrähe</td>
+        <td class="nome-scientifico">Pyrrhocorax pyrrhocorax</td>
+        <td>
+          <div id="gracchio_corallino" data-type="verso-black" content="gracchio_corallino"
+            class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Lucertola vivipara</td>
+        <td lang="en" class="soggeto-name">Viviparous lizard</td>
+        <td lang="fr" class="soggeto-name">Lézard vivipare</td>
+        <td lang="de" class="soggeto-name">Waldeidechse</td>
+        <td class="nome-scientifico">Zootoca vivipara</td>
+        <td>
+          <div data-type="no-audio" content="lucertola_vivipera" class="icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Marasso</td>
+        <td lang="en" class="soggeto-name">Common European adder</td>
+        <td lang="fr" class="soggeto-name">Vipère péliade</td>
+        <td lang="de" class="soggeto-name">Kreuzotter</td>
+        <td class="nome-scientifico">Vipera berus</td>
+        <td>
+          <div data-type="no-audio" content="marasso" class="icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Marmotta</td>
+        <td lang="en" class="soggeto-name">Alpine marmot</td>
+        <td lang="fr" class="soggeto-name">Marmotte des Alpes</td>
+        <td lang="de" class="soggeto-name">Alpenmurmeltier</td>
+        <td class="nome-scientifico">Marmota marmota</td>
+        <td>
+          <div id="marmotta" data-type="verso-black" content="marmotta" class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td>
+          <div lang="it" id="IT_marmotta" data-type="audio-narrazione-black" content="marmotta"
+            class="btnAudio icon icon-archivio"></div>
+          <div lang="en" id="EN_Marmot" data-type="audio-narrazione-black" content="marmotta"
+            class="btnAudio icon icon-archivio"></div>
+          <div lang="fr" id="FR_Marmotte" data-type="audio-narrazione-black" content="marmotta"
+            class="btnAudio icon icon-archivio"></div>
+          <div lang="de" id="DE_Murmeltier" data-type="audio-narrazione-black" content="marmotta"
+            class="btnAudio icon icon-archivio"></div>
+        </td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Merlo dal collare</td>
+        <td lang="en" class="soggeto-name">Ring Ouzel</td>
+        <td lang="fr" class="soggeto-name">Merle à plastron</td>
+        <td lang="de" class="soggeto-name">Ringdrossel</td>
+        <td class="nome-scientifico">Turdus torquatus</td>
+        <td>
+          <div id="merlo_dal_collare" data-type="verso-black" content="merlo_dal_collare"
+            class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Passera scopaiola</td>
+        <td lang="en" class="soggeto-name">Dunnock</td>
+        <td lang="fr" class="soggeto-name">Accenteur mouchet</td>
+        <td lang="de" class="soggeto-name">Heckenbraunelle</td>
+        <td class="nome-scientifico">Prunella modularis</td>
+        <td>
+          <div id="passera_scopaiola" data-type="verso-black" content="passera_scopaiola"
+            class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Picchio muraiolo</td>
+        <td lang="en" class="soggeto-name">Wallcreeper</td>
+        <td lang="fr" class="soggeto-name">Tichodrome échelette</td>
+        <td lang="de" class="soggeto-name">Mauerläufer</td>
+        <td class="nome-scientifico">Tichodroma muraria</td>
+        <td>
+          <div id="picchio_muraiolo" data-type="verso-black" content="picchio_muraiolo"
+            class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Salamandra nera</td>
+        <td lang="en" class="soggeto-name">Alpine salamander</td>
+        <td lang="fr" class="soggeto-name">Salamandre noire</td>
+        <td lang="de" class="soggeto-name">Alpensalamander</span>
+        <td class="nome-scientifico">Salamandra atra</td>
+        <td>
+          <div data-type="no-audio" content="salamandra_nera" class="icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Sordone</td>
+        <td lang="en" class="soggeto-name">Alpine Accentor</td>
+        <td lang="fr" class="soggeto-name">Accenteur alpin</td>
+        <td lang="de" class="soggeto-name">Alpenbraunelle</td>
+        <td class="nome-scientifico">Prunella collaris</td>
+        <td>
+          <div id="sordone" data-type="verso-black" content="sordone" class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Spioncello</td>
+        <td lang="en" class="soggeto-name">Water Pipit</td>
+        <td lang="fr" class="soggeto-name">Pipit spioncelle</td>
+        <td lang="de" class="soggeto-name">Bergpieper</td>
+        <td class="nome-scientifico">Anthus spinoletta</td>
+        <td>
+          <div id="spioncello" data-type="verso-black" content="spioncello" class="btnAudio icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Stambecco alpino ♀♂</td>
+        <td lang="en" class="soggeto-name">Alpine ibex ♀♂</td>
+        <td lang="fr" class="soggeto-name">Bouquetin des Alpes ♀♂</td>
+        <td lang="de" class="soggeto-name">Alpensteinbock ♀♂</td>
+        <td class="nome-scientifico">Capra ibex</td>
+        <td>
+          <div id="stambecco" data-type="verso-black" content="stambecco_alpino_F" class="btnAudio icon icon-archivio">
+          </div>
+        </td>
+        <td>
+          <div lang="it" id="IT_stambecco_M" data-type="audio-narrazione-black" content="stambecco_alpino_M"
+            class="btnAudio icon icon-archivio"></div>
+          <div lang="en" id="EN_Ibex" data-type="audio-narrazione-black" content="stambecco_alpino_M"
+            class="btnAudio icon icon-archivio"></div>
+          <div lang="fr" id="FR_Bouquetin" data-type="audio-narrazione-black" content="stambecco_alpino_M"
+            class="btnAudio icon icon-archivio"></div>
+          <div lang="de" id="DE_Steinbock" data-type="audio-narrazione-black" content="stambecco_alpino_M"
+            class="btnAudio icon icon-archivio"></div>
+        </td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Toporagno alpino</td>
+        <td lang="en" class="soggeto-name">Alpine shrew</td>
+        <td lang="fr" class="soggeto-name">Musaraigne alpine</td>
+        <td lang="de" class="soggeto-name">Alpenspitzmaus</td>
+        <td class="nome-scientifico">Sorex alpinus</td>
+        <td>
+          <div data-type="no-audio" content="toporagno_alpino" class="icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td lang="it" class="soggeto-name">Topo selvatico alpino</td>
+        <td lang="en" class="soggeto-name">Alpine mouse</td>
+        <td lang="fr" class="soggeto-name">Mulot alpestre</td>
+        <td lang="de" class="soggeto-name">Alpenwaldmaus</td>
+        <td class="nome-scientifico">Apodemus alpicola</td>
+        <td>
+          <div data-type="no-audio" content="topo_selvatico_alpino" class="icon icon-archivio"></div>
+        </td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 
   <div class="footer">
     <span class="audioControl" id="progressAudioTime">00:00</span>
-   <!-- <input class="audioControl" id="progressAudioBar" type="range" value="0" min="0" max="100" step="1" /> -->
+    <!-- <input class="audioControl" id="progressAudioBar" type="range" value="0" min="0" max="100" step="1" /> -->
     <div class="languages">
       <p id="switch-it" class="active-language">IT</p>
       <div class="separator-footer">
-        <img src="assets\icons\separator.svg"/>
+        <img src="assets\icons\separator.svg" />
       </div>
       <p id="switch-en">EN</p>
       <div class="separator-footer">
-        <img src="assets\icons\separator.svg"/>
+        <img src="assets\icons\separator.svg" />
       </div>
       <p id="switch-fr">FR</p>
       <div class="separator-footer">
-        <img src="assets\icons\separator.svg"/>
+        <img src="assets\icons\separator.svg" />
       </div>
       <p id="switch-de">DE</p>
     </div>
