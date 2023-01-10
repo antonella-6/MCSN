@@ -248,61 +248,61 @@ body {
 .lucertola-vivipara {
   position: absolute;
   top: 19em; /* 18em */
-  left: 3em;
+  left: 2em;
 }
 
 .sordone {
   position: absolute;
-  top: 6em; /* 8em */
+  top: 4.9em; /* 8em */
   left: 17em; /* 12em */
 }
 
 .codirossone {
   position: absolute;
-  top: 15em; /* 15em */
-  left: 12em; /* 20em */
+  top: 15.5em; /* 15em */
+  left: 10em; /* 20em */
 }
 
 .topo-selvatico-alpino {
   position: absolute;
-  top: 35em; /*32em*/
-  left: 14em; /*24em*/
+  top: 32.5em; /*32em*/
+  left: 12.5em; /*24em*/
 }
 
 .gracchio-alpino {
   position: absolute;
-  top: 30.5em; /*26em*/
-  left: 26em; /*32em*/
+  top: 30em; /*26em*/
+  left: 25.5em; /*32em*/
 }
 
 .aquila-reale {
   position: absolute;
-  top: 6em; /*9em*/
+  top: 4.9em; /*9em*/
   left: 34em; /*40em*/
 }
 
 .codirosso-spazzacamino {
   position: absolute;
   top: 17em; /*18.4em*/
-  left: 34em; /*40em*/
+  left: 30em; /*40em*/
 }
 
 .merlo_dal_collare {
   position: absolute;
   top: 18em; /*22.1*/
-  left: 49em; /*50*/
+  left: 47em; /*50*/
 }
 
 .gracchio-corallino {
   position: absolute;
-  top: 30.5em; /*25.9*/
+  top: 30em; /*25.9*/
   left: 49em; /*58*/
 }
 
 .salamandra-nera {
   position: absolute;
-  top: 32em;
-  left: 66em;
+  top: 29em;
+  left: 63em;
 }
 
 /* Animal Boxes - SLIDE TWO*/
