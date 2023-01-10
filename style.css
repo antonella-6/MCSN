@@ -331,8 +331,8 @@ body {
 
 .culbianco {
   position: absolute;
-  top: 30em;
-  left: 30em;
+  top: 33em; /*30em*/
+  left: 23em; /*30em*/
 }
 
 .passera-scopaiola {
@@ -343,26 +343,26 @@ body {
 
 .camoscio {
   position: absolute;
-  top: 22em; /*27*/
-  left: 43em; /*44*/
+  top: 25em; /*27*/
+  left: 42em; /*44*/
 }
 
 .stambecco-alpino {
   position: absolute;
   top: 6em; /*6em*/
-  left: 47em; /*52em*/
+  left: 49em; /*52em*/
 }
 
 .spioncello {
   position: absolute;
-  top: 21em; /*12em*/
-  left: 56em; /*62*/
+  top: 25em; /*12em*/
+  left: 57em; /*62*/
 }
 
 .toporagno-alpino {
   position: absolute;
-  top: 30em; /*30em*/
-  left: 61em; /*66em*/
+  top: 33em; /*30em*/
+  left: 62em; /*66em*/
 }
 
 /* Animal Boxes - SLIDE Three*/
