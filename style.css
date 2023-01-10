@@ -373,32 +373,32 @@ body {
 
 .arvicola-delle-nevi {
   position: absolute;
-  top: 29em;
+  top: 33em; /*29em*/
   left: 5em;
 }
 
 .camoscio-page-three {
   position: absolute;
-  top: 15em;
-  left: 22em;
+  top: 10em; /*15em*/
+  left: 35em; /*22em*/
 }
 
 .stambecco-alpino-page-three {
   position: absolute;
-  top: 28em;
-  left: 34em;
+  top: 30em;
+  left: 41em; /*34em*/
 }
 
 .fringuello-alpino {
   position: absolute;
-  top: 8em;
-  left: 50em;
+  top: 7em;
+  left: 60em;
 }
 
 .picchio-muraiolo {
   position: absolute;
-  top: 15em;
-  left: 64em;
+  top: 22em; /*15em*/
+  left: 66em; /*64*/
 }
 
 /* Below Header container */
