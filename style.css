@@ -259,19 +259,19 @@ body {
 
 .codirossone {
   position: absolute;
-  top: 15.5em; /* 15em */
-  left: 10em; /* 20em */
+  top: 16em; /* 15em */
+  left: 11.8em; /* 20em */
 }
 
 .topo-selvatico-alpino {
   position: absolute;
-  top: 32.5em; /*32em*/
+  top: 33em; /*32em*/
   left: 12.5em; /*24em*/
 }
 
 .gracchio-alpino {
   position: absolute;
-  top: 30em; /*26em*/
+  top: 31em; /*26em*/
   left: 25.5em; /*32em*/
 }
 
@@ -283,7 +283,7 @@ body {
 
 .codirosso-spazzacamino {
   position: absolute;
-  top: 17em; /*18.4em*/
+  top: 18em; /*18.4em*/
   left: 30em; /*40em*/
 }
 
@@ -295,7 +295,7 @@ body {
 
 .gracchio-corallino {
   position: absolute;
-  top: 30em; /*25.9*/
+  top: 31em; /*25.9*/
   left: 49em; /*58*/
 }
 
@@ -313,20 +313,20 @@ body {
 
 .marmotta {
   position: absolute;
-  top: 10em;
-  left: 4em;
+  top: 8em; /*10em*/
+  left: 6em; /*4em*/
 }
 
 .marasso {
   position: absolute;
-  top: 25em;
-  left: 14em;
+  top: 19em; /*25em*/
+  left: 6em; /*14em*/
 }
 
 .coturnice {
   position: absolute;
-  top: 15em;
-  left: 24em;
+  top: 20em; /*15em*/
+  left: 20em; /*24em*/
 }
 
 .culbianco {
@@ -337,32 +337,32 @@ body {
 
 .passera-scopaiola {
   position: absolute;
-  top: 8em;
-  left: 34em;
+  top: 8em; /*8em*/
+  left: 26em; /*34em*/
 }
 
 .camoscio {
   position: absolute;
-  top: 27em;
-  left: 44em;
+  top: 22em; /*27*/
+  left: 43em; /*44*/
 }
 
 .stambecco-alpino {
   position: absolute;
-  top: 6em;
-  left: 52em;
+  top: 6em; /*6em*/
+  left: 47em; /*52em*/
 }
 
 .spioncello {
   position: absolute;
-  top: 12em;
-  left: 62em;
+  top: 21em; /*12em*/
+  left: 56em; /*62*/
 }
 
 .toporagno-alpino {
   position: absolute;
-  top: 30em;
-  left: 66em;
+  top: 30em; /*30em*/
+  left: 61em; /*66em*/
 }
 
 /* Animal Boxes - SLIDE Three*/
