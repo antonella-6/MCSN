@@ -263,6 +263,12 @@ body {
   left: 11.8em; /* 20em */
 }
 
+.codirossone-femmina {
+  position: absolute;
+  top: 9em; /* 15em */
+  left: 5em; /* 20em */
+}
+
 .topo-selvatico-alpino {
   position: absolute;
   top: 33em; /*32em*/
@@ -285,6 +291,12 @@ body {
   position: absolute;
   top: 18em; /*18.4em*/
   left: 30em; /*40em*/
+}
+
+.codirosso-spazzacamino-femmina {
+  position: absolute;
+  top: 20em; /*18.4em*/
+  left: 22em; /*40em*/
 }
 
 .merlo_dal_collare {
@@ -333,6 +345,12 @@ body {
   position: absolute;
   top: 33em; /*30em*/
   left: 23em; /*30em*/
+}
+
+.culbianco-femmina {
+  position: absolute;
+  top: 30em; /*30em*/
+  left: 15em; /*30em*/
 }
 
 .passera-scopaiola {
@@ -502,10 +520,11 @@ body {
 }
 
 .info-button-close {
-  position: absolute;
   padding: 0;
-  right: 0px;
-  margin: 0.6em 1.4em 0 0;
+  top: 0;
+  right: 0;
+  margin: 0.6em 1.55em 0 0;
+  position: absolute;
 }
 
 .info-container {

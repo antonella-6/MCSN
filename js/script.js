@@ -6,6 +6,7 @@ const indicator = Array.from(indicators.children);
 const closeBox = document.querySelector(".close-box");
 
 function openInfo() {
+  document.getElementById("infoText").style.display = "block";
   document.getElementById("myInfoBox").style.width = "436px";
   document.getElementById("myInfoBox").style.left = "calc(100% - 436px)";
   closeBox.style.width = "calc(100% - 436px)";
@@ -22,6 +23,7 @@ function openInfo() {
 };
 
 function closeInfo() {
+  document.getElementById("infoText").style.display = "none";
   document.getElementById("myInfoBox").style.width = "0";
   document.getElementById("myInfoBox").style.left = "100%";
   prev.classList.remove("is-hidden");
