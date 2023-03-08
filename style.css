@@ -221,11 +221,13 @@ body {
 }
 
 .animal-box .image {
-  width: 6.6em; /* 4.9em*/
-  height: 6.6em; /* 4.9em*/
+  width: 30em; /* 6.6em*/ 
+  height: 30em; /* 6.6em*/
   position: absolute;
-  z-index: 1;
-  bottom: -2.4em;
+  z-index: 99; /*new*/
+  top: calc(50vh - 15em); /* bottom -2.4em*/
+  left: calc(50vw - 15em); /*new*/
+  position: fixed; /*new*/
 }
 
 /* X ANTONELLA DIMENSIONE IMMAGINI */
