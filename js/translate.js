@@ -11,7 +11,13 @@ console.log("German is " + german);
 
 if ((italian == null) && (english == null) && (french == null) && (german == null) ){
     localStorage.setItem('lang', 'it');
+    $('[lang="en"]').hide();
+    $('[lang="fr"]').hide();
+    $('[lang="de"]').hide();
     $('#switch-it').addClass('active-language');
+    $('#switch-en').removeClass('active-language');
+    $('#switch-fr').removeClass('active-language');
+    $('#switch-de').removeClass('active-language');
   } else if (german == 'true') {
     $('[lang="it"]').hide();
     $('[lang="en"]').hide();
